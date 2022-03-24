@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Dow Blog</title>
+    <link>https://blog.dowty.ml/posts/</link>
+    <description>Recent content in Posts on Dow Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 24 Mar 2022 11:10:00 +0000</lastBuildDate><atom:link href="https://blog.dowty.ml/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>（补）test</title>
+      <link>https://blog.dowty.ml/posts/%E6%9B%B4%E6%96%B0/</link>
+      <pubDate>Thu, 24 Mar 2022 11:10:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E6%9B%B4%E6%96%B0/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本博客第三次更新&lt;/em&gt;
+&lt;strong&gt;Here we start！&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo
+git remote *.git
+deploy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;新的博客系统已经从hexo迁移到hugo啦！
+仍怀念三年前用typecho装上一大堆插件，还用自家电脑内网穿透部署博客的画面。&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;不过有个后台的博客系统确实对新手很友好啊&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;就是有点费电脑&lt;/del&gt;&lt;/p&gt;
+&lt;h2 id=&#34;接下来是更新日志&#34;&gt;接下来是更新日志&lt;/h2&gt;
+&lt;h3 id=&#34;2022324&#34;&gt;2022.3.24&lt;/h3&gt;
+&lt;p&gt;博客经过26次commits已经基本部署好了，&lt;strong&gt;Google Lighthouse的分数也在90+&lt;/strong&gt;！
+（当然这视个人网络情况而定，不过网站的漏洞包括XSS攻击都在用CSP等策略在修复了）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;至于美化嘛……有时间再做&lt;/strong&gt;
+毕竟目前主要的是先做好优化&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/blog-lighthouse-test.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<hr>
+<p><em>本博客第三次更新</em>
+<strong>Here we start！</strong></p>
+<pre><code>hugo
+git remote *.git
+deploy
+</code></pre>
+<hr>
+<p>新的博客系统已经从hexo迁移到hugo啦！
+仍怀念三年前用typecho装上一大堆插件，还用自家电脑内网穿透部署博客的画面。</p>
+<p><del>不过有个后台的博客系统确实对新手很友好啊</del></p>
+<p><del>就是有点费电脑</del></p>
+<h2 id="接下来是更新日志">接下来是更新日志</h2>
+<h3 id="2022324">2022.3.24</h3>
+<p>博客经过26次commits已经基本部署好了，<strong>Google Lighthouse的分数也在90+</strong>！
+（当然这视个人网络情况而定，不过网站的漏洞包括XSS攻击都在用CSP等策略在修复了）</p>
+<p><strong>至于美化嘛……有时间再做</strong>
+毕竟目前主要的是先做好优化</p>
+<p><img loading="lazy" src="/img/blog-lighthouse-test.webp" alt="avatar"  />
+</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>2022新年</title>
+      <link>https://blog.dowty.ml/posts/2022%E6%96%B0%E5%B9%B4/</link>
+      <pubDate>Wed, 26 Jan 2022 19:56:45 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/2022%E6%96%B0%E5%B9%B4/</guid>
+      <description>&lt;h2 id=&#34;又是新一年了呢&#34;&gt;又是新一年了呢&lt;/h2&gt;
+&lt;h3 id=&#34;refresh-my-mark-please&#34;&gt;Refresh my mark, please!&lt;/h3&gt;
+&lt;p&gt;作为一名理科差爆的理科生已经很安然的去世了好吧……&lt;/p&gt;
+&lt;p&gt;成绩快捞不起来了QAQ&lt;/p&gt;
+&lt;p&gt;新年估计就只刷题守夜了&lt;/p&gt;
+&lt;p&gt;更新照常随缘……&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<h2 id="又是新一年了呢">又是新一年了呢</h2>
+<h3 id="refresh-my-mark-please">Refresh my mark, please!</h3>
+<p>作为一名理科差爆的理科生已经很安然的去世了好吧……</p>
+<p>成绩快捞不起来了QAQ</p>
+<p>新年估计就只刷题守夜了</p>
+<p>更新照常随缘……</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>感到迷茫</title>
+      <link>https://blog.dowty.ml/posts/%E6%84%9F%E5%88%B0%E8%BF%B7%E8%8C%AB/</link>
+      <pubDate>Sat, 22 May 2021 19:50:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E6%84%9F%E5%88%B0%E8%BF%B7%E8%8C%AB/</guid>
+      <description>&lt;p&gt;就在今天，袁隆平老先生离开人世，睡在了他所心心念念的稻穗禾苗下了。
+就在今天，吴孟超院士也不能在手术台前医治患者了。&lt;/p&gt;
+&lt;p&gt;有些迷茫，
+学业开始艰难，
+成绩倒退了很多。
+看撑不撑得过这个学考了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由于期中考的极差，博客怕是很难更新了。&lt;/strong&gt;
+&lt;strong&gt;疯狂复习ing&lt;/strong&gt;&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>就在今天，袁隆平老先生离开人世，睡在了他所心心念念的稻穗禾苗下了。
+就在今天，吴孟超院士也不能在手术台前医治患者了。</p>
+<p>有些迷茫，
+学业开始艰难，
+成绩倒退了很多。
+看撑不撑得过这个学考了。</p>
+<p><strong>由于期中考的极差，博客怕是很难更新了。</strong>
+<strong>疯狂复习ing</strong></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>2021新年</title>
+      <link>https://blog.dowty.ml/posts/2021%E6%96%B0%E5%B9%B4/</link>
+      <pubDate>Thu, 11 Feb 2021 09:35:45 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/2021%E6%96%B0%E5%B9%B4/</guid>
+      <description>&lt;p&gt;终于，我还是成功逆袭了。
+经过复习，我以388的分数，用一个指标生的名额（能加15分）考上了403分的学校（满分460）
+指标生只能押在一个学校上，这波刚好押满，极限操作。
+请叫我欧皇 /doge&lt;/p&gt;
+&lt;p&gt;一个学期艰难度过，这就是高中吗，爱了爱了。&lt;/p&gt;
+&lt;p&gt;假期就只有可怜的二十一天，还剩九天。我还有作业、短篇小说参赛作品没写QAQ
+哭死……
+加油加油&lt;/p&gt;
+&lt;p&gt;不过后几天还可能去海岸图书馆？看看书，拍拍海景什么的&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;博客怕是很难更新了，这次纯粹是我懒。&lt;/strong&gt;
+&lt;strong&gt;疯狂学习ing&lt;/strong&gt;&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>终于，我还是成功逆袭了。
+经过复习，我以388的分数，用一个指标生的名额（能加15分）考上了403分的学校（满分460）
+指标生只能押在一个学校上，这波刚好押满，极限操作。
+请叫我欧皇 /doge</p>
+<p>一个学期艰难度过，这就是高中吗，爱了爱了。</p>
+<p>假期就只有可怜的二十一天，还剩九天。我还有作业、短篇小说参赛作品没写QAQ
+哭死……
+加油加油</p>
+<p>不过后几天还可能去海岸图书馆？看看书，拍拍海景什么的</p>
+<p><strong>博客怕是很难更新了，这次纯粹是我懒。</strong>
+<strong>疯狂学习ing</strong></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>假期再见</title>
+      <link>https://blog.dowty.ml/posts/%E5%81%87%E6%9C%9F%E5%86%8D%E8%A7%81/</link>
+      <pubDate>Fri, 21 Aug 2020 22:00:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E5%81%87%E6%9C%9F%E5%86%8D%E8%A7%81/</guid>
+      <description>&lt;p&gt;终于，还是考完了。
+毕业后我和几个同学先是到广州去生活，住民宿（珠江帝景苑真的只是好看的破落小区）一天上千，过于昂贵。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/%e7%8f%a0%e6%b1%9f%e5%b8%9d%e6%99%af%e8%8b%91.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;我们试着自己做饭，结果发现刀就只有那种腌肉用的三寸小刀。
+三百多平的房子里有烤箱、工具，就是没有菜刀。
+…………
+离谱。&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>终于，还是考完了。
+毕业后我和几个同学先是到广州去生活，住民宿（珠江帝景苑真的只是好看的破落小区）一天上千，过于昂贵。</p>
+<p><img loading="lazy" src="/img/%e7%8f%a0%e6%b1%9f%e5%b8%9d%e6%99%af%e8%8b%91.webp" alt="avatar"  />
+</p>
+<p>我们试着自己做饭，结果发现刀就只有那种腌肉用的三寸小刀。
+三百多平的房子里有烤箱、工具，就是没有菜刀。
+…………
+离谱。</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>倒数10天</title>
+      <link>https://blog.dowty.ml/posts/%E5%80%92%E6%95%B010%E5%A4%A9/</link>
+      <pubDate>Fri, 10 Jul 2020 19:06:09 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E5%80%92%E6%95%B010%E5%A4%A9/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;在一片喧嚣、热闹的教室里，我是苦恼的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;既不想在最后时段去打好人际关系，也不愿面对那几本试卷，没日没夜地做试卷，然后靠刷手机是真的枯燥。&lt;/strong&gt;
+&lt;strong&gt;这有点像一点点掏空充实多彩的精神世界，就拿把火烧毁华华丽丽外壳，只剩下千篇一律的、单调的余烬。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以前还能说我去外面逛逛，拿手机相机拍人拍景之类的，又或者是去线下的lolita茶会见小姐姐之类的&lt;/p&gt;
+&lt;h2 id=&#34;不会真的没有雄性生物参加过茶会吧&#34;&gt;不会真的没有雄性生物参加过茶会吧&lt;/h2&gt;
+&lt;p&gt;不管了，距离大考就只剩十天了，按憨憨的话说：“屈指可数。”
+志愿填完了就去复习喽。&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p><strong>在一片喧嚣、热闹的教室里，我是苦恼的。</strong></p>
+<p><strong>既不想在最后时段去打好人际关系，也不愿面对那几本试卷，没日没夜地做试卷，然后靠刷手机是真的枯燥。</strong>
+<strong>这有点像一点点掏空充实多彩的精神世界，就拿把火烧毁华华丽丽外壳，只剩下千篇一律的、单调的余烬。</strong></p>
+<p>以前还能说我去外面逛逛，拿手机相机拍人拍景之类的，又或者是去线下的lolita茶会见小姐姐之类的</p>
+<h2 id="不会真的没有雄性生物参加过茶会吧">不会真的没有雄性生物参加过茶会吧</h2>
+<p>不管了，距离大考就只剩十天了，按憨憨的话说：“屈指可数。”
+志愿填完了就去复习喽。</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>倒数20天</title>
+      <link>https://blog.dowty.ml/posts/%E5%80%92%E6%95%B020%E5%A4%A9/</link>
+      <pubDate>Wed, 24 Jun 2020 21:19:09 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E5%80%92%E6%95%B020%E5%A4%A9/</guid>
+      <description>&lt;p&gt;终于到了大考倒数第20天，后天就要去听说考试了。
+体育不出所料，没有满分，但也比模拟高了4分左右。&lt;/p&gt;
+&lt;p&gt;有时候复习三年知识起来挺迷茫的。
+我是该回到原来的方式学习，还是继续这种刷题式复习？
+交给考试结果来决定吧。&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>终于到了大考倒数第20天，后天就要去听说考试了。
+体育不出所料，没有满分，但也比模拟高了4分左右。</p>
+<p>有时候复习三年知识起来挺迷茫的。
+我是该回到原来的方式学习，还是继续这种刷题式复习？
+交给考试结果来决定吧。</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>（补）想当个有为的吃货</title>
+      <link>https://blog.dowty.ml/posts/%E8%A1%A5%E6%83%B3%E5%BD%93%E4%B8%AA%E6%9C%89%E4%B8%BA%E7%9A%84%E5%90%83%E8%B4%A7/</link>
+      <pubDate>Wed, 10 Jun 2020 22:28:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E6%83%B3%E5%BD%93%E4%B8%AA%E6%9C%89%E4%B8%BA%E7%9A%84%E5%90%83%E8%B4%A7/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;吃货不解释&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/wx_camera_1564900817151.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/wx_camera_1564728707757.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/wx_camera_1564049990023.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/wx_camera_1558349510112.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/Screenshot_20210208_173847.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/ProShot_20180813_170207.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1643297579360.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1636818603688.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1636818599542.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1612446985639.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1611463943899.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1611463806788.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1606579548846.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1606579546834.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1606579543730.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/tIqpjd.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1605961131300.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1605960485101.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1605954094938.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1601656690139.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/tIqclG.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1601621387068.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1601621378546.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/mmexport1601621372801.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/IMG_20220214_191224.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/IMG_20220212_151654.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/IMG_20220120_192245.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/IMG_20220120_192236.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/IMG_20220120_192007.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/IMG_20220115_121522.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/IMG_20211112_114532.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/IMG_20211006_183240.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/IMG_20210911_193243.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/IMG_20201003_135232.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/IMG_20200531_131939.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<ul>
+<li>吃货不解释</li>
+</ul>
+<p><img loading="lazy" src="/img/wx_camera_1564900817151.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/wx_camera_1564728707757.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/wx_camera_1564049990023.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/wx_camera_1558349510112.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/Screenshot_20210208_173847.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/ProShot_20180813_170207.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1643297579360.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1636818603688.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1636818599542.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1612446985639.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1611463943899.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1611463806788.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1606579548846.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1606579546834.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1606579543730.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/tIqpjd.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1605961131300.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1605960485101.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1605954094938.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1601656690139.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/tIqclG.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1601621387068.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1601621378546.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/mmexport1601621372801.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/IMG_20220214_191224.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/IMG_20220212_151654.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/IMG_20220120_192245.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/IMG_20220120_192236.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/IMG_20220120_192007.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/IMG_20220115_121522.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/IMG_20211112_114532.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/IMG_20211006_183240.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/IMG_20210911_193243.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/IMG_20201003_135232.webp" alt="avatar"  />
+</p>
+<p><img loading="lazy" src="/img/IMG_20200531_131939.webp" alt="avatar"  />
+</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>励志的梗</title>
+      <link>https://blog.dowty.ml/posts/%E5%8A%B1%E5%BF%97%E7%9A%84%E6%A2%97/</link>
+      <pubDate>Mon, 08 Jun 2020 19:40:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E5%8A%B1%E5%BF%97%E7%9A%84%E6%A2%97/</guid>
+      <description>&lt;p&gt;憨憨（我们老班）在大考前很励志的说了几句奇句：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你们不能看到自己成绩多差，就放弃学了啊！&lt;/strong&gt;（过于真实）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;想想你们喊作业多的时候，作业多不要抱怨。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;要接受，并为此付出努力！&lt;/strong&gt;（这句用老班的语气说出来绝对是经典）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;今天你三观正了吗？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;总之就是类似这样的句子等云云。&lt;/p&gt;
+&lt;p&gt;已经被我们班传颂至全年级了（迫真
+&lt;!-- raw HTML omitted --&gt;
+老班放飞自我ing：
+&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/tI7HsD.webp&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>憨憨（我们老班）在大考前很励志的说了几句奇句：</p>
+<p><strong>你们不能看到自己成绩多差，就放弃学了啊！</strong>（过于真实）</p>
+<p><strong>想想你们喊作业多的时候，作业多不要抱怨。</strong></p>
+<p><strong>要接受，并为此付出努力！</strong>（这句用老班的语气说出来绝对是经典）</p>
+<p><strong>今天你三观正了吗？</strong></p>
+<p>总之就是类似这样的句子等云云。</p>
+<p>已经被我们班传颂至全年级了（迫真
+<!-- raw HTML omitted -->
+老班放飞自我ing：
+<img loading="lazy" src="/img/tI7HsD.webp" alt=""  />
+</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>考试了</title>
+      <link>https://blog.dowty.ml/posts/%E8%80%83%E8%AF%95%E4%BA%86/</link>
+      <pubDate>Sat, 06 Jun 2020 09:19:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E8%80%83%E8%AF%95%E4%BA%86/</guid>
+      <description>&lt;p&gt;要考试了啊啊啊！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由于期中考的极差，博客怕是很难更新了。&lt;/strong&gt;
+&lt;strong&gt;疯狂复习ing&lt;/strong&gt;&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>要考试了啊啊啊！</p>
+<p><strong>由于期中考的极差，博客怕是很难更新了。</strong>
+<strong>疯狂复习ing</strong></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>（补）还有67天</title>
+      <link>https://blog.dowty.ml/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</link>
+      <pubDate>Thu, 14 May 2020 23:15:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</guid>
+      <description>&lt;h2 id=&#34;我真的好难啊&#34;&gt;我真的好难啊&lt;/h2&gt;
+&lt;p&gt;距离大考还有67天，桌台上的作业是按摞计算的，写完一本还要再发四本。
+不知道老师是怎么找到这破博客的，上课时提到“你好像挺闲啊”……
+有更多作业写我好开心（破音）🥰&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;过着一天休息三小时的生活，我快赶上996的程序猿了😊
+emmm要接着写作业了&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<h2 id="我真的好难啊">我真的好难啊</h2>
+<p>距离大考还有67天，桌台上的作业是按摞计算的，写完一本还要再发四本。
+不知道老师是怎么找到这破博客的，上课时提到“你好像挺闲啊”……
+有更多作业写我好开心（破音）🥰</p>
+<hr>
+<p>过着一天休息三小时的生活，我快赶上996的程序猿了😊
+emmm要接着写作业了</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>（补）终于能回学校了</title>
+      <link>https://blog.dowty.ml/posts/%E8%A1%A5%E7%BB%88%E4%BA%8E%E8%83%BD%E5%9B%9E%E5%AD%A6%E6%A0%A1%E4%BA%86/</link>
+      <pubDate>Mon, 27 Apr 2020 21:01:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E7%BB%88%E4%BA%8E%E8%83%BD%E5%9B%9E%E5%AD%A6%E6%A0%A1%E4%BA%86/</guid>
+      <description>&lt;p&gt;经过长达三个月的宅家生活，终于回到学校了！愿新冠肺炎早日消失！😊&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>经过长达三个月的宅家生活，终于回到学校了！愿新冠肺炎早日消失！😊</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>（补）暂时潜水</title>
+      <link>https://blog.dowty.ml/posts/%E8%A1%A5%E6%9A%82%E6%97%B6%E6%BD%9C%E6%B0%B4/</link>
+      <pubDate>Thu, 23 Apr 2020 16:54:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E6%9A%82%E6%97%B6%E6%BD%9C%E6%B0%B4/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;中考当下我实在是不能匀出更多时间来装点我的博客了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可能随心写一些日常，但更新日记怕是很长一段时间都不会再出现新的记录。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;教程嘛……偶尔有空会来催催自己更新。虽然说已经有各位大佬的教程在先了，我的没啥用，但是自己留下的坑，自己跳下去也得把它填完（这是立flag吧……这肯定是立flag吧！）&lt;/li&gt;
+&lt;li&gt;这里的升学率……百分之40多……不拿前程开玩笑了。
+&lt;strong&gt;努力学习&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2022-3-17留：
+&lt;del&gt;所以你就鸽到现在？&lt;/del&gt;&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<ul>
+<li>中考当下我实在是不能匀出更多时间来装点我的博客了。</li>
+</ul>
+<p>可能随心写一些日常，但更新日记怕是很长一段时间都不会再出现新的记录。</p>
+<ul>
+<li>教程嘛……偶尔有空会来催催自己更新。虽然说已经有各位大佬的教程在先了，我的没啥用，但是自己留下的坑，自己跳下去也得把它填完（这是立flag吧……这肯定是立flag吧！）</li>
+<li>这里的升学率……百分之40多……不拿前程开玩笑了。
+<strong>努力学习</strong></li>
+</ul>
+<p>2022-3-17留：
+<del>所以你就鸽到现在？</del></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>（补）关于RSS的说明</title>
+      <link>https://blog.dowty.ml/posts/%E8%A1%A5%E5%85%B3%E4%BA%8Erss%E7%9A%84%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Wed, 22 Apr 2020 18:01:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E5%85%B3%E4%BA%8Erss%E7%9A%84%E8%AF%B4%E6%98%8E/</guid>
+      <description>&lt;p&gt;请注意RSS内本博客大量效果内容无法正常显示，这是因为RSS不支持html标签和Markdown语法。&lt;/p&gt;
+&lt;p&gt;建议仍使用浏览器访问本博客来获取内容。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.dowty.ml/index.xml&#34;&gt;RSS链接在此&lt;/a&gt;&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>请注意RSS内本博客大量效果内容无法正常显示，这是因为RSS不支持html标签和Markdown语法。</p>
+<p>建议仍使用浏览器访问本博客来获取内容。</p>
+<p><a href="https://blog.dowty.ml/index.xml">RSS链接在此</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>（补）如何快速搭建一个网站？（不包含任何html、css、php代码）序章</title>
+      <link>https://blog.dowty.ml/posts/%E8%A1%A5%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E4%B8%8D%E5%8C%85%E5%90%AB%E4%BB%BB%E4%BD%95htmlcssphp%E4%BB%A3%E7%A0%81%E5%BA%8F%E7%AB%A0/</link>
+      <pubDate>Mon, 13 Apr 2020 23:21:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E4%B8%8D%E5%8C%85%E5%90%AB%E4%BB%BB%E4%BD%95htmlcssphp%E4%BB%A3%E7%A0%81%E5%BA%8F%E7%AB%A0/</guid>
+      <description>&lt;h5 id=&#34;以下描述的过程纯粹是为在网络方面零基础小白的提供的比喻并不准确同时为了确保任何零基础无任何学习计算机经历的人也能学会多处内容会做详细解释很啰嗦以下ip均指ipv4地址就是虚拟网络世界中的身份证&#34;&gt;以下描述的过程纯粹是为在网络方面零基础小白的提供的比喻，并不准确，同时为了确保任何零基础、无任何学习计算机经历的人也能学会，多处内容会做详细解释，很啰嗦。（以下IP均指IPV4地址，就是虚拟网络世界中的身份证）&lt;/h5&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;del&gt;你自己也知道啰嗦啊……&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;请多多指教和包涵啦。&lt;/p&gt;
+&lt;p&gt;2020年了，最近是互联网的繁盛时期，也是互联网公司的寒冬时期。疫情的突然爆发间接导致十四亿人呆在家中。如果不想无所事事的话，自己搭建个网站是个很好的选择。但在搭建网站前，我们要先了解&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;网站是怎样展现在我们眼前的&#34;&gt;网站是怎样展现在我们眼前的？&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;h6 id=&#34;1-内网用户下面会详细讲到&#34;&gt;1. 内网用户（下面会详细讲到）&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;First step: 首先,我们从客户端（也就是我们上网的电子产品，如电脑）上通过我们的路由器向网络提供商ISP（中国移动、中国电信、中国联通）的NAT发起一个请求，表示我们要访问网站的域名。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Second step: NAT将你的请求转发给DNS。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Third step: DNS把你要访问网站的真实IP发送给NAT。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fourth step: NAT将真实ip中转给我们。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fifth step: 我们直接向真实IP的网站主机发出访问的意向，真实IP网站主机允许并将网站内容发送给我们，我们再访问。&lt;/p&gt;
+&lt;h5 id=&#34;2-外网用户-即有真实可用公认独一无二的外网ip非特殊用途的地址非专用网络的地址&#34;&gt;2. 外网用户 （即有真实可用、公认独一无二的外网IP，非特殊用途的地址，非专用网络的地址）&lt;/h5&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;First step: 客户端向DNS发出请求，表示我们要访问网站的域名。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Second step: DNS把你要访问网站的真实IP发送给你。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Third step: 我们直接向真实IP的网站主机发出访问的意向，真实IP网站主机允许并将网站内容发送给我们，我们再访问。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;由此可见，外网用户可以直接访问网络，内网用户则需要通过集中的NAT中转来访问网络。那两者的网络速度会有差别吗？有的，只不过我们与NAT之间的中转过程很快，快到我们察觉不到。（用BT的用户会容易察觉，只能被动接受数据）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;那么这会对我们搭建网站有什么影响？很明显，因为内网用户没有独一无二的ip作为自己的身份标志，只能被动接受数据，他人无法直接连接到我们的电脑来访问我们搭建的网站，NAT也没有帮助他人区别内网用户们的能力。这就导致了一个新的技术出现了，叫内网穿透。（其实木有什么技术，只是有公网的用户提供各个端口，帮内网用户转发网站信息而已。）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;常见的内网穿透服务商有-各种有免费服务器的frp公云花生壳ngrokfcnnat123&#34;&gt;常见的内网穿透服务商有： 各种有免费服务器的frp、公云、花生壳、ngrok、FCN、nat123&lt;/h4&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;以上服务商均有免费限制服务（人家也要恰饭的嘛）
+实在不放心就氪金，买一台服务器（可选择国内国外的，国内的愁备案，国外的愁速度和被国内屏蔽就好了）
+序章end&lt;/code&gt;&lt;/pre&gt;
+</description>
+      <content:encoded><![CDATA[<h5 id="以下描述的过程纯粹是为在网络方面零基础小白的提供的比喻并不准确同时为了确保任何零基础无任何学习计算机经历的人也能学会多处内容会做详细解释很啰嗦以下ip均指ipv4地址就是虚拟网络世界中的身份证">以下描述的过程纯粹是为在网络方面零基础小白的提供的比喻，并不准确，同时为了确保任何零基础、无任何学习计算机经历的人也能学会，多处内容会做详细解释，很啰嗦。（以下IP均指IPV4地址，就是虚拟网络世界中的身份证）</h5>
+<hr>
+<blockquote>
+<p><del>你自己也知道啰嗦啊……</del></p>
+</blockquote>
+<p>请多多指教和包涵啦。</p>
+<p>2020年了，最近是互联网的繁盛时期，也是互联网公司的寒冬时期。疫情的突然爆发间接导致十四亿人呆在家中。如果不想无所事事的话，自己搭建个网站是个很好的选择。但在搭建网站前，我们要先了解</p>
+<ul>
+<li>
+<h4 id="网站是怎样展现在我们眼前的">网站是怎样展现在我们眼前的？</h4>
+</li>
+</ul>
+<hr>
+<blockquote>
+<h6 id="1-内网用户下面会详细讲到">1. 内网用户（下面会详细讲到）</h6>
+<ul>
+<li>
+<p>First step: 首先,我们从客户端（也就是我们上网的电子产品，如电脑）上通过我们的路由器向网络提供商ISP（中国移动、中国电信、中国联通）的NAT发起一个请求，表示我们要访问网站的域名。</p>
+</li>
+<li>
+<p>Second step: NAT将你的请求转发给DNS。</p>
+</li>
+<li>
+<p>Third step: DNS把你要访问网站的真实IP发送给NAT。</p>
+</li>
+<li>
+<p>Fourth step: NAT将真实ip中转给我们。</p>
+</li>
+<li>
+<p>Fifth step: 我们直接向真实IP的网站主机发出访问的意向，真实IP网站主机允许并将网站内容发送给我们，我们再访问。</p>
+<h5 id="2-外网用户-即有真实可用公认独一无二的外网ip非特殊用途的地址非专用网络的地址">2. 外网用户 （即有真实可用、公认独一无二的外网IP，非特殊用途的地址，非专用网络的地址）</h5>
+</li>
+<li>
+<p>First step: 客户端向DNS发出请求，表示我们要访问网站的域名。</p>
+</li>
+<li>
+<p>Second step: DNS把你要访问网站的真实IP发送给你。</p>
+</li>
+<li>
+<p>Third step: 我们直接向真实IP的网站主机发出访问的意向，真实IP网站主机允许并将网站内容发送给我们，我们再访问。</p>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p>由此可见，外网用户可以直接访问网络，内网用户则需要通过集中的NAT中转来访问网络。那两者的网络速度会有差别吗？有的，只不过我们与NAT之间的中转过程很快，快到我们察觉不到。（用BT的用户会容易察觉，只能被动接受数据）</p>
+</li>
+<li>
+<p>那么这会对我们搭建网站有什么影响？很明显，因为内网用户没有独一无二的ip作为自己的身份标志，只能被动接受数据，他人无法直接连接到我们的电脑来访问我们搭建的网站，NAT也没有帮助他人区别内网用户们的能力。这就导致了一个新的技术出现了，叫内网穿透。（其实木有什么技术，只是有公网的用户提供各个端口，帮内网用户转发网站信息而已。）</p>
+</li>
+</ul>
+<h4 id="常见的内网穿透服务商有-各种有免费服务器的frp公云花生壳ngrokfcnnat123">常见的内网穿透服务商有： 各种有免费服务器的frp、公云、花生壳、ngrok、FCN、nat123</h4>
+<hr>
+<pre><code>以上服务商均有免费限制服务（人家也要恰饭的嘛）
+实在不放心就氪金，买一台服务器（可选择国内国外的，国内的愁备案，国外的愁速度和被国内屏蔽就好了）
+序章end</code></pre>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>（补）介绍</title>
+      <link>https://blog.dowty.ml/posts/%E8%A1%A5%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Fri, 10 Apr 2020 09:45:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E4%BB%8B%E7%BB%8D/</guid>
+      <description>&lt;blockquote&gt;
+&lt;h3 id=&#34;欢迎来到某入门级新手的个人博客&#34;&gt;&lt;strong&gt;欢迎来到某入门级新手的个人博客&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;这里主要是记录&#34;&gt;这里主要是记录：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;做网站的过程还有个人遇到的一些问题最后是怎么解决的&lt;/li&gt;
+&lt;li&gt;生活日常吐槽（吐槽本身就是槽点吧😝）&lt;/li&gt;
+&lt;li&gt;日常的生活快记&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;某些不可gaoren（搞人）的秘密&lt;/del&gt;和推荐。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;del&gt;总之我是一时兴起的……&lt;/del&gt;
+最后自顶自己维护的论坛还有github（里面没什么的==）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;论坛地址如下
+主域名：? （ping平均100ms）&lt;/p&gt;
+&lt;p&gt;二级域名①：? （ping平均38ms，有每月流量限制）&lt;/p&gt;
+&lt;p&gt;二级域名②：? （ping平均33ms，有每月流量限制）&lt;/p&gt;
+&lt;p&gt;github如下(没错你网卡了）&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<blockquote>
+<h3 id="欢迎来到某入门级新手的个人博客"><strong>欢迎来到某入门级新手的个人博客</strong></h3>
+<h4 id="这里主要是记录">这里主要是记录：</h4>
+<ul>
+<li>做网站的过程还有个人遇到的一些问题最后是怎么解决的</li>
+<li>生活日常吐槽（吐槽本身就是槽点吧😝）</li>
+<li>日常的生活快记</li>
+<li><del>某些不可gaoren（搞人）的秘密</del>和推荐。</li>
+</ul>
+<p><del>总之我是一时兴起的……</del>
+最后自顶自己维护的论坛还有github（里面没什么的==）</p>
+</blockquote>
+<p>论坛地址如下
+主域名：? （ping平均100ms）</p>
+<p>二级域名①：? （ping平均38ms，有每月流量限制）</p>
+<p>二级域名②：? （ping平均33ms，有每月流量限制）</p>
+<p>github如下(没错你网卡了）</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>（补）更新日志</title>
+      <link>https://blog.dowty.ml/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Thu, 09 Apr 2020 11:21:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
+      <description>&lt;h1 id=&#34;这里是博客的更新日志&#34;&gt;这里是博客的更新日志&lt;/h1&gt;
+&lt;p&gt;4.8 &lt;strong&gt;博客搭建完毕&lt;/strong&gt;，域名申请成功：oblog.ml（4月10日更换了DNS服务商，可用！) 是因为DNS解析方依然木有解析……只能直接用穿透搭建了。&lt;/p&gt;
+&lt;p&gt;4.9 &lt;strong&gt;添加外观以及特殊功能&lt;/strong&gt;,&lt;strong&gt;晚9点左右更换DNS解析方，可以正式使用域名了！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;4.10 &lt;strong&gt;论坛域名修正，去除端口号，论坛CDN加速节奏带起！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;论坛目前界面：&lt;a href=&#34;https://blog.dowty.ml/img/20201009BBS.webp&#34; title=&#34;2020年4月10日论坛界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/20201009BBS.webp&#34; alt=&#34;2020年4月10日论坛界面&#34;  title=&#34;2020年4月10日论坛界面&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;博客目前界面：&lt;a href=&#34;https://blog.dowty.ml/img/20200410Blog.webp&#34; title=&#34;2020年10月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/20200410Blog.webp&#34; alt=&#34;2020年4月10日博客界面&#34;  title=&#34;2020年10月4日博客界面&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4.11 由于CDN方被这次疫情的突然袭击损失巨大，服务器有丢包不稳定，&lt;strong&gt;因此博客会在4月20号之前停止使用CDN加速&lt;/strong&gt;，届时博客加载速度将变慢一些（大约100ms左右，我的网络可ping到80ms左右）。同时更换了网站托管的服务器来弥补速度：美国俄勒冈的AWS更换至新加坡。&lt;/p&gt;
+&lt;p&gt;4.12 看来今天网速很好，早上9点ping论坛的速度为58ms，ping博客的速度有19ms。&lt;/p&gt;
+&lt;p&gt;4.20 不知道为什么，DNS始终解析到CDN商的中国服务器下，改了也木有用。等了十天后ping出来的ip依旧是CDN的服务器。绝了……&lt;/p&gt;
+&lt;p&gt;4.22 &lt;strong&gt;更新第二个域名oscarblog.ml&lt;/strong&gt;,之前的根域名用不了，于是切换了第二个域名。同时&lt;strong&gt;更新主题、优化缓存&lt;/strong&gt;，现在博客的访问速度即使没有CDN加速也能ping到60ms左右的延迟了。&lt;strong&gt;新增友情链接。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;4.23&lt;strong&gt;更新多个备用域名，不常启用。同时成功实现https！已开启HSTS，全站强制https。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;4.24博客目前界面：&lt;a href=&#34;https://blog.dowty.ml/img/20200424Blog.webp&#34; title=&#34;2020年4月24日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/20200424Blog.webp&#34; alt=&#34;2020年4月24日论坛界面&#34;  title=&#34;2020年4月24日博客界面&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5.4&lt;strong&gt;更新界面，扩展功能。&lt;/strong&gt;（页面调用得十分痛苦，一天里不知道又制造了多少惊喜的bug）&lt;/p&gt;
+&lt;p&gt;博客5月4号界面：&lt;a href=&#34;https://blog.dowty.ml/img/20200504Blog.webp&#34; title=&#34;2020年5月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/20200504Blog.webp&#34; alt=&#34;2020年5月4日论坛界面&#34;  title=&#34;2020年5月4日博客界面&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;现在可访问博客的域名有：
+?&lt;/p&gt;
+&lt;p&gt;如果网站加载速度很慢或使用流量，可以使用本博客的AMP版：
+?&lt;/p&gt;
+&lt;p&gt;AMP版更为简洁但有部分内容不能正常显示。
+?&lt;/p&gt;
+&lt;p&gt;如果以上网址都不能用，请联系站长：?&lt;/p&gt;
+&lt;p&gt;收到消息后博客将启用备用网址，一般情况下不开启。（访问速度极慢且丢包75%）&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Update soon.&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<h1 id="这里是博客的更新日志">这里是博客的更新日志</h1>
+<p>4.8 <strong>博客搭建完毕</strong>，域名申请成功：oblog.ml（4月10日更换了DNS服务商，可用！) 是因为DNS解析方依然木有解析……只能直接用穿透搭建了。</p>
+<p>4.9 <strong>添加外观以及特殊功能</strong>,<strong>晚9点左右更换DNS解析方，可以正式使用域名了！</strong></p>
+<p>4.10 <strong>论坛域名修正，去除端口号，论坛CDN加速节奏带起！</strong></p>
+<p>论坛目前界面：<a href="/img/20201009BBS.webp" title="2020年4月10日论坛界面"><img loading="lazy" src="/img/20201009BBS.webp" alt="2020年4月10日论坛界面"  title="2020年4月10日论坛界面"  />
+</a></p>
+<p>博客目前界面：<a href="/img/20200410Blog.webp" title="2020年10月4日博客界面"><img loading="lazy" src="/img/20200410Blog.webp" alt="2020年4月10日博客界面"  title="2020年10月4日博客界面"  />
+</a></p>
+<p>4.11 由于CDN方被这次疫情的突然袭击损失巨大，服务器有丢包不稳定，<strong>因此博客会在4月20号之前停止使用CDN加速</strong>，届时博客加载速度将变慢一些（大约100ms左右，我的网络可ping到80ms左右）。同时更换了网站托管的服务器来弥补速度：美国俄勒冈的AWS更换至新加坡。</p>
+<p>4.12 看来今天网速很好，早上9点ping论坛的速度为58ms，ping博客的速度有19ms。</p>
+<p>4.20 不知道为什么，DNS始终解析到CDN商的中国服务器下，改了也木有用。等了十天后ping出来的ip依旧是CDN的服务器。绝了……</p>
+<p>4.22 <strong>更新第二个域名oscarblog.ml</strong>,之前的根域名用不了，于是切换了第二个域名。同时<strong>更新主题、优化缓存</strong>，现在博客的访问速度即使没有CDN加速也能ping到60ms左右的延迟了。<strong>新增友情链接。</strong></p>
+<p>4.23<strong>更新多个备用域名，不常启用。同时成功实现https！已开启HSTS，全站强制https。</strong></p>
+<p>4.24博客目前界面：<a href="/img/20200424Blog.webp" title="2020年4月24日博客界面"><img loading="lazy" src="/img/20200424Blog.webp" alt="2020年4月24日论坛界面"  title="2020年4月24日博客界面"  />
+</a></p>
+<p>5.4<strong>更新界面，扩展功能。</strong>（页面调用得十分痛苦，一天里不知道又制造了多少惊喜的bug）</p>
+<p>博客5月4号界面：<a href="/img/20200504Blog.webp" title="2020年5月4日博客界面"><img loading="lazy" src="/img/20200504Blog.webp" alt="2020年5月4日论坛界面"  title="2020年5月4日博客界面"  />
+</a></p>
+<p>现在可访问博客的域名有：
+?</p>
+<p>如果网站加载速度很慢或使用流量，可以使用本博客的AMP版：
+?</p>
+<p>AMP版更为简洁但有部分内容不能正常显示。
+?</p>
+<p>如果以上网址都不能用，请联系站长：?</p>
+<p>收到消息后博客将启用备用网址，一般情况下不开启。（访问速度极慢且丢包75%）</p>
+<hr>
+<p>Update soon.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>（补）test</title>
+      <link>https://blog.dowty.ml/posts/%E8%A1%A5test-/</link>
+      <pubDate>Wed, 08 Apr 2020 18:44:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E8%A1%A5test-/</guid>
+      <description>&lt;p&gt;本人确信自己不是标题党，尽管标题有明显特征……&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本博客起点。&lt;/em&gt;
+&lt;strong&gt;Here we start！&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@echo
+shutdown -s -t 1
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;:)开个玩笑，咳咳咳。
+这里是Oscar的博客，搭建博客真的比我想象中复杂很多（谁叫你拿自家电脑做服务器，还同时塞两个站点进去）
+不过还是艰难地成功建好了，不过不知道之后域名被DNS商那边解析以后还要不要做一遍博客QAQ
+这个博客的界面我一定会美化好的（立起大大的flag）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;想一想还是好的嘛，万一实现了呢&lt;/p&gt;
+&lt;p&gt;（那也得等全市考完，被骂死以后了……）&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+      <content:encoded><![CDATA[<p>本人确信自己不是标题党，尽管标题有明显特征……</p>
+<hr>
+<p><em>本博客起点。</em>
+<strong>Here we start！</strong></p>
+<pre><code>@echo
+shutdown -s -t 1
+end
+</code></pre>
+<hr>
+<p>:)开个玩笑，咳咳咳。
+这里是Oscar的博客，搭建博客真的比我想象中复杂很多（谁叫你拿自家电脑做服务器，还同时塞两个站点进去）
+不过还是艰难地成功建好了，不过不知道之后域名被DNS商那边解析以后还要不要做一遍博客QAQ
+这个博客的界面我一定会美化好的（立起大大的flag）</p>
+<blockquote>
+<p>想一想还是好的嘛，万一实现了呢</p>
+<p>（那也得等全市考完，被骂死以后了……）</p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>（补）震惊！某初二学生的初中生活竟如此……！</title>
+      <link>https://blog.dowty.ml/posts/%E8%A1%A5%E9%9C%87%E6%83%8A%E6%9F%90%E5%88%9D%E4%BA%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E5%88%9D%E4%B8%AD%E7%94%9F%E6%B4%BB%E7%AB%9F%E5%A6%82%E6%AD%A4/</link>
+      <pubDate>Thu, 30 May 2019 17:10:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E9%9C%87%E6%83%8A%E6%9F%90%E5%88%9D%E4%BA%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E5%88%9D%E4%B8%AD%E7%94%9F%E6%B4%BB%E7%AB%9F%E5%A6%82%E6%AD%A4/</guid>
+      <description>&lt;p&gt;本人确信自己不是标题党，尽管标题有明显特征……&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;老实说这是我的黑历史，真的。&lt;/p&gt;
+&lt;p&gt;初一初二特别爱出入各大mall，那里消费动辄几百上千，上不封顶。（我个穷苦小孩是怎么两年在里面玩的很开心的？？？）&lt;/p&gt;
+&lt;p&gt;大多是应同学好友邀请，剩余都是路过时进去看看的。&lt;/p&gt;
+&lt;p&gt;我自己在购物中心里也有夸张的消费。&lt;/p&gt;
+&lt;p&gt;尤其是初二，粗略地算了算，这三百多天的日子里自己光是吃就花了十万多，
+主要是因为那一学期结交了一个死党（很豪但是不土），
+看我不敢去高档场所就约我一起去，给我钱去付款。（表面上AA，实际绝大部分都是他出的）&lt;/p&gt;
+&lt;p&gt;还有的原因是他们家是独生子女家庭，没人陪着去玩挺孤单的。&lt;/p&gt;
+&lt;p&gt;记录一下当时去吃的画面：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/tIqclG.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;为什么说不土呢？因为人家懂生活啊，你见过给你做过饭吃的死党吗？&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/tIqNMr.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;然后在回归原话题，正是因为出去玩，年少的我学会了喝酒……&lt;/p&gt;
+&lt;p&gt;起因是两个同学约我去购物，中午在麦当劳吃饭，随后她俩就去下面71便利店买了三瓶啤酒。&lt;/p&gt;
+&lt;p&gt;就是酱紫的：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/tIqpjd.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;还好我们都不会太过火，就只是一点点慢慢喝。&lt;/p&gt;
+&lt;p&gt;（真正过火的在新年家族聚会上，几十号亲戚，自己逞能在1分钟内往嘴里灌了一开水壶的红酒后，当晚硬是没吐，就……再没敢碰过酒。）&lt;/p&gt;
+&lt;p&gt;话说自己想下次做个美食合集，看看我这几年都吃了什么 /doge（狗头防打&lt;/p&gt;
+&lt;p&gt;时不时发面前美食迫害班里吃货+1&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>本人确信自己不是标题党，尽管标题有明显特征……</p>
+<hr>
+<p>老实说这是我的黑历史，真的。</p>
+<p>初一初二特别爱出入各大mall，那里消费动辄几百上千，上不封顶。（我个穷苦小孩是怎么两年在里面玩的很开心的？？？）</p>
+<p>大多是应同学好友邀请，剩余都是路过时进去看看的。</p>
+<p>我自己在购物中心里也有夸张的消费。</p>
+<p>尤其是初二，粗略地算了算，这三百多天的日子里自己光是吃就花了十万多，
+主要是因为那一学期结交了一个死党（很豪但是不土），
+看我不敢去高档场所就约我一起去，给我钱去付款。（表面上AA，实际绝大部分都是他出的）</p>
+<p>还有的原因是他们家是独生子女家庭，没人陪着去玩挺孤单的。</p>
+<p>记录一下当时去吃的画面：</p>
+<p><img loading="lazy" src="/img/tIqclG.webp" alt="avatar"  />
+</p>
+<p>为什么说不土呢？因为人家懂生活啊，你见过给你做过饭吃的死党吗？</p>
+<p><img loading="lazy" src="/img/tIqNMr.webp" alt="avatar"  />
+</p>
+<p>然后在回归原话题，正是因为出去玩，年少的我学会了喝酒……</p>
+<p>起因是两个同学约我去购物，中午在麦当劳吃饭，随后她俩就去下面71便利店买了三瓶啤酒。</p>
+<p>就是酱紫的：</p>
+<p><img loading="lazy" src="/img/tIqpjd.webp" alt="avatar"  />
+</p>
+<p>还好我们都不会太过火，就只是一点点慢慢喝。</p>
+<p>（真正过火的在新年家族聚会上，几十号亲戚，自己逞能在1分钟内往嘴里灌了一开水壶的红酒后，当晚硬是没吐，就……再没敢碰过酒。）</p>
+<p>话说自己想下次做个美食合集，看看我这几年都吃了什么 /doge（狗头防打</p>
+<p>时不时发面前美食迫害班里吃货+1</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://blog.dowty.ml/posts/hello-world/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/hello-world/</guid>
+      <description>&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h2&gt;
+&lt;h3 id=&#34;run-server&#34;&gt;Run server&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo server
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <content:encoded><![CDATA[<h2 id="quick-start">Quick Start</h2>
+<h3 id="run-server">Run server</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ hugo server
+</span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
