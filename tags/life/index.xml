@@ -263,44 +263,6 @@
     </item>
     
     <item>
-      <title>（补）更新日志</title>
-      <link>https://blog.dowty.ml/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
-      <pubDate>Thu, 09 Apr 2020 11:21:00 +0000</pubDate>
-      
-      <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
-      <description>这里是博客的更新日志 4.8 博客搭建完毕，域名申请成功：oblog.ml（4月10日更换了DNS服务商，可用！) 是因为DNS解析方依然木有解析……</description>
-      <content:encoded><![CDATA[<h1 id="这里是博客的更新日志">这里是博客的更新日志</h1>
-<p>4.8 <strong>博客搭建完毕</strong>，域名申请成功：oblog.ml（4月10日更换了DNS服务商，可用！) 是因为DNS解析方依然木有解析……只能直接用穿透搭建了。</p>
-<p>4.9 <strong>添加外观以及特殊功能</strong>,<strong>晚9点左右更换DNS解析方，可以正式使用域名了！</strong></p>
-<p>4.10 <strong>论坛域名修正，去除端口号，论坛CDN加速节奏带起！</strong></p>
-<p>论坛目前界面：<a href="/img/20201009BBS.webp" title="2020年4月10日论坛界面"><img loading="lazy" src="/img/20201009BBS.webp" alt="2020年4月10日论坛界面"  title="2020年4月10日论坛界面"  />
-</a></p>
-<p>博客目前界面：<a href="/img/20200410Blog.webp" title="2020年10月4日博客界面"><img loading="lazy" src="/img/20200410Blog.webp" alt="2020年4月10日博客界面"  title="2020年10月4日博客界面"  />
-</a></p>
-<p>4.11 由于CDN方被这次疫情的突然袭击损失巨大，服务器有丢包不稳定，<strong>因此博客会在4月20号之前停止使用CDN加速</strong>，届时博客加载速度将变慢一些（大约100ms左右，我的网络可ping到80ms左右）。同时更换了网站托管的服务器来弥补速度：美国俄勒冈的AWS更换至新加坡。</p>
-<p>4.12 看来今天网速很好，早上9点ping论坛的速度为58ms，ping博客的速度有19ms。</p>
-<p>4.20 不知道为什么，DNS始终解析到CDN商的中国服务器下，改了也木有用。等了十天后ping出来的ip依旧是CDN的服务器。绝了……</p>
-<p>4.22 <strong>更新第二个域名oscarblog.ml</strong>,之前的根域名用不了，于是切换了第二个域名。同时<strong>更新主题、优化缓存</strong>，现在博客的访问速度即使没有CDN加速也能ping到60ms左右的延迟了。<strong>新增友情链接。</strong></p>
-<p>4.23<strong>更新多个备用域名，不常启用。同时成功实现https！已开启HSTS，全站强制https。</strong></p>
-<p>4.24博客目前界面：<a href="/img/20200424Blog.webp" title="2020年4月24日博客界面"><img loading="lazy" src="/img/20200424Blog.webp" alt="2020年4月24日论坛界面"  title="2020年4月24日博客界面"  />
-</a></p>
-<p>5.4<strong>更新界面，扩展功能。</strong>（页面调用得十分痛苦，一天里不知道又制造了多少惊喜的bug）</p>
-<p>博客5月4号界面：<a href="/img/20200504Blog.webp" title="2020年5月4日博客界面"><img loading="lazy" src="/img/20200504Blog.webp" alt="2020年5月4日论坛界面"  title="2020年5月4日博客界面"  />
-</a></p>
-<p>现在可访问博客的域名有：
-?</p>
-<p>如果网站加载速度很慢或使用流量，可以使用本博客的AMP版：
-?</p>
-<p>AMP版更为简洁但有部分内容不能正常显示。
-?</p>
-<p>如果以上网址都不能用，请联系站长：?</p>
-<p>收到消息后博客将启用备用网址，一般情况下不开启。（访问速度极慢且丢包75%）</p>
-<hr>
-<p>Update soon.</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
       <title>（补）震惊！某初二学生的初中生活竟如此……！</title>
       <link>https://blog.dowty.ml/posts/%E8%A1%A5%E9%9C%87%E6%83%8A%E6%9F%90%E5%88%9D%E4%BA%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E5%88%9D%E4%B8%AD%E7%94%9F%E6%B4%BB%E7%AB%9F%E5%A6%82%E6%AD%A4/</link>
       <pubDate>Thu, 30 May 2019 17:10:00 +0000</pubDate>
