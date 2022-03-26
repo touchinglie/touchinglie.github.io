@@ -110,7 +110,7 @@ deploy
       
       <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
       <description>这里是博客的更新日志 4.8 博客搭建完毕，域名申请成功：oblog.ml（4月10日更换了DNS服务商，可用！) 是因为DNS解析方依然木有解析……</description>
-      <content:encoded><![CDATA[<h1 id="这里是博客的更新日志">这里是博客的更新日志</h1>
+      <content:encoded><![CDATA[<h2 id="这里是博客的更新日志">这里是博客的更新日志</h2>
 <p>4.8 <strong>博客搭建完毕</strong>，域名申请成功：oblog.ml（4月10日更换了DNS服务商，可用！) 是因为DNS解析方依然木有解析……只能直接用穿透搭建了。</p>
 <p>4.9 <strong>添加外观以及特殊功能</strong>,<strong>晚9点左右更换DNS解析方，可以正式使用域名了！</strong></p>
 <p>4.10 <strong>论坛域名修正，去除端口号，论坛CDN加速节奏带起！</strong></p>
