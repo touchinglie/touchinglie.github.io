@@ -34,6 +34,10 @@ deploy
 毕竟目前主要的是先做好优化</p>
 <p><img loading="lazy" src="/img/blog-lighthouse-test.webp" alt="avatar"  />
 </p>
+<h3 id="2022329">2022.3.29</h3>
+<p>目前仍在尝试部署域名稳定（指heroku自带域名🐶）的博客，系统是typecho
+不求速度，只求稳定和随时随地能有后台写博客。
+加油吧</p>
 ]]></content:encoded>
     </item>
     
