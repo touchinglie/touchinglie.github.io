@@ -13,7 +13,31 @@
       <pubDate>Thu, 24 Mar 2022 11:10:00 +0000</pubDate>
       
       <guid>https://blog.dowty.ml/posts/%E6%9B%B4%E6%96%B0/</guid>
-      <description>本博客第三次更新 Here we start！ hugo git remote *.git deploy 新的博客系统已经从hexo迁移到hugo啦！ 仍怀念三年前用typecho装上一大堆插件，还用自家电</description>
+      <description>&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本博客第三次更新&lt;/em&gt;
+&lt;strong&gt;Here we start！&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo
+git remote *.git
+deploy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;新的博客系统已经从hexo迁移到hugo啦！
+仍怀念三年前用typecho装上一大堆插件，还用自家电脑内网穿透部署博客的画面。&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;不过有个后台的博客系统确实对新手很友好啊&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;就是有点费电脑&lt;/del&gt;&lt;/p&gt;
+&lt;h2 id=&#34;接下来是更新日志&#34;&gt;接下来是更新日志&lt;/h2&gt;
+&lt;h3 id=&#34;2022324&#34;&gt;2022.3.24&lt;/h3&gt;
+&lt;p&gt;博客经过26次commits已经基本部署好了，&lt;strong&gt;Google Lighthouse的分数也在90+&lt;/strong&gt;！
+（当然这视个人网络情况而定，不过网站的漏洞包括XSS攻击都在用CSP等策略在修复了）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;至于美化嘛……有时间再做&lt;/strong&gt;
+毕竟目前主要的是先做好优化&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/blog-lighthouse-test.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;2022329&#34;&gt;2022.3.29&lt;/h3&gt;
+&lt;p&gt;目前仍在尝试部署域名稳定（指heroku自带域名🐶）的博客，系统是typecho
+不求速度，只求稳定和随时随地能有后台写博客。
+加油吧&lt;/p&gt;
+</description>
       <content:encoded><![CDATA[<hr>
 <p><em>本博客第三次更新</em>
 <strong>Here we start！</strong></p>
@@ -47,7 +71,63 @@ deploy
       <pubDate>Mon, 13 Apr 2020 23:21:00 +0000</pubDate>
       
       <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E4%B8%8D%E5%8C%85%E5%90%AB%E4%BB%BB%E4%BD%95htmlcssphp%E4%BB%A3%E7%A0%81%E5%BA%8F%E7%AB%A0/</guid>
-      <description>以下描述的过程纯粹是为在网络方面零基础小白的提供的比喻，并不准确，同时为了确保任何零基础、无任何学习计算机经历的人也能学会，多处内容会做详细</description>
+      <description>&lt;h5 id=&#34;以下描述的过程纯粹是为在网络方面零基础小白的提供的比喻并不准确同时为了确保任何零基础无任何学习计算机经历的人也能学会多处内容会做详细解释很啰嗦以下ip均指ipv4地址就是虚拟网络世界中的身份证&#34;&gt;以下描述的过程纯粹是为在网络方面零基础小白的提供的比喻，并不准确，同时为了确保任何零基础、无任何学习计算机经历的人也能学会，多处内容会做详细解释，很啰嗦。（以下IP均指IPV4地址，就是虚拟网络世界中的身份证）&lt;/h5&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;del&gt;你自己也知道啰嗦啊……&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;请多多指教和包涵啦。&lt;/p&gt;
+&lt;p&gt;2020年了，最近是互联网的繁盛时期，也是互联网公司的寒冬时期。疫情的突然爆发间接导致十四亿人呆在家中。如果不想无所事事的话，自己搭建个网站是个很好的选择。但在搭建网站前，我们要先了解&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;网站是怎样展现在我们眼前的&#34;&gt;网站是怎样展现在我们眼前的？&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;h6 id=&#34;1-内网用户下面会详细讲到&#34;&gt;1. 内网用户（下面会详细讲到）&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;First step: 首先,我们从客户端（也就是我们上网的电子产品，如电脑）上通过我们的路由器向网络提供商ISP（中国移动、中国电信、中国联通）的NAT发起一个请求，表示我们要访问网站的域名。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Second step: NAT将你的请求转发给DNS。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Third step: DNS把你要访问网站的真实IP发送给NAT。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fourth step: NAT将真实ip中转给我们。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fifth step: 我们直接向真实IP的网站主机发出访问的意向，真实IP网站主机允许并将网站内容发送给我们，我们再访问。&lt;/p&gt;
+&lt;h5 id=&#34;2-外网用户-即有真实可用公认独一无二的外网ip非特殊用途的地址非专用网络的地址&#34;&gt;2. 外网用户 （即有真实可用、公认独一无二的外网IP，非特殊用途的地址，非专用网络的地址）&lt;/h5&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;First step: 客户端向DNS发出请求，表示我们要访问网站的域名。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Second step: DNS把你要访问网站的真实IP发送给你。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Third step: 我们直接向真实IP的网站主机发出访问的意向，真实IP网站主机允许并将网站内容发送给我们，我们再访问。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;由此可见，外网用户可以直接访问网络，内网用户则需要通过集中的NAT中转来访问网络。那两者的网络速度会有差别吗？有的，只不过我们与NAT之间的中转过程很快，快到我们察觉不到。（用BT的用户会容易察觉，只能被动接受数据）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;那么这会对我们搭建网站有什么影响？很明显，因为内网用户没有独一无二的ip作为自己的身份标志，只能被动接受数据，他人无法直接连接到我们的电脑来访问我们搭建的网站，NAT也没有帮助他人区别内网用户们的能力。这就导致了一个新的技术出现了，叫内网穿透。（其实木有什么技术，只是有公网的用户提供各个端口，帮内网用户转发网站信息而已。）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;常见的内网穿透服务商有-各种有免费服务器的frp公云花生壳ngrokfcnnat123&#34;&gt;常见的内网穿透服务商有： 各种有免费服务器的frp、公云、花生壳、ngrok、FCN、nat123&lt;/h4&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;以上服务商均有免费限制服务（人家也要恰饭的嘛）
+实在不放心就氪金，买一台服务器（可选择国内国外的，国内的愁备案，国外的愁速度和被国内屏蔽就好了）
+序章end&lt;/code&gt;&lt;/pre&gt;
+</description>
       <content:encoded><![CDATA[<h5 id="以下描述的过程纯粹是为在网络方面零基础小白的提供的比喻并不准确同时为了确保任何零基础无任何学习计算机经历的人也能学会多处内容会做详细解释很啰嗦以下ip均指ipv4地址就是虚拟网络世界中的身份证">以下描述的过程纯粹是为在网络方面零基础小白的提供的比喻，并不准确，同时为了确保任何零基础、无任何学习计算机经历的人也能学会，多处内容会做详细解释，很啰嗦。（以下IP均指IPV4地址，就是虚拟网络世界中的身份证）</h5>
 <hr>
 <blockquote>
@@ -113,7 +193,35 @@ deploy
       <pubDate>Thu, 09 Apr 2020 11:21:00 +0000</pubDate>
       
       <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
-      <description>这里是博客的更新日志 4.8 博客搭建完毕，域名申请成功：oblog.ml（4月10日更换了DNS服务商，可用！) 是因为DNS解析方依然木有解析……</description>
+      <description>&lt;h2 id=&#34;这里是博客的更新日志&#34;&gt;这里是博客的更新日志&lt;/h2&gt;
+&lt;p&gt;4.8 &lt;strong&gt;博客搭建完毕&lt;/strong&gt;，域名申请成功：oblog.ml（4月10日更换了DNS服务商，可用！) 是因为DNS解析方依然木有解析……只能直接用穿透搭建了。&lt;/p&gt;
+&lt;p&gt;4.9 &lt;strong&gt;添加外观以及特殊功能&lt;/strong&gt;,&lt;strong&gt;晚9点左右更换DNS解析方，可以正式使用域名了！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;4.10 &lt;strong&gt;论坛域名修正，去除端口号，论坛CDN加速节奏带起！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;论坛目前界面：&lt;a href=&#34;https://blog.dowty.ml/img/20201009BBS.webp&#34; title=&#34;2020年4月10日论坛界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/20201009BBS.webp&#34; alt=&#34;2020年4月10日论坛界面&#34;  title=&#34;2020年4月10日论坛界面&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;博客目前界面：&lt;a href=&#34;https://blog.dowty.ml/img/20200410Blog.webp&#34; title=&#34;2020年10月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/20200410Blog.webp&#34; alt=&#34;2020年4月10日博客界面&#34;  title=&#34;2020年10月4日博客界面&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4.11 由于CDN方被这次疫情的突然袭击损失巨大，服务器有丢包不稳定，&lt;strong&gt;因此博客会在4月20号之前停止使用CDN加速&lt;/strong&gt;，届时博客加载速度将变慢一些（大约100ms左右，我的网络可ping到80ms左右）。同时更换了网站托管的服务器来弥补速度：美国俄勒冈的AWS更换至新加坡。&lt;/p&gt;
+&lt;p&gt;4.12 看来今天网速很好，早上9点ping论坛的速度为58ms，ping博客的速度有19ms。&lt;/p&gt;
+&lt;p&gt;4.20 不知道为什么，DNS始终解析到CDN商的中国服务器下，改了也木有用。等了十天后ping出来的ip依旧是CDN的服务器。绝了……&lt;/p&gt;
+&lt;p&gt;4.22 &lt;strong&gt;更新第二个域名oscarblog.ml&lt;/strong&gt;,之前的根域名用不了，于是切换了第二个域名。同时&lt;strong&gt;更新主题、优化缓存&lt;/strong&gt;，现在博客的访问速度即使没有CDN加速也能ping到60ms左右的延迟了。&lt;strong&gt;新增友情链接。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;4.23&lt;strong&gt;更新多个备用域名，不常启用。同时成功实现https！已开启HSTS，全站强制https。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;4.24博客目前界面：&lt;a href=&#34;https://blog.dowty.ml/img/20200424Blog.webp&#34; title=&#34;2020年4月24日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/20200424Blog.webp&#34; alt=&#34;2020年4月24日论坛界面&#34;  title=&#34;2020年4月24日博客界面&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5.4&lt;strong&gt;更新界面，扩展功能。&lt;/strong&gt;（页面调用得十分痛苦，一天里不知道又制造了多少惊喜的bug）&lt;/p&gt;
+&lt;p&gt;博客5月4号界面：&lt;a href=&#34;https://blog.dowty.ml/img/20200504Blog.webp&#34; title=&#34;2020年5月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/20200504Blog.webp&#34; alt=&#34;2020年5月4日论坛界面&#34;  title=&#34;2020年5月4日博客界面&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;现在可访问博客的域名有：
+?&lt;/p&gt;
+&lt;p&gt;如果网站加载速度很慢或使用流量，可以使用本博客的AMP版：
+?&lt;/p&gt;
+&lt;p&gt;AMP版更为简洁但有部分内容不能正常显示。
+?&lt;/p&gt;
+&lt;p&gt;如果以上网址都不能用，请联系站长：?&lt;/p&gt;
+&lt;p&gt;收到消息后博客将启用备用网址，一般情况下不开启。（访问速度极慢且丢包75%）&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Update soon.&lt;/p&gt;
+</description>
       <content:encoded><![CDATA[<h2 id="这里是博客的更新日志">这里是博客的更新日志</h2>
 <p>4.8 <strong>博客搭建完毕</strong>，域名申请成功：oblog.ml（4月10日更换了DNS服务商，可用！) 是因为DNS解析方依然木有解析……只能直接用穿透搭建了。</p>
 <p>4.9 <strong>添加外观以及特殊功能</strong>,<strong>晚9点左右更换DNS解析方，可以正式使用域名了！</strong></p>

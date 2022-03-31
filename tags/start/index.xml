@@ -13,7 +13,24 @@
       <pubDate>Wed, 08 Apr 2020 18:44:00 +0000</pubDate>
       
       <guid>https://blog.dowty.ml/posts/%E8%A1%A5test-/</guid>
-      <description>本人确信自己不是标题党，尽管标题有明显特征…… 本博客起点。 Here we start！ @echo shutdown -s -t 1 end :)开个玩笑，咳咳咳。 这里是Oscar的博客，搭建博客</description>
+      <description>&lt;p&gt;本人确信自己不是标题党，尽管标题有明显特征……&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本博客起点。&lt;/em&gt;
+&lt;strong&gt;Here we start！&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@echo
+shutdown -s -t 1
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;:)开个玩笑，咳咳咳。
+这里是Oscar的博客，搭建博客真的比我想象中复杂很多（谁叫你拿自家电脑做服务器，还同时塞两个站点进去）
+不过还是艰难地成功建好了，不过不知道之后域名被DNS商那边解析以后还要不要做一遍博客QAQ
+这个博客的界面我一定会美化好的（立起大大的flag）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;想一想还是好的嘛，万一实现了呢&lt;/p&gt;
+&lt;p&gt;（那也得等全市考完，被骂死以后了……）&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
       <content:encoded><![CDATA[<p>本人确信自己不是标题党，尽管标题有明显特征……</p>
 <hr>
 <p><em>本博客起点。</em>
