@@ -1,12 +1,11 @@
-@import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
 html, body, div, p, ol, li,
 footer, header {
-	margin: 0;
+	margin: 1em;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 200%;
 	font: inherit;
 	vertical-align: baseline;}
 
@@ -14,9 +13,9 @@ footer, header {
     background: #f9f9f9 none repeat scroll 0 0;
     border: 1px solid #aaa;
     display: table;
-    font-size: 95%;
+    font-size: 100%;
     margin-bottom: 1em;
-    padding: 20px;
+    padding: 48px;
     width: auto;
 }
 
