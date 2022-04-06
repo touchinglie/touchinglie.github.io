@@ -9,6 +9,64 @@
     <lastBuildDate>Thu, 24 Mar 2022 11:10:00 +0000</lastBuildDate><atom:link href="https://blog.dowty.ml/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>更新</title>
+      <link>https://blog.dowty.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 24 Mar 2022 11:10:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本博客第三次更新&lt;/em&gt;
+&lt;strong&gt;Here we start！&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo
+git remote *.git
+deploy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;新的博客系统已经从hexo迁移到hugo啦！
+仍怀念三年前用typecho装上一大堆插件，还用自家电脑内网穿透部署博客的画面。&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;不过有个后台的博客系统确实对新手很友好啊&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;就是有点费电脑&lt;/del&gt;&lt;/p&gt;
+&lt;h2 id=&#34;接下来是更新日志&#34;&gt;接下来是更新日志&lt;/h2&gt;
+&lt;h3 id=&#34;2022324&#34;&gt;2022.3.24&lt;/h3&gt;
+&lt;p&gt;博客经过26次commits已经基本部署好了，&lt;strong&gt;Google Lighthouse的分数也在90+&lt;/strong&gt;！
+（当然这视个人网络情况而定，不过网站的漏洞包括XSS攻击都在用CSP等策略在修复了）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;至于美化嘛……有时间再做&lt;/strong&gt;
+毕竟目前主要的是先做好优化&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.dowty.ml/img/blog-lighthouse-test.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;2022329&#34;&gt;2022.3.29&lt;/h3&gt;
+&lt;p&gt;目前仍在尝试部署域名稳定（指heroku自带域名🐶）的博客，系统是typecho
+不求速度，只求稳定和随时随地能有后台写博客。
+加油吧&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<hr>
+<p><em>本博客第三次更新</em>
+<strong>Here we start！</strong></p>
+<pre><code>hugo
+git remote *.git
+deploy
+</code></pre>
+<hr>
+<p>新的博客系统已经从hexo迁移到hugo啦！
+仍怀念三年前用typecho装上一大堆插件，还用自家电脑内网穿透部署博客的画面。</p>
+<p><del>不过有个后台的博客系统确实对新手很友好啊</del></p>
+<p><del>就是有点费电脑</del></p>
+<h2 id="接下来是更新日志">接下来是更新日志</h2>
+<h3 id="2022324">2022.3.24</h3>
+<p>博客经过26次commits已经基本部署好了，<strong>Google Lighthouse的分数也在90+</strong>！
+（当然这视个人网络情况而定，不过网站的漏洞包括XSS攻击都在用CSP等策略在修复了）</p>
+<p><strong>至于美化嘛……有时间再做</strong>
+毕竟目前主要的是先做好优化</p>
+<p><img loading="lazy" src="/img/blog-lighthouse-test.webp" alt="avatar"  />
+</p>
+<h3 id="2022329">2022.3.29</h3>
+<p>目前仍在尝试部署域名稳定（指heroku自带域名🐶）的博客，系统是typecho
+不求速度，只求稳定和随时随地能有后台写博客。
+加油吧</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>更新</title>
       <link>https://blog.dowty.ml/posts/%E6%9B%B4%E6%96%B0/</link>
       <pubDate>Thu, 24 Mar 2022 11:10:00 +0000</pubDate>
       

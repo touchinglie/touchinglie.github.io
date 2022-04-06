@@ -2,8 +2,11 @@
 <html lang="zh">
 
 <head>
+	Content-Security-Policy: default-src https:
 	<title>CCTalk-class-review</title>
 	<meta charset="utf-8" />
+	<meta http-equiv="Content-Security-Policy" content="default-src https:">
+	<meta http-equiv="Content-Security-Policy" content="default-src https:">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="main.css" />
 </head>
@@ -24,7 +27,14 @@
 			</li>
 		</ol>
 	</div>
-
+    <script>
+		//if CSP is supported this will not run
+		window.onload=function(){
+			var jsNode = document.getElementById("jsNode");
+			jsNode.innerHTML = "<h3> CSP Not Supported</h3> Your browser does not support CSP, the inline script executed and replaced this div content";
+			jsNode.className = "alert alert-danger";
+		};
+	  </script>
 </body>
 
 </html>
