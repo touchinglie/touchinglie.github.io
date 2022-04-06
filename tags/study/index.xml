@@ -34,8 +34,7 @@
 &lt;p&gt;$${\lim_{x \to +\infty}\frac{e^n n!}{n^n \sqrt{n}} = \sqrt {2 \pi}}$$&lt;/p&gt;
 &lt;p&gt;其中 $\sqrt{2 \pi} \thickappro 2.506628274631$&lt;/p&gt;
 &lt;h3 id=&#34;基础阶乘值&#34;&gt;基础阶乘值&lt;/h3&gt;
-&lt;p&gt;$$
-\begin{table}[]
+&lt;p&gt;$$\begin{table}[]
 \begin{tabular}{|c|c|}
 \hline
 \textbf{n}  &amp;amp; \textbf{n!}      \ \hline
@@ -98,8 +97,7 @@ $$&lt;/p&gt;
 <p>$${\lim_{x \to +\infty}\frac{e^n n!}{n^n \sqrt{n}} = \sqrt {2 \pi}}$$</p>
 <p>其中 $\sqrt{2 \pi} \thickappro 2.506628274631$</p>
 <h3 id="基础阶乘值">基础阶乘值</h3>
-<p>$$
-\begin{table}[]
+<p>$$\begin{table}[]
 \begin{tabular}{|c|c|}
 \hline
 \textbf{n}  &amp; \textbf{n!}      \ \hline
