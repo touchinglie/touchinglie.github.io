@@ -15,26 +15,27 @@
       <guid>https://blog.dowty.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;这里是学习笔记，注意检索关键词
-语法引用\LaTeX，未显示准确需转码&lt;/p&gt;
+语法引用 $\LaTeX$ ，未显示准确需转码&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;阶乘&#34;&gt;阶乘&lt;/h2&gt;
 &lt;h3 id=&#34;阶乘的定义&#34;&gt;阶乘的定义&lt;/h3&gt;
-&lt;p&gt;正整数的阶乘(Factorial)是所有小于及等于该数的正整数的积，计为${n!}$，例如5的阶乘计为${5!}$，其值为120：&lt;/p&gt;
+&lt;p&gt;正整数的阶乘(Factorial)是所有小于及等于该数的正整数的积，计为 ${n!}$ ，例如5的阶乘计为 ${5!}$ ，其值为120：&lt;/p&gt;
 &lt;p&gt;$$5! = 5 \times 4 \times 3 \times 2 \times 1 = 120$$&lt;/p&gt;
 &lt;p&gt;并定义，&lt;/p&gt;
 &lt;p&gt;$$1! = 0! = 1$$&lt;/p&gt;
-&lt;p&gt;其中0的阶乘$0!$表示一个空积(零个因子相乘的结果)。&lt;/p&gt;
+&lt;p&gt;其中0的阶乘$0!$表示一个空积(零个因子相乘的结果)&lt;/p&gt;
 &lt;p&gt;$$n! = \prod \limits_{k=1}^n \times k   \forall n \geqslant 1$$&lt;/p&gt;
-&lt;p&gt;亦即$$n! = 1 \times 2 \times 3 \times \cdots \times n$$&lt;/p&gt;
+&lt;p&gt;亦即 $$n! = 1 \times 2 \times 3 \times \cdots \times n$$&lt;/p&gt;
 &lt;p&gt;阶乘亦可以递归方式定义:&lt;/p&gt;
 &lt;p&gt;$$0! = 1$$&lt;/p&gt;
 &lt;p&gt;$$n!={n-1}! \times n$$&lt;/p&gt;
 &lt;p&gt;当n很大时，可用斯特林公式估计，对于足够大的整数n，这两个数互为近似值：&lt;/p&gt;
-&lt;p&gt;$$n! \thickappro \sqrt{2 \pi n}(\frac{n}{e}^n)$$&lt;/p&gt;
+&lt;p&gt;$${n!} \thickappro \sqrt{2 \pi n} (\frac{n}{e}^n)$$&lt;/p&gt;
 &lt;p&gt;$${\lim_{x \to +\infty}\frac{e^n n!}{n^n \sqrt{n}} = \sqrt {2 \pi}}$$&lt;/p&gt;
-&lt;p&gt;其中$\sqrt{2 \pi} \thickappro 2.506628274631$&lt;/p&gt;
+&lt;p&gt;其中 $\sqrt{2 \pi} \thickappro 2.506628274631$&lt;/p&gt;
 &lt;h3 id=&#34;基础阶乘值&#34;&gt;基础阶乘值&lt;/h3&gt;
-&lt;p&gt;\begin{table}[]
+&lt;p&gt;$$
+\begin{table}[]
 \begin{tabular}{|c|c|}
 \hline
 \textbf{n}  &amp;amp; \textbf{n!}      \ \hline
@@ -50,20 +51,21 @@
 \textbf{9}  &amp;amp; \textbf{362880}  \ \hline
 \textbf{10} &amp;amp; \textbf{3628800} \ \hline
 \end{tabular}
-\end{table}&lt;/p&gt;
+\end{table}
+$$&lt;/p&gt;
 &lt;h2 id=&#34;组合数&#34;&gt;组合数&lt;/h2&gt;
-&lt;p&gt;从 n 个不同元素中每次取出 m 个不同元素$(0 \leqslant m \leqslant n)$，&lt;/p&gt;
+&lt;p&gt;从 n 个不同元素中每次取出 m 个不同元素 $(0 \leqslant m \leqslant n)$ ，&lt;/p&gt;
 &lt;p&gt;不管其顺序合成一组，称为从 n 个元素中不重复地选取 m 个元素的一个组合&lt;/p&gt;
 &lt;p&gt;所有这样的组合的种数称为组合数&lt;/p&gt;
-&lt;p&gt;在线性写法中被写作C(n,m),在二项式系数中被写作\tbinom{n}{m}&lt;/p&gt;
-&lt;p&gt;即$C_n^m$&lt;/p&gt;
+&lt;p&gt;在线性写法中被写作C(n,m),在二项式系数中被写作 $\tbinom{n}{m}$&lt;/p&gt;
+&lt;p&gt;即 $C_n^m$&lt;/p&gt;
 &lt;p&gt;组合数的计算公式为&lt;/p&gt;
 &lt;p&gt;$$C_n^m = \frac{P_n^m}{P_m} = \frac{n!}{(n-m)!},C_n^0 = 1$$&lt;/p&gt;
 &lt;p&gt;n 元集合 A 中不重复地抽取 m 个元素作成的一个组合实质上是 A 的一个 m 元子集合&lt;/p&gt;
 &lt;h3 id=&#34;互补性质&#34;&gt;互补性质&lt;/h3&gt;
 &lt;p&gt;$$C_n^m = \frac{P_n^m}{P_m} = \frac{n!}{(n-m)!} = C_n^{n-m}$$&lt;/p&gt;
 &lt;p&gt;规定：$C_n^0 = 1, C_n^n=1, C_0^0 = 1$&lt;/p&gt;
-&lt;p&gt;例如C_9^2=C_9^7，&lt;/p&gt;
+&lt;p&gt;例如 $C_9^2=C_9^7$&lt;/p&gt;
 &lt;p&gt;即&lt;strong&gt;从9个元素里选择2个元素的方法&lt;/strong&gt;与&lt;strong&gt;从9个元素里选择7个元素的方法是相等的&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;组合恒等式&#34;&gt;组合恒等式&lt;/h3&gt;
 &lt;p&gt;若表示在 n 个物品中选取 m 个物品，则如存在下述公式：&lt;/p&gt;
@@ -77,26 +79,27 @@
 </description>
       <content:encoded><![CDATA[<hr>
 <p>这里是学习笔记，注意检索关键词
-语法引用\LaTeX，未显示准确需转码</p>
+语法引用 $\LaTeX$ ，未显示准确需转码</p>
 <hr>
 <h2 id="阶乘">阶乘</h2>
 <h3 id="阶乘的定义">阶乘的定义</h3>
-<p>正整数的阶乘(Factorial)是所有小于及等于该数的正整数的积，计为${n!}$，例如5的阶乘计为${5!}$，其值为120：</p>
+<p>正整数的阶乘(Factorial)是所有小于及等于该数的正整数的积，计为 ${n!}$ ，例如5的阶乘计为 ${5!}$ ，其值为120：</p>
 <p>$$5! = 5 \times 4 \times 3 \times 2 \times 1 = 120$$</p>
 <p>并定义，</p>
 <p>$$1! = 0! = 1$$</p>
-<p>其中0的阶乘$0!$表示一个空积(零个因子相乘的结果)。</p>
+<p>其中0的阶乘$0!$表示一个空积(零个因子相乘的结果)</p>
 <p>$$n! = \prod \limits_{k=1}^n \times k   \forall n \geqslant 1$$</p>
-<p>亦即$$n! = 1 \times 2 \times 3 \times \cdots \times n$$</p>
+<p>亦即 $$n! = 1 \times 2 \times 3 \times \cdots \times n$$</p>
 <p>阶乘亦可以递归方式定义:</p>
 <p>$$0! = 1$$</p>
 <p>$$n!={n-1}! \times n$$</p>
 <p>当n很大时，可用斯特林公式估计，对于足够大的整数n，这两个数互为近似值：</p>
-<p>$$n! \thickappro \sqrt{2 \pi n}(\frac{n}{e}^n)$$</p>
+<p>$${n!} \thickappro \sqrt{2 \pi n} (\frac{n}{e}^n)$$</p>
 <p>$${\lim_{x \to +\infty}\frac{e^n n!}{n^n \sqrt{n}} = \sqrt {2 \pi}}$$</p>
-<p>其中$\sqrt{2 \pi} \thickappro 2.506628274631$</p>
+<p>其中 $\sqrt{2 \pi} \thickappro 2.506628274631$</p>
 <h3 id="基础阶乘值">基础阶乘值</h3>
-<p>\begin{table}[]
+<p>$$
+\begin{table}[]
 \begin{tabular}{|c|c|}
 \hline
 \textbf{n}  &amp; \textbf{n!}      \ \hline
@@ -112,20 +115,21 @@
 \textbf{9}  &amp; \textbf{362880}  \ \hline
 \textbf{10} &amp; \textbf{3628800} \ \hline
 \end{tabular}
-\end{table}</p>
+\end{table}
+$$</p>
 <h2 id="组合数">组合数</h2>
-<p>从 n 个不同元素中每次取出 m 个不同元素$(0 \leqslant m \leqslant n)$，</p>
+<p>从 n 个不同元素中每次取出 m 个不同元素 $(0 \leqslant m \leqslant n)$ ，</p>
 <p>不管其顺序合成一组，称为从 n 个元素中不重复地选取 m 个元素的一个组合</p>
 <p>所有这样的组合的种数称为组合数</p>
-<p>在线性写法中被写作C(n,m),在二项式系数中被写作\tbinom{n}{m}</p>
-<p>即$C_n^m$</p>
+<p>在线性写法中被写作C(n,m),在二项式系数中被写作 $\tbinom{n}{m}$</p>
+<p>即 $C_n^m$</p>
 <p>组合数的计算公式为</p>
 <p>$$C_n^m = \frac{P_n^m}{P_m} = \frac{n!}{(n-m)!},C_n^0 = 1$$</p>
 <p>n 元集合 A 中不重复地抽取 m 个元素作成的一个组合实质上是 A 的一个 m 元子集合</p>
 <h3 id="互补性质">互补性质</h3>
 <p>$$C_n^m = \frac{P_n^m}{P_m} = \frac{n!}{(n-m)!} = C_n^{n-m}$$</p>
 <p>规定：$C_n^0 = 1, C_n^n=1, C_0^0 = 1$</p>
-<p>例如C_9^2=C_9^7，</p>
+<p>例如 $C_9^2=C_9^7$</p>
 <p>即<strong>从9个元素里选择2个元素的方法</strong>与<strong>从9个元素里选择7个元素的方法是相等的</strong></p>
 <h3 id="组合恒等式">组合恒等式</h3>
 <p>若表示在 n 个物品中选取 m 个物品，则如存在下述公式：</p>
