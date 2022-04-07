@@ -30,9 +30,9 @@
 &lt;p&gt;$$0! = 1$$&lt;/p&gt;
 &lt;p&gt;$$n!={n-1}! \times n$$&lt;/p&gt;
 &lt;p&gt;当n很大时，可用斯特林公式估计，对于足够大的整数n，这两个数互为近似值：&lt;/p&gt;
-&lt;p&gt;$$n! \thickappro \sqrt{2 \pi n} (\frac{n}{e})^n$$&lt;/p&gt;
-&lt;p&gt;$${\lim_{x \to +\infty}\frac{e^n n!}{n^n \sqrt{n}} = \sqrt {2 \pi}}$$&lt;/p&gt;
-&lt;p&gt;其中&amp;rsquo;$\sqrt{2 \pi} \thickappro 2.506628274631$&#39;&lt;/p&gt;
+&lt;p&gt;$${n!} \approx \sqrt{{2}\pi{n}} (\frac{n}{e})^n$$&lt;/p&gt;
+&lt;p&gt;$${\lim_{x \to +\infty}\frac{{e}^{n}{n!}}{n^n \sqrt{n}} = \sqrt {2 \pi}}$$&lt;/p&gt;
+&lt;p&gt;其中 $\sqrt{{2}\pi} \approx {2.506628274631}$&lt;/p&gt;
 &lt;h3 id=&#34;基础阶乘值&#34;&gt;基础阶乘值&lt;/h3&gt;
 &lt;p&gt;$$
 \begin{table}[]
@@ -94,9 +94,9 @@ $$&lt;/p&gt;
 <p>$$0! = 1$$</p>
 <p>$$n!={n-1}! \times n$$</p>
 <p>当n很大时，可用斯特林公式估计，对于足够大的整数n，这两个数互为近似值：</p>
-<p>$$n! \thickappro \sqrt{2 \pi n} (\frac{n}{e})^n$$</p>
-<p>$${\lim_{x \to +\infty}\frac{e^n n!}{n^n \sqrt{n}} = \sqrt {2 \pi}}$$</p>
-<p>其中&rsquo;$\sqrt{2 \pi} \thickappro 2.506628274631$'</p>
+<p>$${n!} \approx \sqrt{{2}\pi{n}} (\frac{n}{e})^n$$</p>
+<p>$${\lim_{x \to +\infty}\frac{{e}^{n}{n!}}{n^n \sqrt{n}} = \sqrt {2 \pi}}$$</p>
+<p>其中 $\sqrt{{2}\pi} \approx {2.506628274631}$</p>
 <h3 id="基础阶乘值">基础阶乘值</h3>
 <p>$$
 \begin{table}[]
