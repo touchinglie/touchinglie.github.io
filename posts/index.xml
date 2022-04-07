@@ -34,25 +34,60 @@
 &lt;p&gt;$${\lim_{x \to +\infty}\frac{{e}^{n}{n!}}{n^n \sqrt{n}} = \sqrt {2 \pi}}$$&lt;/p&gt;
 &lt;p&gt;其中 $\sqrt{{2}\pi} \approx {2.506628274631}$&lt;/p&gt;
 &lt;h3 id=&#34;基础阶乘值&#34;&gt;基础阶乘值&lt;/h3&gt;
-&lt;p&gt;$$
-\begin{table}[]
-\begin{tabular}{|c|c|}
-\hline
-\textbf{n}  &amp;amp; \textbf{n!}      \ \hline
-\textbf{0}  &amp;amp; \textbf{1}       \ \hline
-\textbf{1}  &amp;amp; \textbf{1}       \ \hline
-\textbf{2}  &amp;amp; \textbf{2}       \ \hline
-\textbf{3}  &amp;amp; \textbf{6}       \ \hline
-\textbf{4}  &amp;amp; \textbf{24}      \ \hline
-\textbf{5}  &amp;amp; \textbf{120}     \ \hline
-\textbf{6}  &amp;amp; \textbf{720}     \ \hline
-\textbf{7}  &amp;amp; \textbf{5040}    \ \hline
-\textbf{8}  &amp;amp; \textbf{40320}   \ \hline
-\textbf{9}  &amp;amp; \textbf{362880}  \ \hline
-\textbf{10} &amp;amp; \textbf{3628800} \ \hline
-\end{tabular}
-\end{table}
-$$&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;n&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;n!&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;24&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;120&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;720&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;7&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5040&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;40320&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;9&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;362880&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3628800&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h2 id=&#34;组合数&#34;&gt;组合数&lt;/h2&gt;
 &lt;p&gt;从 n 个不同元素中每次取出 m 个不同元素 $(0 \leqslant m \leqslant n)$ ，&lt;/p&gt;
 &lt;p&gt;不管其顺序合成一组，称为从 n 个元素中不重复地选取 m 个元素的一个组合&lt;/p&gt;
@@ -98,25 +133,60 @@ $$&lt;/p&gt;
 <p>$${\lim_{x \to +\infty}\frac{{e}^{n}{n!}}{n^n \sqrt{n}} = \sqrt {2 \pi}}$$</p>
 <p>其中 $\sqrt{{2}\pi} \approx {2.506628274631}$</p>
 <h3 id="基础阶乘值">基础阶乘值</h3>
-<p>$$
-\begin{table}[]
-\begin{tabular}{|c|c|}
-\hline
-\textbf{n}  &amp; \textbf{n!}      \ \hline
-\textbf{0}  &amp; \textbf{1}       \ \hline
-\textbf{1}  &amp; \textbf{1}       \ \hline
-\textbf{2}  &amp; \textbf{2}       \ \hline
-\textbf{3}  &amp; \textbf{6}       \ \hline
-\textbf{4}  &amp; \textbf{24}      \ \hline
-\textbf{5}  &amp; \textbf{120}     \ \hline
-\textbf{6}  &amp; \textbf{720}     \ \hline
-\textbf{7}  &amp; \textbf{5040}    \ \hline
-\textbf{8}  &amp; \textbf{40320}   \ \hline
-\textbf{9}  &amp; \textbf{362880}  \ \hline
-\textbf{10} &amp; \textbf{3628800} \ \hline
-\end{tabular}
-\end{table}
-$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">n</th>
+<th style="text-align:center">n!</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">6</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">24</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">120</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">720</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">5040</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">40320</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">362880</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">3628800</td>
+</tr>
+</tbody>
+</table>
 <h2 id="组合数">组合数</h2>
 <p>从 n 个不同元素中每次取出 m 个不同元素 $(0 \leqslant m \leqslant n)$ ，</p>
 <p>不管其顺序合成一组，称为从 n 个元素中不重复地选取 m 个元素的一个组合</p>
