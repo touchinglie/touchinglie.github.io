@@ -24,7 +24,7 @@
 &lt;p&gt;并定义，&lt;/p&gt;
 &lt;p&gt;$$1! = 0! = 1$$&lt;/p&gt;
 &lt;p&gt;其中0的阶乘$0!$表示一个空积(零个因子相乘的结果)&lt;/p&gt;
-&lt;p&gt;$$n! = \prod \limits_{k=1}^n \times k   \forall n \geqslant 1$$&lt;/p&gt;
+&lt;p&gt;$$n! = \prod \limits_{k=1}^n \times k , \forall n \geqslant 1$$&lt;/p&gt;
 &lt;p&gt;亦即 $$n! = 1 \times 2 \times 3 \times \cdots \times n$$&lt;/p&gt;
 &lt;p&gt;阶乘亦可以递归方式定义:&lt;/p&gt;
 &lt;p&gt;$$0! = 1$$&lt;/p&gt;
@@ -123,7 +123,7 @@
 <p>并定义，</p>
 <p>$$1! = 0! = 1$$</p>
 <p>其中0的阶乘$0!$表示一个空积(零个因子相乘的结果)</p>
-<p>$$n! = \prod \limits_{k=1}^n \times k   \forall n \geqslant 1$$</p>
+<p>$$n! = \prod \limits_{k=1}^n \times k , \forall n \geqslant 1$$</p>
 <p>亦即 $$n! = 1 \times 2 \times 3 \times \cdots \times n$$</p>
 <p>阶乘亦可以递归方式定义:</p>
 <p>$$0! = 1$$</p>
