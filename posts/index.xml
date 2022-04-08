@@ -6,7 +6,47 @@
     <description>Recent content in Posts on Dow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 06 Apr 2022 19:36:00 +0000</lastBuildDate><atom:link href="https://blog.dowty.ml/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Apr 2022 19:36:00 +0000</lastBuildDate><atom:link href="https://blog.dowty.ml/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>排列数基础(常见模型)笔记</title>
+      <link>https://blog.dowty.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 08 Apr 2022 19:36:00 +0000</pubDate>
+      
+      <guid>https://blog.dowty.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;这里是学习笔记，注意检索关键词&lt;/p&gt;
+&lt;p&gt;语法引用 $\LaTeX$ ，未显示准确需转码&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;解题思路&#34;&gt;解题思路&lt;/h2&gt;
+&lt;h3 id=&#34;特优原则&#34;&gt;特优原则&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;对于题目中有特殊要求的元素或位置，在考虑步骤时优先安排，然后再去处理无要求的元素&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;元素和位置都有特殊时即可随意选一种排序&lt;/p&gt;
+&lt;p&gt;即从特殊元素角度(如包含零的n个数字组成n位数后四位必须有一位是零)&lt;/p&gt;
+&lt;p&gt;亦或是特殊位置角度(如n位数首位不能是零，n位数字首位可以为零)&lt;/p&gt;
+&lt;p&gt;提前安排，再处理剩下的元素&lt;/p&gt;
+&lt;h3 id=&#34;正难则反&#34;&gt;正难则反&lt;/h3&gt;
+&lt;p&gt;若正面(直接)算很难、杂，则可考虑先用排除法算与题意不符的情况，再将总情况数减去与题意不符的情况&lt;/p&gt;
+&lt;p&gt;通常对于题目要求带“至少、重复”的题目有奇效&lt;/p&gt;
+&lt;h3 id=&#34;先取分组再排排列&#34;&gt;先取(分组)再排(排列)&lt;/h3&gt;
+</description>
+      <content:encoded><![CDATA[<hr>
+<p>这里是学习笔记，注意检索关键词</p>
+<p>语法引用 $\LaTeX$ ，未显示准确需转码</p>
+<hr>
+<h2 id="解题思路">解题思路</h2>
+<h3 id="特优原则">特优原则</h3>
+<p><strong>对于题目中有特殊要求的元素或位置，在考虑步骤时优先安排，然后再去处理无要求的元素</strong>。</p>
+<p>元素和位置都有特殊时即可随意选一种排序</p>
+<p>即从特殊元素角度(如包含零的n个数字组成n位数后四位必须有一位是零)</p>
+<p>亦或是特殊位置角度(如n位数首位不能是零，n位数字首位可以为零)</p>
+<p>提前安排，再处理剩下的元素</p>
+<h3 id="正难则反">正难则反</h3>
+<p>若正面(直接)算很难、杂，则可考虑先用排除法算与题意不符的情况，再将总情况数减去与题意不符的情况</p>
+<p>通常对于题目要求带“至少、重复”的题目有奇效</p>
+<h3 id="先取分组再排排列">先取(分组)再排(排列)</h3>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>排列数(组合数与阶乘)笔记</title>
       <link>https://blog.dowty.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
@@ -243,6 +283,13 @@ deploy
 &lt;p&gt;目前仍在尝试部署域名稳定（指heroku自带域名🐶）的博客，系统是typecho
 不求速度，只求稳定和随时随地能有后台写博客。
 加油吧&lt;/p&gt;
+&lt;h3 id=&#34;202248&#34;&gt;2022.4.8&lt;/h3&gt;
+&lt;p&gt;typecho的长期稳定博客已经部署好了
+&lt;a href=&#34;https://tranquil-atoll-01447.herokuapp.com/&#34;&gt;typecho-blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;两个博客均做了美化调试，多功能实现(主要给自己日常住校用的)&lt;/p&gt;
+&lt;p&gt;美化确实难做，一不留神就error，我整整commit了100多次艹&lt;/p&gt;
+&lt;p&gt;在校更新博客就用typecho，每周回家再同步(&lt;del&gt;指复制粘贴&lt;/del&gt;)&lt;/p&gt;
+&lt;p&gt;毕竟都是用markdown写文章，还是很方便的&lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<hr>
 <p><em>本博客第三次更新</em>
@@ -268,6 +315,13 @@ deploy
 <p>目前仍在尝试部署域名稳定（指heroku自带域名🐶）的博客，系统是typecho
 不求速度，只求稳定和随时随地能有后台写博客。
 加油吧</p>
+<h3 id="202248">2022.4.8</h3>
+<p>typecho的长期稳定博客已经部署好了
+<a href="https://tranquil-atoll-01447.herokuapp.com/">typecho-blog</a></p>
+<p>两个博客均做了美化调试，多功能实现(主要给自己日常住校用的)</p>
+<p>美化确实难做，一不留神就error，我整整commit了100多次艹</p>
+<p>在校更新博客就用typecho，每周回家再同步(<del>指复制粘贴</del>)</p>
+<p>毕竟都是用markdown写文章，还是很方便的</p>
 ]]></content:encoded>
     </item>
     
