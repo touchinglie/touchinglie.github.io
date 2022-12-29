@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>study on Dow Blog</title>
-    <link>https://blog.dowty.ml/tags/study/</link>
+    <link>https://blog.dowtybooker.ml/tags/study/</link>
     <description>Recent content in study on Dow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 08 Apr 2022 19:36:00 +0000</lastBuildDate><atom:link href="https://blog.dowty.ml/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Apr 2022 19:36:00 +0000</lastBuildDate><atom:link href="https://blog.dowtybooker.ml/tags/study/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>排列数基础(常见模型)笔记</title>
-      <link>https://blog.dowty.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
+      <link>https://blog.dowtybooker.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Fri, 08 Apr 2022 19:36:00 +0000</pubDate>
       
-      <guid>https://blog.dowty.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://blog.dowtybooker.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;这里是学习笔记，注意检索关键词&lt;/p&gt;
 &lt;p&gt;语法引用 $\LaTeX$ ，未显示准确需转码&lt;/p&gt;
@@ -49,10 +49,10 @@
     
     <item>
       <title>排列数(组合数与阶乘)笔记</title>
-      <link>https://blog.dowty.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://blog.dowtybooker.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Wed, 06 Apr 2022 19:36:00 +0000</pubDate>
       
-      <guid>https://blog.dowty.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://blog.dowtybooker.ml/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;这里是学习笔记，注意检索关键词&lt;/p&gt;
 &lt;p&gt;语法引用 $\LaTeX$ ，未显示准确需转码&lt;/p&gt;
@@ -255,10 +255,10 @@
     
     <item>
       <title>（补）还有67天</title>
-      <link>https://blog.dowty.ml/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</link>
+      <link>https://blog.dowtybooker.ml/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</link>
       <pubDate>Thu, 14 May 2020 23:15:00 +0000</pubDate>
       
-      <guid>https://blog.dowty.ml/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</guid>
+      <guid>https://blog.dowtybooker.ml/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</guid>
       <description>&lt;h2 id=&#34;我真的好难啊&#34;&gt;我真的好难啊&lt;/h2&gt;
 &lt;p&gt;距离大考还有67天，桌台上的作业是按摞计算的，写完一本还要再发四本。
 不知道老师是怎么找到这破博客的，上课时提到“你好像挺闲啊”……
