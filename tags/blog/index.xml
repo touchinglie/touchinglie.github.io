@@ -44,6 +44,11 @@ deploy
 &lt;p&gt;美化确实难做，一不留神就error，我整整commit了100多次艹&lt;/p&gt;
 &lt;p&gt;在校更新博客就用typecho，每周回家再同步(&lt;del&gt;指复制粘贴&lt;/del&gt;)&lt;/p&gt;
 &lt;p&gt;毕竟都是用markdown写文章，还是很方便的&lt;/p&gt;
+&lt;h3 id=&#34;2023918&#34;&gt;2023.9.18&lt;/h3&gt;
+&lt;p&gt;typecho的博客废了
+&lt;a href=&#34;https://tranquil-atoll-01447.herokuapp.com/&#34;&gt;typecho-blog&lt;/a&gt;
+原因是heroku的牛马测试机屏蔽了来自Bettertime的保活
+域名改为永久二级域名哩，Freenom也没了，懒得折腾了。&lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<hr>
 <p><em>本博客第三次更新</em>
@@ -76,6 +81,11 @@ deploy
 <p>美化确实难做，一不留神就error，我整整commit了100多次艹</p>
 <p>在校更新博客就用typecho，每周回家再同步(<del>指复制粘贴</del>)</p>
 <p>毕竟都是用markdown写文章，还是很方便的</p>
+<h3 id="2023918">2023.9.18</h3>
+<p>typecho的博客废了
+<a href="https://tranquil-atoll-01447.herokuapp.com/">typecho-blog</a>
+原因是heroku的牛马测试机屏蔽了来自Bettertime的保活
+域名改为永久二级域名哩，Freenom也没了，懒得折腾了。</p>
 ]]></content:encoded>
     </item>
     
