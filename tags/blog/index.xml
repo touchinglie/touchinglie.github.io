@@ -46,9 +46,10 @@ deploy
 &lt;p&gt;毕竟都是用markdown写文章，还是很方便的&lt;/p&gt;
 &lt;h3 id=&#34;2023918&#34;&gt;2023.9.18&lt;/h3&gt;
 &lt;p&gt;typecho的博客废了
-&lt;a href=&#34;https://tranquil-atoll-01447.herokuapp.com/&#34;&gt;typecho-blog&lt;/a&gt;
-原因是heroku的牛马测试机屏蔽了来自Bettertime的保活
-域名改为永久二级域名哩，Freenom也没了，懒得折腾了。&lt;/p&gt;
+&lt;a href=&#34;https://tranquil-atoll-01447.herokuapp.com/&#34;&gt;typecho-blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原因是heroku的牛马测试机屏蔽了来自Bettertime的保活&lt;/p&gt;
+&lt;p&gt;静态博客域名改为&lt;a href=&#34;https://dowblog.rr.nu/&#34;&gt;永久二级域名&lt;/a&gt;哩，Freenom也没了，懒得折腾了。&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;已经进入老年生活了，遥遥领先&lt;/del&gt;&lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<hr>
 <p><em>本博客第三次更新</em>
@@ -83,9 +84,10 @@ deploy
 <p>毕竟都是用markdown写文章，还是很方便的</p>
 <h3 id="2023918">2023.9.18</h3>
 <p>typecho的博客废了
-<a href="https://tranquil-atoll-01447.herokuapp.com/">typecho-blog</a>
-原因是heroku的牛马测试机屏蔽了来自Bettertime的保活
-域名改为永久二级域名哩，Freenom也没了，懒得折腾了。</p>
+<a href="https://tranquil-atoll-01447.herokuapp.com/">typecho-blog</a></p>
+<p>原因是heroku的牛马测试机屏蔽了来自Bettertime的保活</p>
+<p>静态博客域名改为<a href="https://dowblog.rr.nu/">永久二级域名</a>哩，Freenom也没了，懒得折腾了。</p>
+<p><del>已经进入老年生活了，遥遥领先</del></p>
 ]]></content:encoded>
     </item>
     
