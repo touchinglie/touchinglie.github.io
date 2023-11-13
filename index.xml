@@ -953,6 +953,36 @@ emmm要接着写作业了</p>
     </item>
     
     <item>
+      <title>有关秩的笔记（线性代数系列）</title>
+      <link>https://dowblog.rr.nu/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</link>
+      <pubDate>Thu, 09 Apr 2020 11:21:00 +0000</pubDate>
+      
+      <guid>https://dowblog.rr.nu/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</guid>
+      <description>&lt;p&gt;上了大学以后可以说线性代数和高等数学真的杀我，尤其是线性代数，开始并不觉得解方程有什么难度，后来难度上来以后，就是薄纱。第一个爆杀我的就是秩，真的抽象到不知道什么东西。&lt;/p&gt;
+&lt;p&gt;目前就记些笔记，搜集一下网上网友的教学：&lt;/p&gt;
+&lt;p&gt;知乎上比较好的：
+&lt;a href=&#34;https://www.zhihu.com/people/cang-bai-de-gou/posts&#34;&gt;@Aliothhuangzttt&lt;/a&gt;
+&lt;a href=&#34;https://www.zhihu.com/question/280920553/answer/1240817502&#34;&gt;如何快速求一个矩阵的秩？求大神给详细方法？&lt;/a&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/496118586&#34;&gt;用人话解释（一）——矩阵、行列式与秩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最后一个刚看完前面部分，感觉有点群论的思维，像在复平面内&lt;/p&gt;
+&lt;p&gt;$$i \times i = -1$$&lt;/p&gt;
+&lt;p&gt;一样,是对向量i进行了90°的逆时针旋转。&lt;/p&gt;
+&lt;p&gt;但是秩的概念实在不懂的话，第二个应该足够应试了。&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>上了大学以后可以说线性代数和高等数学真的杀我，尤其是线性代数，开始并不觉得解方程有什么难度，后来难度上来以后，就是薄纱。第一个爆杀我的就是秩，真的抽象到不知道什么东西。</p>
+<p>目前就记些笔记，搜集一下网上网友的教学：</p>
+<p>知乎上比较好的：
+<a href="https://www.zhihu.com/people/cang-bai-de-gou/posts">@Aliothhuangzttt</a>
+<a href="https://www.zhihu.com/question/280920553/answer/1240817502">如何快速求一个矩阵的秩？求大神给详细方法？</a>
+<a href="https://zhuanlan.zhihu.com/p/496118586">用人话解释（一）——矩阵、行列式与秩</a></p>
+<p>最后一个刚看完前面部分，感觉有点群论的思维，像在复平面内</p>
+<p>$$i \times i = -1$$</p>
+<p>一样,是对向量i进行了90°的逆时针旋转。</p>
+<p>但是秩的概念实在不懂的话，第二个应该足够应试了。</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>（补）更新日志</title>
       <link>https://dowblog.rr.nu/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
       <pubDate>Thu, 09 Apr 2020 11:21:00 +0000</pubDate>
@@ -977,7 +1007,7 @@ emmm要接着写作业了</p>
 &lt;p&gt;博客5月4号界面：&lt;a href=&#34;https://dowblog.rr.nu/img/20200504Blog.webp&#34; title=&#34;2020年5月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/20200504Blog.webp&#34; alt=&#34;2020年5月4日论坛界面&#34;  title=&#34;2020年5月4日博客界面&#34;  /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;现在可访问博客的域名有：
-?&lt;/p&gt;
+就这个了，其它懒得维护，hexo的域名到期，看看有没有心情，有心情再整（&lt;/p&gt;
 &lt;p&gt;如果网站加载速度很慢或使用流量，可以使用本博客的AMP版：
 ?&lt;/p&gt;
 &lt;p&gt;AMP版更为简洁但有部分内容不能正常显示。
@@ -1006,7 +1036,7 @@ emmm要接着写作业了</p>
 <p>博客5月4号界面：<a href="/img/20200504Blog.webp" title="2020年5月4日博客界面"><img loading="lazy" src="/img/20200504Blog.webp" alt="2020年5月4日论坛界面"  title="2020年5月4日博客界面"  />
 </a></p>
 <p>现在可访问博客的域名有：
-?</p>
+就这个了，其它懒得维护，hexo的域名到期，看看有没有心情，有心情再整（</p>
 <p>如果网站加载速度很慢或使用流量，可以使用本博客的AMP版：
 ?</p>
 <p>AMP版更为简洁但有部分内容不能正常显示。
