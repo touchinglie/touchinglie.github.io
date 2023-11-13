@@ -6,7 +6,37 @@
     <description>Recent content on Dow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 08 Apr 2022 19:36:00 +0000</lastBuildDate><atom:link href="https://dowblog.rr.nu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Nov 2023 14:21:00 +0000</lastBuildDate><atom:link href="https://dowblog.rr.nu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>有关秩的笔记（线性代数系列）</title>
+      <link>https://dowblog.rr.nu/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</link>
+      <pubDate>Mon, 13 Nov 2023 14:21:00 +0000</pubDate>
+      
+      <guid>https://dowblog.rr.nu/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</guid>
+      <description>&lt;p&gt;上了大学以后可以说线性代数和高等数学真的杀我，尤其是线性代数，开始并不觉得解方程有什么难度，后来难度上来以后，就是薄纱。第一个爆杀我的就是秩，真的抽象到不知道什么东西。&lt;/p&gt;
+&lt;p&gt;目前就记些笔记，搜集一下网上网友的教学：&lt;/p&gt;
+&lt;p&gt;知乎上比较好的：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/people/cang-bai-de-gou/posts&#34;&gt;@Aliothhuangzttt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/280920553/answer/1240817502&#34;&gt;如何快速求一个矩阵的秩？求大神给详细方法？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/496118586&#34;&gt;用人话解释（一）——矩阵、行列式与秩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最后一个刚看完前面部分，感觉有点群论的思维，像在复平面内&lt;/p&gt;
+&lt;p&gt;$$i \times i = -1$$&lt;/p&gt;
+&lt;p&gt;一样,是对向量i进行了90°的逆时针旋转。&lt;/p&gt;
+&lt;p&gt;但是秩的概念实在不懂的话，第二个应该足够应试了。&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>上了大学以后可以说线性代数和高等数学真的杀我，尤其是线性代数，开始并不觉得解方程有什么难度，后来难度上来以后，就是薄纱。第一个爆杀我的就是秩，真的抽象到不知道什么东西。</p>
+<p>目前就记些笔记，搜集一下网上网友的教学：</p>
+<p>知乎上比较好的：</p>
+<p><a href="https://www.zhihu.com/people/cang-bai-de-gou/posts">@Aliothhuangzttt</a></p>
+<p><a href="https://www.zhihu.com/question/280920553/answer/1240817502">如何快速求一个矩阵的秩？求大神给详细方法？</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/496118586">用人话解释（一）——矩阵、行列式与秩</a></p>
+<p>最后一个刚看完前面部分，感觉有点群论的思维，像在复平面内</p>
+<p>$$i \times i = -1$$</p>
+<p>一样,是对向量i进行了90°的逆时针旋转。</p>
+<p>但是秩的概念实在不懂的话，第二个应该足够应试了。</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>排列数基础(常见模型)笔记</title>
       <link>https://dowblog.rr.nu/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
@@ -949,36 +979,6 @@ emmm要接着写作业了</p>
 <p>二级域名①：? （ping平均38ms，有每月流量限制）</p>
 <p>二级域名②：? （ping平均33ms，有每月流量限制）</p>
 <p>github如下(没错你网卡了）</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>有关秩的笔记（线性代数系列）</title>
-      <link>https://dowblog.rr.nu/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</link>
-      <pubDate>Thu, 09 Apr 2020 11:21:00 +0000</pubDate>
-      
-      <guid>https://dowblog.rr.nu/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</guid>
-      <description>&lt;p&gt;上了大学以后可以说线性代数和高等数学真的杀我，尤其是线性代数，开始并不觉得解方程有什么难度，后来难度上来以后，就是薄纱。第一个爆杀我的就是秩，真的抽象到不知道什么东西。&lt;/p&gt;
-&lt;p&gt;目前就记些笔记，搜集一下网上网友的教学：&lt;/p&gt;
-&lt;p&gt;知乎上比较好的：
-&lt;a href=&#34;https://www.zhihu.com/people/cang-bai-de-gou/posts&#34;&gt;@Aliothhuangzttt&lt;/a&gt;
-&lt;a href=&#34;https://www.zhihu.com/question/280920553/answer/1240817502&#34;&gt;如何快速求一个矩阵的秩？求大神给详细方法？&lt;/a&gt;
-&lt;a href=&#34;https://zhuanlan.zhihu.com/p/496118586&#34;&gt;用人话解释（一）——矩阵、行列式与秩&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;最后一个刚看完前面部分，感觉有点群论的思维，像在复平面内&lt;/p&gt;
-&lt;p&gt;$$i \times i = -1$$&lt;/p&gt;
-&lt;p&gt;一样,是对向量i进行了90°的逆时针旋转。&lt;/p&gt;
-&lt;p&gt;但是秩的概念实在不懂的话，第二个应该足够应试了。&lt;/p&gt;
-</description>
-      <content:encoded><![CDATA[<p>上了大学以后可以说线性代数和高等数学真的杀我，尤其是线性代数，开始并不觉得解方程有什么难度，后来难度上来以后，就是薄纱。第一个爆杀我的就是秩，真的抽象到不知道什么东西。</p>
-<p>目前就记些笔记，搜集一下网上网友的教学：</p>
-<p>知乎上比较好的：
-<a href="https://www.zhihu.com/people/cang-bai-de-gou/posts">@Aliothhuangzttt</a>
-<a href="https://www.zhihu.com/question/280920553/answer/1240817502">如何快速求一个矩阵的秩？求大神给详细方法？</a>
-<a href="https://zhuanlan.zhihu.com/p/496118586">用人话解释（一）——矩阵、行列式与秩</a></p>
-<p>最后一个刚看完前面部分，感觉有点群论的思维，像在复平面内</p>
-<p>$$i \times i = -1$$</p>
-<p>一样,是对向量i进行了90°的逆时针旋转。</p>
-<p>但是秩的概念实在不懂的话，第二个应该足够应试了。</p>
 ]]></content:encoded>
     </item>
     

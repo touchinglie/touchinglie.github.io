@@ -2,16 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dowblog.rr.nu/tags/blog/</loc>
+    <lastmod>2023-11-13T14:21:00+00:00</lastmod>
+  </url><url>
     <loc>https://dowblog.rr.nu/</loc>
-    <lastmod>2022-04-08T19:36:00+00:00</lastmod>
+    <lastmod>2023-11-13T14:21:00+00:00</lastmod>
   </url><url>
     <loc>https://dowblog.rr.nu/posts/</loc>
-    <lastmod>2022-04-08T19:36:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dowblog.rr.nu/tags/study/</loc>
-    <lastmod>2022-04-08T19:36:00+00:00</lastmod>
+    <lastmod>2023-11-13T14:21:00+00:00</lastmod>
   </url><url>
     <loc>https://dowblog.rr.nu/tags/</loc>
+    <lastmod>2023-11-13T14:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dowblog.rr.nu/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2023-11-13T14:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dowblog.rr.nu/tags/study/</loc>
     <lastmod>2022-04-08T19:36:00+00:00</lastmod>
   </url><url>
     <loc>https://dowblog.rr.nu/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</loc>
@@ -19,9 +25,6 @@
   </url><url>
     <loc>https://dowblog.rr.nu/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-04-06T19:36:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dowblog.rr.nu/tags/blog/</loc>
-    <lastmod>2022-03-24T11:10:00+00:00</lastmod>
   </url><url>
     <loc>https://dowblog.rr.nu/posts/%E6%9B%B4%E6%96%B0/</loc>
     <lastmod>2022-03-24T11:10:00+00:00</lastmod>
@@ -82,9 +85,6 @@
   </url><url>
     <loc>https://dowblog.rr.nu/posts/%E8%A1%A5%E4%BB%8B%E7%BB%8D/</loc>
     <lastmod>2020-04-10T09:45:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dowblog.rr.nu/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</loc>
-    <lastmod>2020-04-09T11:21:00+00:00</lastmod>
   </url><url>
     <loc>https://dowblog.rr.nu/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2020-04-09T11:21:00+00:00</lastmod>
