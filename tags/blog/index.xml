@@ -6,7 +6,23 @@
     <description>Recent content in blog on Dow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 13 Nov 2023 14:21:00 +0000</lastBuildDate><atom:link href="https://dowblog.rr.nu/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Dec 2023 18:00:00 +0000</lastBuildDate><atom:link href="https://dowblog.rr.nu/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>折腾</title>
+      <link>https://dowblog.rr.nu/posts/%E6%8A%98%E8%85%BE/</link>
+      <pubDate>Thu, 14 Dec 2023 18:00:00 +0000</pubDate>
+      
+      <guid>https://dowblog.rr.nu/posts/%E6%8A%98%E8%85%BE/</guid>
+      <description>&lt;p&gt;###目前学完Python、Js基础哩&lt;/p&gt;
+&lt;p&gt;朝着Java前进，但是还要过高数线代期末考，麻了&lt;/p&gt;
+&lt;p&gt;考完想用python和nodejs分别给博客写一个后端部署在Vercel上，但是博客用的是Github Action推的，直接改可能出问题，想着用后端直接从GitHub推，估计挺难。&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>###目前学完Python、Js基础哩</p>
+<p>朝着Java前进，但是还要过高数线代期末考，麻了</p>
+<p>考完想用python和nodejs分别给博客写一个后端部署在Vercel上，但是博客用的是Github Action推的，直接改可能出问题，想着用后端直接从GitHub推，估计挺难。</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>有关秩的笔记（线性代数系列）</title>
       <link>https://dowblog.rr.nu/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</link>
@@ -267,7 +283,7 @@ deploy
 &lt;p&gt;5.4&lt;strong&gt;更新界面，扩展功能。&lt;/strong&gt;（页面调用得十分痛苦，一天里不知道又制造了多少惊喜的bug）&lt;/p&gt;
 &lt;p&gt;博客5月4号界面：&lt;a href=&#34;https://dowblog.rr.nu/img/20200504Blog.webp&#34; title=&#34;2020年5月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/20200504Blog.webp&#34; alt=&#34;2020年5月4日论坛界面&#34;  title=&#34;2020年5月4日博客界面&#34;  /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;现在可访问博客的域名有：
+&lt;p&gt;现在可访问博客的域名有：&lt;a href=&#34;https://dowblog.rr.nu/&#34;&gt;Dow&amp;rsquo;s blog&lt;/a&gt;
 就这个了，其它懒得维护，hexo的域名到期，看看有没有心情，有心情再整（&lt;/p&gt;
 &lt;p&gt;如果网站加载速度很慢或使用流量，可以使用本博客的AMP版：
 ?&lt;/p&gt;
@@ -296,7 +312,7 @@ deploy
 <p>5.4<strong>更新界面，扩展功能。</strong>（页面调用得十分痛苦，一天里不知道又制造了多少惊喜的bug）</p>
 <p>博客5月4号界面：<a href="/img/20200504Blog.webp" title="2020年5月4日博客界面"><img loading="lazy" src="/img/20200504Blog.webp" alt="2020年5月4日论坛界面"  title="2020年5月4日博客界面"  />
 </a></p>
-<p>现在可访问博客的域名有：
+<p>现在可访问博客的域名有：<a href="https://dowblog.rr.nu/">Dow&rsquo;s blog</a>
 就这个了，其它懒得维护，hexo的域名到期，看看有没有心情，有心情再整（</p>
 <p>如果网站加载速度很慢或使用流量，可以使用本博客的AMP版：
 ?</p>
