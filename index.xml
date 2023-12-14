@@ -13,11 +13,11 @@
       <pubDate>Thu, 14 Dec 2023 18:00:00 +0000</pubDate>
       
       <guid>https://dowblog.rr.nu/posts/%E6%8A%98%E8%85%BE/</guid>
-      <description>&lt;p&gt;###目前学完Python、Js基础哩&lt;/p&gt;
+      <description>&lt;h2 id=&#34;目前学完pythonjs基础哩&#34;&gt;目前学完Python、Js基础哩&lt;/h2&gt;
 &lt;p&gt;朝着Java前进，但是还要过高数线代期末考，麻了&lt;/p&gt;
 &lt;p&gt;考完想用python和nodejs分别给博客写一个后端部署在Vercel上，但是博客用的是Github Action推的，直接改可能出问题，想着用后端直接从GitHub推，估计挺难。&lt;/p&gt;
 </description>
-      <content:encoded><![CDATA[<p>###目前学完Python、Js基础哩</p>
+      <content:encoded><![CDATA[<h2 id="目前学完pythonjs基础哩">目前学完Python、Js基础哩</h2>
 <p>朝着Java前进，但是还要过高数线代期末考，麻了</p>
 <p>考完想用python和nodejs分别给博客写一个后端部署在Vercel上，但是博客用的是Github Action推的，直接改可能出问题，想着用后端直接从GitHub推，估计挺难。</p>
 ]]></content:encoded>
