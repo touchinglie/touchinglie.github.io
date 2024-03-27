@@ -15,11 +15,15 @@
       <guid>https://dowblog.rr.nu/posts/%E6%8A%98%E8%85%BE/</guid>
       <description>&lt;h2 id=&#34;目前学完pythonjs基础哩&#34;&gt;目前学完Python、Js基础哩&lt;/h2&gt;
 &lt;p&gt;朝着Java前进，但是还要过高数线代期末考，麻了&lt;/p&gt;
-&lt;p&gt;考完想用python和nodejs分别给博客写一个后端部署在Vercel上，但是博客用的是Github Action推的，直接改可能出问题，想着用后端直接从GitHub推，估计挺难。&lt;/p&gt;
+&lt;p&gt;考完想用python和nodejs分别给博客写一个后端部署在Vercel上，但是博客用的是Github Action推的，直接改可能出问题，想着用后端直接从GitHub推，估计挺难。主要是后端和本地action源码会不同步。&lt;/p&gt;
+&lt;h3 id=&#34;202413&#34;&gt;2024.1.3&lt;/h3&gt;
+&lt;p&gt;目前考完高数，精神状态良好，马上就能出院&amp;ndash;我想着要不直接把另一个闲置的hexo博客改来做后台，这样保险一点。&lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<h2 id="目前学完pythonjs基础哩">目前学完Python、Js基础哩</h2>
 <p>朝着Java前进，但是还要过高数线代期末考，麻了</p>
-<p>考完想用python和nodejs分别给博客写一个后端部署在Vercel上，但是博客用的是Github Action推的，直接改可能出问题，想着用后端直接从GitHub推，估计挺难。</p>
+<p>考完想用python和nodejs分别给博客写一个后端部署在Vercel上，但是博客用的是Github Action推的，直接改可能出问题，想着用后端直接从GitHub推，估计挺难。主要是后端和本地action源码会不同步。</p>
+<h3 id="202413">2024.1.3</h3>
+<p>目前考完高数，精神状态良好，马上就能出院&ndash;我想着要不直接把另一个闲置的hexo博客改来做后台，这样保险一点。</p>
 ]]></content:encoded>
     </item>
     
@@ -92,10 +96,14 @@ deploy
 &lt;p&gt;毕竟都是用markdown写文章，还是很方便的&lt;/p&gt;
 &lt;h3 id=&#34;2023918&#34;&gt;2023.9.18&lt;/h3&gt;
 &lt;p&gt;typecho的博客废了
-&lt;a href=&#34;https://tranquil-atoll-01447.herokuapp.com/&#34;&gt;typecho-blog&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://tranquil-atoll-01447.herokuapp.com/&#34;&gt;typecho-blog-old&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;原因是heroku的牛马测试机屏蔽了来自Bettertime的保活&lt;/p&gt;
 &lt;p&gt;静态博客域名改为&lt;a href=&#34;https://dowblog.rr.nu/&#34;&gt;永久二级域名&lt;/a&gt;哩，Freenom也没了，懒得折腾了。&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;已经进入老年生活了，遥遥领先&lt;/del&gt;&lt;/p&gt;
+&lt;h1 id=&#34;2024318&#34;&gt;2024.3.18&lt;/h1&gt;
+&lt;p&gt;typecho的博客复活x2
+&lt;a href=&#34;https://dowtyblog.rf.gd&#34;&gt;typecho-blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;总算是找到一家能免费托管的，不过限制&lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<hr>
 <p><em>本博客第三次更新</em>
@@ -130,10 +138,14 @@ deploy
 <p>毕竟都是用markdown写文章，还是很方便的</p>
 <h3 id="2023918">2023.9.18</h3>
 <p>typecho的博客废了
-<a href="https://tranquil-atoll-01447.herokuapp.com/">typecho-blog</a></p>
+<a href="https://tranquil-atoll-01447.herokuapp.com/">typecho-blog-old</a></p>
 <p>原因是heroku的牛马测试机屏蔽了来自Bettertime的保活</p>
 <p>静态博客域名改为<a href="https://dowblog.rr.nu/">永久二级域名</a>哩，Freenom也没了，懒得折腾了。</p>
 <p><del>已经进入老年生活了，遥遥领先</del></p>
+<h1 id="2024318">2024.3.18</h1>
+<p>typecho的博客复活x2
+<a href="https://dowtyblog.rf.gd">typecho-blog</a></p>
+<p>总算是找到一家能免费托管的，不过限制</p>
 ]]></content:encoded>
     </item>
     
@@ -283,14 +295,16 @@ deploy
 &lt;p&gt;5.4&lt;strong&gt;更新界面，扩展功能。&lt;/strong&gt;（页面调用得十分痛苦，一天里不知道又制造了多少惊喜的bug）&lt;/p&gt;
 &lt;p&gt;博客5月4号界面：&lt;a href=&#34;https://dowblog.rr.nu/img/20200504Blog.webp&#34; title=&#34;2020年5月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/20200504Blog.webp&#34; alt=&#34;2020年5月4日论坛界面&#34;  title=&#34;2020年5月4日博客界面&#34;  /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;现在可访问博客的域名有：&lt;a href=&#34;https://dowblog.rr.nu/&#34;&gt;Dow&amp;rsquo;s blog&lt;/a&gt;
+&lt;p&gt;现在可访问博客的域名有：
+&lt;a href=&#34;https://dowblog.rr.nu/&#34;&gt;Dow&amp;rsquo;s blog&lt;/a&gt;
 &lt;a href=&#34;https://dowty.rr.nu/&#34;&gt;home|Oscar&amp;rsquo;s blog&lt;/a&gt;
-就这个了，其它懒得维护，hexo的域名到期，看看有没有心情，有心情再整（&lt;/p&gt;
+&lt;a href=&#34;https://dowtyblog.rf.gd/&#34;&gt;Dowblog&lt;/a&gt;
+除第一个hugo做的以外其它博客懒得维护，hexo不常同步更新，看看有没有心情，有心情再整（&lt;/p&gt;
 &lt;p&gt;如果网站加载速度很慢或使用流量，可以使用本博客的AMP版：
-?&lt;/p&gt;
+&lt;del&gt;曾经有&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;AMP版更为简洁但有部分内容不能正常显示。
-?&lt;/p&gt;
-&lt;p&gt;如果以上网址都不能用，请联系站长：?&lt;/p&gt;
+&lt;del&gt;曾经有&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;如果以上网址都不能用，请联系站长：&lt;del&gt;曾经有&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;收到消息后博客将启用备用网址，一般情况下不开启。（访问速度极慢且丢包75%）&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Update soon.&lt;/p&gt;
@@ -313,14 +327,16 @@ deploy
 <p>5.4<strong>更新界面，扩展功能。</strong>（页面调用得十分痛苦，一天里不知道又制造了多少惊喜的bug）</p>
 <p>博客5月4号界面：<a href="/img/20200504Blog.webp" title="2020年5月4日博客界面"><img loading="lazy" src="/img/20200504Blog.webp" alt="2020年5月4日论坛界面"  title="2020年5月4日博客界面"  />
 </a></p>
-<p>现在可访问博客的域名有：<a href="https://dowblog.rr.nu/">Dow&rsquo;s blog</a>
+<p>现在可访问博客的域名有：
+<a href="https://dowblog.rr.nu/">Dow&rsquo;s blog</a>
 <a href="https://dowty.rr.nu/">home|Oscar&rsquo;s blog</a>
-就这个了，其它懒得维护，hexo的域名到期，看看有没有心情，有心情再整（</p>
+<a href="https://dowtyblog.rf.gd/">Dowblog</a>
+除第一个hugo做的以外其它博客懒得维护，hexo不常同步更新，看看有没有心情，有心情再整（</p>
 <p>如果网站加载速度很慢或使用流量，可以使用本博客的AMP版：
-?</p>
+<del>曾经有</del></p>
 <p>AMP版更为简洁但有部分内容不能正常显示。
-?</p>
-<p>如果以上网址都不能用，请联系站长：?</p>
+<del>曾经有</del></p>
+<p>如果以上网址都不能用，请联系站长：<del>曾经有</del></p>
 <p>收到消息后博客将启用备用网址，一般情况下不开启。（访问速度极慢且丢包75%）</p>
 <hr>
 <p>Update soon.</p>
