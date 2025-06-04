@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Dow Blog</title>
-    <link>https://dowblog.rr.nu/posts/</link>
+    <link>https://gitblog.dowblog.top/posts/</link>
     <description>Recent content in Posts on Dow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 13 Apr 2024 07:50:00 +0000</lastBuildDate><atom:link href="https://dowblog.rr.nu/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Apr 2024 07:50:00 +0000</lastBuildDate><atom:link href="https://gitblog.dowblog.top/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>简单python图形化程序开发（tkiner、sqlite3）</title>
-      <link>https://dowblog.rr.nu/posts/%E7%AE%80%E5%8D%95python%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91tkinersqlite3/</link>
+      <link>https://gitblog.dowblog.top/posts/%E7%AE%80%E5%8D%95python%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91tkinersqlite3/</link>
       <pubDate>Sat, 13 Apr 2024 07:50:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E7%AE%80%E5%8D%95python%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91tkinersqlite3/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E7%AE%80%E5%8D%95python%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91tkinersqlite3/</guid>
       <description>&lt;h5 id=&#34;折腾前引学校任务图形化界面直接无脑tkiner&#34;&gt;折腾前引：学校任务图形化界面直接无脑tkiner，&lt;/h5&gt;
 &lt;h5 id=&#34;自己想长期开发的python项目才用qt框架pyside6库&#34;&gt;自己想长期开发的python项目才用qt框架（pyside6库），&lt;/h5&gt;
 &lt;h5 id=&#34;想处理大量同类数据及保证程序独立性再加数据库&#34;&gt;想处理大量同类数据及保证程序独立性再加数据库。&lt;/h5&gt;
@@ -36,10 +36,10 @@
 &lt;p&gt;&lt;del&gt;主要是学校作业犯不上这么玩命&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;学长也劝我没必要，于是便转tkiner这个python自带的小型库。
 国内的tkiner教程的严重滞后，也没有太多人用。
-python Wiki提供了国外第三方较为完善的教程：
-&lt;a href=&#34;https://coderslegacy.com/python/python-gui/&#34;&gt;Python GUI with Tkinter&lt;/a&gt;
-&lt;a href=&#34;https://tkdocs.com/tutorial/index.html&#34;&gt;TkDocs Tutorial&lt;/a&gt;
-第二个是官方教程但第一个很不错。&lt;/p&gt;
+python Wiki提供了国外第三方较为完善的教程：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://coderslegacy.com/python/python-gui/&#34;&gt;Python GUI with Tkinter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://tkdocs.com/tutorial/index.html&#34;&gt;TkDocs Tutorial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;第二个是官方教程但第一个很不错。&lt;/p&gt;
 &lt;p&gt;对这个程序我的基本设想是数据库操作与主程序界面分离，分为main.py负责图形化界面，logincheck.py负责登录数据库的核验，functionpack.py负责学生管理系统的数据库操作。&lt;/p&gt;
 &lt;p&gt;数据库用的是sqlite，毕竟不可能每个使用者都为了这个系统安装mysql。&lt;/p&gt;
 &lt;hr&gt;
@@ -199,10 +199,10 @@ def open_child_window():
 <p><del>主要是学校作业犯不上这么玩命</del></p>
 <p>学长也劝我没必要，于是便转tkiner这个python自带的小型库。
 国内的tkiner教程的严重滞后，也没有太多人用。
-python Wiki提供了国外第三方较为完善的教程：
-<a href="https://coderslegacy.com/python/python-gui/">Python GUI with Tkinter</a>
-<a href="https://tkdocs.com/tutorial/index.html">TkDocs Tutorial</a>
-第二个是官方教程但第一个很不错。</p>
+python Wiki提供了国外第三方较为完善的教程：</p>
+<p><a href="https://coderslegacy.com/python/python-gui/">Python GUI with Tkinter</a></p>
+<p><a href="https://tkdocs.com/tutorial/index.html">TkDocs Tutorial</a></p>
+<p>第二个是官方教程但第一个很不错。</p>
 <p>对这个程序我的基本设想是数据库操作与主程序界面分离，分为main.py负责图形化界面，logincheck.py负责登录数据库的核验，functionpack.py负责学生管理系统的数据库操作。</p>
 <p>数据库用的是sqlite，毕竟不可能每个使用者都为了这个系统安装mysql。</p>
 <hr>
@@ -343,10 +343,10 @@ def open_child_window():
     
     <item>
       <title>折腾</title>
-      <link>https://dowblog.rr.nu/posts/%E6%8A%98%E8%85%BE/</link>
+      <link>https://gitblog.dowblog.top/posts/%E6%8A%98%E8%85%BE/</link>
       <pubDate>Thu, 14 Dec 2023 18:00:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E6%8A%98%E8%85%BE/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E6%8A%98%E8%85%BE/</guid>
       <description>&lt;h2 id=&#34;目前学完pythonjs基础哩&#34;&gt;目前学完Python、Js基础哩&lt;/h2&gt;
 &lt;p&gt;朝着Java前进，但是还要过高数线代期末考，麻了&lt;/p&gt;
 &lt;p&gt;考完想用python和nodejs分别给博客写一个后端部署在Vercel上，但是博客用的是Github Action推的，直接改可能出问题，想着用后端直接从GitHub推，估计挺难。主要是后端和本地action源码会不同步。&lt;/p&gt;
@@ -363,10 +363,10 @@ def open_child_window():
     
     <item>
       <title>有关秩的笔记（线性代数系列）</title>
-      <link>https://dowblog.rr.nu/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</link>
+      <link>https://gitblog.dowblog.top/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</link>
       <pubDate>Mon, 13 Nov 2023 14:21:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</guid>
       <description>&lt;p&gt;上了大学以后可以说线性代数和高等数学真的杀我，尤其是线性代数，开始并不觉得解方程有什么难度，后来难度上来以后，就是薄纱。第一个爆杀我的就是秩，真的抽象到不知道什么东西。&lt;/p&gt;
 &lt;p&gt;目前就记些笔记，搜集一下网上网友的教学：&lt;/p&gt;
 &lt;p&gt;知乎上比较好的：&lt;/p&gt;
@@ -393,10 +393,10 @@ def open_child_window():
     
     <item>
       <title>排列数基础(常见模型)笔记</title>
-      <link>https://dowblog.rr.nu/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
+      <link>https://gitblog.dowblog.top/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Fri, 08 Apr 2022 19:36:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;这里是学习笔记，注意检索关键词&lt;/p&gt;
 &lt;p&gt;语法引用 $\LaTeX$ ，未显示准确需转码&lt;/p&gt;
@@ -433,10 +433,10 @@ def open_child_window():
     
     <item>
       <title>排列数(组合数与阶乘)笔记</title>
-      <link>https://dowblog.rr.nu/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://gitblog.dowblog.top/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Wed, 06 Apr 2022 19:36:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;这里是学习笔记，注意检索关键词&lt;/p&gt;
 &lt;p&gt;语法引用 $\LaTeX$ ，未显示准确需转码&lt;/p&gt;
@@ -639,10 +639,10 @@ def open_child_window():
     
     <item>
       <title>更新</title>
-      <link>https://dowblog.rr.nu/posts/%E6%9B%B4%E6%96%B0/</link>
+      <link>https://gitblog.dowblog.top/posts/%E6%9B%B4%E6%96%B0/</link>
       <pubDate>Thu, 24 Mar 2022 11:10:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E6%9B%B4%E6%96%B0/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E6%9B%B4%E6%96%B0/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;&lt;em&gt;本博客第三次更新&lt;/em&gt;
 &lt;strong&gt;Here we start！&lt;/strong&gt;&lt;/p&gt;
@@ -661,7 +661,7 @@ deploy
 （当然这视个人网络情况而定，不过网站的漏洞包括XSS攻击都在用CSP等策略在修复了）&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;至于美化嘛……有时间再做&lt;/strong&gt;
 毕竟目前主要的是先做好优化&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/blog-lighthouse-test.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/blog-lighthouse-test.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;2022329&#34;&gt;2022.3.29&lt;/h3&gt;
 &lt;p&gt;目前仍在尝试部署域名稳定（指heroku自带域名🐶）的博客，系统是typecho
@@ -731,10 +731,10 @@ deploy
     
     <item>
       <title>2022新年</title>
-      <link>https://dowblog.rr.nu/posts/2022%E6%96%B0%E5%B9%B4/</link>
+      <link>https://gitblog.dowblog.top/posts/2022%E6%96%B0%E5%B9%B4/</link>
       <pubDate>Wed, 26 Jan 2022 19:56:45 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/2022%E6%96%B0%E5%B9%B4/</guid>
+      <guid>https://gitblog.dowblog.top/posts/2022%E6%96%B0%E5%B9%B4/</guid>
       <description>&lt;h2 id=&#34;又是新一年了呢&#34;&gt;又是新一年了呢&lt;/h2&gt;
 &lt;h3 id=&#34;refresh-my-mark-please&#34;&gt;Refresh my mark, please!&lt;/h3&gt;
 &lt;p&gt;作为一名理科差爆的理科生已经很安然的去世了好吧……&lt;/p&gt;
@@ -753,10 +753,10 @@ deploy
     
     <item>
       <title>感到迷茫</title>
-      <link>https://dowblog.rr.nu/posts/%E6%84%9F%E5%88%B0%E8%BF%B7%E8%8C%AB/</link>
+      <link>https://gitblog.dowblog.top/posts/%E6%84%9F%E5%88%B0%E8%BF%B7%E8%8C%AB/</link>
       <pubDate>Sat, 22 May 2021 19:50:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E6%84%9F%E5%88%B0%E8%BF%B7%E8%8C%AB/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E6%84%9F%E5%88%B0%E8%BF%B7%E8%8C%AB/</guid>
       <description>&lt;p&gt;就在今天，袁隆平老先生离开人世，睡在了他所心心念念的稻穗禾苗下了。
 就在今天，吴孟超院士也不能在手术台前医治患者了。&lt;/p&gt;
 &lt;p&gt;有些迷茫，
@@ -779,10 +779,10 @@ deploy
     
     <item>
       <title>2021新年</title>
-      <link>https://dowblog.rr.nu/posts/2021%E6%96%B0%E5%B9%B4/</link>
+      <link>https://gitblog.dowblog.top/posts/2021%E6%96%B0%E5%B9%B4/</link>
       <pubDate>Thu, 11 Feb 2021 09:35:45 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/2021%E6%96%B0%E5%B9%B4/</guid>
+      <guid>https://gitblog.dowblog.top/posts/2021%E6%96%B0%E5%B9%B4/</guid>
       <description>&lt;p&gt;终于，我还是成功逆袭了。
 经过复习，我以388的分数，用一个指标生的名额（能加15分）考上了403分的学校（满分460）
 指标生只能押在一个学校上，这波刚好押满，极限操作。
@@ -811,13 +811,13 @@ deploy
     
     <item>
       <title>假期再见</title>
-      <link>https://dowblog.rr.nu/posts/%E5%81%87%E6%9C%9F%E5%86%8D%E8%A7%81/</link>
+      <link>https://gitblog.dowblog.top/posts/%E5%81%87%E6%9C%9F%E5%86%8D%E8%A7%81/</link>
       <pubDate>Fri, 21 Aug 2020 22:00:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E5%81%87%E6%9C%9F%E5%86%8D%E8%A7%81/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E5%81%87%E6%9C%9F%E5%86%8D%E8%A7%81/</guid>
       <description>&lt;p&gt;终于，还是考完了。
 毕业后我和几个同学先是到广州去生活，住民宿（珠江帝景苑真的只是好看的破落小区）一天上千，过于昂贵。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/%e7%8f%a0%e6%b1%9f%e5%b8%9d%e6%99%af%e8%8b%91.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/%e7%8f%a0%e6%b1%9f%e5%b8%9d%e6%99%af%e8%8b%91.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;我们试着自己做饭，结果发现刀就只有那种腌肉用的三寸小刀。
 三百多平的房子里有烤箱、工具，就是没有菜刀。
@@ -837,10 +837,10 @@ deploy
     
     <item>
       <title>倒数10天</title>
-      <link>https://dowblog.rr.nu/posts/%E5%80%92%E6%95%B010%E5%A4%A9/</link>
+      <link>https://gitblog.dowblog.top/posts/%E5%80%92%E6%95%B010%E5%A4%A9/</link>
       <pubDate>Fri, 10 Jul 2020 19:06:09 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E5%80%92%E6%95%B010%E5%A4%A9/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E5%80%92%E6%95%B010%E5%A4%A9/</guid>
       <description>&lt;p&gt;&lt;strong&gt;在一片喧嚣、热闹的教室里，我是苦恼的。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;既不想在最后时段去打好人际关系，也不愿面对那几本试卷，没日没夜地做试卷，然后靠刷手机是真的枯燥。&lt;/strong&gt;
 &lt;strong&gt;这有点像一点点掏空充实多彩的精神世界，就拿把火烧毁华华丽丽外壳，只剩下千篇一律的、单调的余烬。&lt;/strong&gt;&lt;/p&gt;
@@ -861,10 +861,10 @@ deploy
     
     <item>
       <title>倒数20天</title>
-      <link>https://dowblog.rr.nu/posts/%E5%80%92%E6%95%B020%E5%A4%A9/</link>
+      <link>https://gitblog.dowblog.top/posts/%E5%80%92%E6%95%B020%E5%A4%A9/</link>
       <pubDate>Wed, 24 Jun 2020 21:19:09 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E5%80%92%E6%95%B020%E5%A4%A9/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E5%80%92%E6%95%B020%E5%A4%A9/</guid>
       <description>&lt;p&gt;终于到了大考倒数第20天，后天就要去听说考试了。
 体育不出所料，没有满分，但也比模拟高了4分左右。&lt;/p&gt;
 &lt;p&gt;有时候复习三年知识起来挺迷茫的。
@@ -881,82 +881,82 @@ deploy
     
     <item>
       <title>（补）想当个有为的吃货</title>
-      <link>https://dowblog.rr.nu/posts/%E8%A1%A5%E6%83%B3%E5%BD%93%E4%B8%AA%E6%9C%89%E4%B8%BA%E7%9A%84%E5%90%83%E8%B4%A7/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%A1%A5%E6%83%B3%E5%BD%93%E4%B8%AA%E6%9C%89%E4%B8%BA%E7%9A%84%E5%90%83%E8%B4%A7/</link>
       <pubDate>Wed, 10 Jun 2020 22:28:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%A1%A5%E6%83%B3%E5%BD%93%E4%B8%AA%E6%9C%89%E4%B8%BA%E7%9A%84%E5%90%83%E8%B4%A7/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5%E6%83%B3%E5%BD%93%E4%B8%AA%E6%9C%89%E4%B8%BA%E7%9A%84%E5%90%83%E8%B4%A7/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;吃货不解释&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/wx_camera_1564900817151.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/wx_camera_1564900817151.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/wx_camera_1564728707757.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/wx_camera_1564728707757.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/wx_camera_1564049990023.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/wx_camera_1564049990023.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/wx_camera_1558349510112.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/wx_camera_1558349510112.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/Screenshot_20210208_173847.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/Screenshot_20210208_173847.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/ProShot_20180813_170207.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/ProShot_20180813_170207.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1643297579360.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1643297579360.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1636818603688.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1636818603688.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1636818599542.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1636818599542.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1612446985639.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1612446985639.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1611463943899.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1611463943899.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1611463806788.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1611463806788.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1606579548846.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1606579548846.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1606579546834.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1606579546834.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1606579543730.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1606579543730.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/tIqpjd.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/tIqpjd.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1605961131300.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1605961131300.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1605960485101.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1605960485101.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1605954094938.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1605954094938.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1601656690139.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1601656690139.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/tIqclG.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/tIqclG.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1601621387068.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1601621387068.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1601621378546.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1601621378546.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/mmexport1601621372801.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/mmexport1601621372801.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/IMG_20220214_191224.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/IMG_20220214_191224.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/IMG_20220212_151654.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/IMG_20220212_151654.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/IMG_20220120_192245.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/IMG_20220120_192245.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/IMG_20220120_192236.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/IMG_20220120_192236.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/IMG_20220120_192007.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/IMG_20220120_192007.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/IMG_20220115_121522.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/IMG_20220115_121522.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/IMG_20211112_114532.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/IMG_20211112_114532.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/IMG_20211006_183240.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/IMG_20211006_183240.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/IMG_20210911_193243.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/IMG_20210911_193243.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/IMG_20201003_135232.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/IMG_20201003_135232.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/IMG_20200531_131939.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/IMG_20200531_131939.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<ul>
@@ -1037,10 +1037,10 @@ deploy
     
     <item>
       <title>励志的梗</title>
-      <link>https://dowblog.rr.nu/posts/%E5%8A%B1%E5%BF%97%E7%9A%84%E6%A2%97/</link>
+      <link>https://gitblog.dowblog.top/posts/%E5%8A%B1%E5%BF%97%E7%9A%84%E6%A2%97/</link>
       <pubDate>Mon, 08 Jun 2020 19:40:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E5%8A%B1%E5%BF%97%E7%9A%84%E6%A2%97/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E5%8A%B1%E5%BF%97%E7%9A%84%E6%A2%97/</guid>
       <description>&lt;p&gt;憨憨（我们老班）在大考前很励志的说了几句奇句：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;你们不能看到自己成绩多差，就放弃学了啊！&lt;/strong&gt;（过于真实）&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;想想你们喊作业多的时候，作业多不要抱怨。&lt;/strong&gt;&lt;/p&gt;
@@ -1050,7 +1050,7 @@ deploy
 &lt;p&gt;已经被我们班传颂至全年级了（迫真
 &lt;!-- raw HTML omitted --&gt;
 老班放飞自我ing：
-&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/tI7HsD.webp&#34; alt=&#34;&#34;  /&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/tI7HsD.webp&#34; alt=&#34;&#34;  /&gt;
 &lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<p>憨憨（我们老班）在大考前很励志的说了几句奇句：</p>
@@ -1069,10 +1069,10 @@ deploy
     
     <item>
       <title>考试了</title>
-      <link>https://dowblog.rr.nu/posts/%E8%80%83%E8%AF%95%E4%BA%86/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%80%83%E8%AF%95%E4%BA%86/</link>
       <pubDate>Sat, 06 Jun 2020 09:19:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%80%83%E8%AF%95%E4%BA%86/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%80%83%E8%AF%95%E4%BA%86/</guid>
       <description>&lt;p&gt;要考试了啊啊啊！&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;由于期中考的极差，博客怕是很难更新了。&lt;/strong&gt;
 &lt;strong&gt;疯狂复习ing&lt;/strong&gt;&lt;/p&gt;
@@ -1085,10 +1085,10 @@ deploy
     
     <item>
       <title>（补）还有67天</title>
-      <link>https://dowblog.rr.nu/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</link>
       <pubDate>Thu, 14 May 2020 23:15:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</guid>
       <description>&lt;h2 id=&#34;我真的好难啊&#34;&gt;我真的好难啊&lt;/h2&gt;
 &lt;p&gt;距离大考还有67天，桌台上的作业是按摞计算的，写完一本还要再发四本。
 不知道老师是怎么找到这破博客的，上课时提到“你好像挺闲啊”……
@@ -1109,10 +1109,10 @@ emmm要接着写作业了</p>
     
     <item>
       <title>（补）终于能回学校了</title>
-      <link>https://dowblog.rr.nu/posts/%E8%A1%A5%E7%BB%88%E4%BA%8E%E8%83%BD%E5%9B%9E%E5%AD%A6%E6%A0%A1%E4%BA%86/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%A1%A5%E7%BB%88%E4%BA%8E%E8%83%BD%E5%9B%9E%E5%AD%A6%E6%A0%A1%E4%BA%86/</link>
       <pubDate>Mon, 27 Apr 2020 21:01:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%A1%A5%E7%BB%88%E4%BA%8E%E8%83%BD%E5%9B%9E%E5%AD%A6%E6%A0%A1%E4%BA%86/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5%E7%BB%88%E4%BA%8E%E8%83%BD%E5%9B%9E%E5%AD%A6%E6%A0%A1%E4%BA%86/</guid>
       <description>&lt;p&gt;经过长达三个月的宅家生活，终于回到学校了！愿新冠肺炎早日消失！😊&lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<p>经过长达三个月的宅家生活，终于回到学校了！愿新冠肺炎早日消失！😊</p>
@@ -1121,10 +1121,10 @@ emmm要接着写作业了</p>
     
     <item>
       <title>（补）暂时潜水</title>
-      <link>https://dowblog.rr.nu/posts/%E8%A1%A5%E6%9A%82%E6%97%B6%E6%BD%9C%E6%B0%B4/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%A1%A5%E6%9A%82%E6%97%B6%E6%BD%9C%E6%B0%B4/</link>
       <pubDate>Thu, 23 Apr 2020 16:54:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%A1%A5%E6%9A%82%E6%97%B6%E6%BD%9C%E6%B0%B4/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5%E6%9A%82%E6%97%B6%E6%BD%9C%E6%B0%B4/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;中考当下我实在是不能匀出更多时间来装点我的博客了。&lt;/li&gt;
 &lt;/ul&gt;
@@ -1153,10 +1153,10 @@ emmm要接着写作业了</p>
     
     <item>
       <title>（补）关于RSS的说明</title>
-      <link>https://dowblog.rr.nu/posts/%E8%A1%A5%E5%85%B3%E4%BA%8Erss%E7%9A%84%E8%AF%B4%E6%98%8E/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%A1%A5%E5%85%B3%E4%BA%8Erss%E7%9A%84%E8%AF%B4%E6%98%8E/</link>
       <pubDate>Wed, 22 Apr 2020 18:01:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%A1%A5%E5%85%B3%E4%BA%8Erss%E7%9A%84%E8%AF%B4%E6%98%8E/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5%E5%85%B3%E4%BA%8Erss%E7%9A%84%E8%AF%B4%E6%98%8E/</guid>
       <description>&lt;p&gt;请注意RSS内本博客大量效果内容无法正常显示，这是因为RSS不支持html标签和Markdown语法。&lt;/p&gt;
 &lt;p&gt;建议仍使用浏览器访问本博客来获取内容。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://dowblog.rr.nu/index.xml&#34;&gt;RSS链接在此&lt;/a&gt;&lt;/p&gt;
@@ -1169,10 +1169,10 @@ emmm要接着写作业了</p>
     
     <item>
       <title>（补）如何快速搭建一个网站？（不包含任何html、css、php代码）序章</title>
-      <link>https://dowblog.rr.nu/posts/%E8%A1%A5%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E4%B8%8D%E5%8C%85%E5%90%AB%E4%BB%BB%E4%BD%95htmlcssphp%E4%BB%A3%E7%A0%81%E5%BA%8F%E7%AB%A0/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%A1%A5%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E4%B8%8D%E5%8C%85%E5%90%AB%E4%BB%BB%E4%BD%95htmlcssphp%E4%BB%A3%E7%A0%81%E5%BA%8F%E7%AB%A0/</link>
       <pubDate>Mon, 13 Apr 2020 23:21:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%A1%A5%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E4%B8%8D%E5%8C%85%E5%90%AB%E4%BB%BB%E4%BD%95htmlcssphp%E4%BB%A3%E7%A0%81%E5%BA%8F%E7%AB%A0/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E4%B8%8D%E5%8C%85%E5%90%AB%E4%BB%BB%E4%BD%95htmlcssphp%E4%BB%A3%E7%A0%81%E5%BA%8F%E7%AB%A0/</guid>
       <description>&lt;h5 id=&#34;以下描述的过程纯粹是为在网络方面零基础小白的提供的比喻并不准确同时为了确保任何零基础无任何学习计算机经历的人也能学会多处内容会做详细解释很啰嗦以下ip均指ipv4地址就是虚拟网络世界中的身份证&#34;&gt;以下描述的过程纯粹是为在网络方面零基础小白的提供的比喻，并不准确，同时为了确保任何零基础、无任何学习计算机经历的人也能学会，多处内容会做详细解释，很啰嗦。（以下IP均指IPV4地址，就是虚拟网络世界中的身份证）&lt;/h5&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
@@ -1291,10 +1291,10 @@ emmm要接着写作业了</p>
     
     <item>
       <title>（补）介绍</title>
-      <link>https://dowblog.rr.nu/posts/%E8%A1%A5%E4%BB%8B%E7%BB%8D/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%A1%A5%E4%BB%8B%E7%BB%8D/</link>
       <pubDate>Fri, 10 Apr 2020 09:45:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%A1%A5%E4%BB%8B%E7%BB%8D/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5%E4%BB%8B%E7%BB%8D/</guid>
       <description>&lt;blockquote&gt;
 &lt;h3 id=&#34;欢迎来到某入门级新手的个人博客&#34;&gt;&lt;strong&gt;欢迎来到某入门级新手的个人博客&lt;/strong&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;这里主要是记录&#34;&gt;这里主要是记录：&lt;/h4&gt;
@@ -1335,27 +1335,27 @@ emmm要接着写作业了</p>
     
     <item>
       <title>（补）更新日志</title>
-      <link>https://dowblog.rr.nu/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
       <pubDate>Thu, 09 Apr 2020 11:21:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
       <description>&lt;h2 id=&#34;这里是博客的更新日志&#34;&gt;这里是博客的更新日志&lt;/h2&gt;
 &lt;p&gt;4.8 &lt;strong&gt;博客搭建完毕&lt;/strong&gt;，域名申请成功：oblog.ml（4月10日更换了DNS服务商，可用！) 是因为DNS解析方依然木有解析……只能直接用穿透搭建了。&lt;/p&gt;
 &lt;p&gt;4.9 &lt;strong&gt;添加外观以及特殊功能&lt;/strong&gt;,&lt;strong&gt;晚9点左右更换DNS解析方，可以正式使用域名了！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;4.10 &lt;strong&gt;论坛域名修正，去除端口号，论坛CDN加速节奏带起！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;论坛目前界面：&lt;a href=&#34;https://dowblog.rr.nu/img/20201009BBS.webp&#34; title=&#34;2020年4月10日论坛界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/20201009BBS.webp&#34; alt=&#34;2020年4月10日论坛界面&#34;  title=&#34;2020年4月10日论坛界面&#34;  /&gt;
+&lt;p&gt;论坛目前界面：&lt;a href=&#34;https://gitblog.dowblog.top/img/20201009BBS.webp&#34; title=&#34;2020年4月10日论坛界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/20201009BBS.webp&#34; alt=&#34;2020年4月10日论坛界面&#34;  title=&#34;2020年4月10日论坛界面&#34;  /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;博客目前界面：&lt;a href=&#34;https://dowblog.rr.nu/img/20200410Blog.webp&#34; title=&#34;2020年10月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/20200410Blog.webp&#34; alt=&#34;2020年4月10日博客界面&#34;  title=&#34;2020年10月4日博客界面&#34;  /&gt;
+&lt;p&gt;博客目前界面：&lt;a href=&#34;https://gitblog.dowblog.top/img/20200410Blog.webp&#34; title=&#34;2020年10月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/20200410Blog.webp&#34; alt=&#34;2020年4月10日博客界面&#34;  title=&#34;2020年10月4日博客界面&#34;  /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;4.11 由于CDN方被这次疫情的突然袭击损失巨大，服务器有丢包不稳定，&lt;strong&gt;因此博客会在4月20号之前停止使用CDN加速&lt;/strong&gt;，届时博客加载速度将变慢一些（大约100ms左右，我的网络可ping到80ms左右）。同时更换了网站托管的服务器来弥补速度：美国俄勒冈的AWS更换至新加坡。&lt;/p&gt;
 &lt;p&gt;4.12 看来今天网速很好，早上9点ping论坛的速度为58ms，ping博客的速度有19ms。&lt;/p&gt;
 &lt;p&gt;4.20 不知道为什么，DNS始终解析到CDN商的中国服务器下，改了也木有用。等了十天后ping出来的ip依旧是CDN的服务器。绝了……&lt;/p&gt;
 &lt;p&gt;4.22 &lt;strong&gt;更新第二个域名oscarblog.ml&lt;/strong&gt;,之前的根域名用不了，于是切换了第二个域名。同时&lt;strong&gt;更新主题、优化缓存&lt;/strong&gt;，现在博客的访问速度即使没有CDN加速也能ping到60ms左右的延迟了。&lt;strong&gt;新增友情链接。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;4.23&lt;strong&gt;更新多个备用域名，不常启用。同时成功实现https！已开启HSTS，全站强制https。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;4.24博客目前界面：&lt;a href=&#34;https://dowblog.rr.nu/img/20200424Blog.webp&#34; title=&#34;2020年4月24日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/20200424Blog.webp&#34; alt=&#34;2020年4月24日论坛界面&#34;  title=&#34;2020年4月24日博客界面&#34;  /&gt;
+&lt;p&gt;4.24博客目前界面：&lt;a href=&#34;https://gitblog.dowblog.top/img/20200424Blog.webp&#34; title=&#34;2020年4月24日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/20200424Blog.webp&#34; alt=&#34;2020年4月24日论坛界面&#34;  title=&#34;2020年4月24日博客界面&#34;  /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;5.4&lt;strong&gt;更新界面，扩展功能。&lt;/strong&gt;（页面调用得十分痛苦，一天里不知道又制造了多少惊喜的bug）&lt;/p&gt;
-&lt;p&gt;博客5月4号界面：&lt;a href=&#34;https://dowblog.rr.nu/img/20200504Blog.webp&#34; title=&#34;2020年5月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/20200504Blog.webp&#34; alt=&#34;2020年5月4日论坛界面&#34;  title=&#34;2020年5月4日博客界面&#34;  /&gt;
+&lt;p&gt;博客5月4号界面：&lt;a href=&#34;https://gitblog.dowblog.top/img/20200504Blog.webp&#34; title=&#34;2020年5月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/20200504Blog.webp&#34; alt=&#34;2020年5月4日论坛界面&#34;  title=&#34;2020年5月4日博客界面&#34;  /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;现在可访问博客的域名有：
 &lt;a href=&#34;https://dowblog.rr.nu/&#34;&gt;Dow&amp;rsquo;s blog&lt;/a&gt;
@@ -1407,10 +1407,10 @@ emmm要接着写作业了</p>
     
     <item>
       <title>（补）test</title>
-      <link>https://dowblog.rr.nu/posts/%E8%A1%A5test-/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%A1%A5test-/</link>
       <pubDate>Wed, 08 Apr 2020 18:44:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%A1%A5test-/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5test-/</guid>
       <description>&lt;p&gt;本人确信自己不是标题党，尽管标题有明显特征……&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;本博客起点。&lt;/em&gt;
@@ -1451,10 +1451,10 @@ end
     
     <item>
       <title>（补）震惊！某初二学生的初中生活竟如此……！</title>
-      <link>https://dowblog.rr.nu/posts/%E8%A1%A5%E9%9C%87%E6%83%8A%E6%9F%90%E5%88%9D%E4%BA%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E5%88%9D%E4%B8%AD%E7%94%9F%E6%B4%BB%E7%AB%9F%E5%A6%82%E6%AD%A4/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%A1%A5%E9%9C%87%E6%83%8A%E6%9F%90%E5%88%9D%E4%BA%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E5%88%9D%E4%B8%AD%E7%94%9F%E6%B4%BB%E7%AB%9F%E5%A6%82%E6%AD%A4/</link>
       <pubDate>Thu, 30 May 2019 17:10:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%A1%A5%E9%9C%87%E6%83%8A%E6%9F%90%E5%88%9D%E4%BA%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E5%88%9D%E4%B8%AD%E7%94%9F%E6%B4%BB%E7%AB%9F%E5%A6%82%E6%AD%A4/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5%E9%9C%87%E6%83%8A%E6%9F%90%E5%88%9D%E4%BA%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E5%88%9D%E4%B8%AD%E7%94%9F%E6%B4%BB%E7%AB%9F%E5%A6%82%E6%AD%A4/</guid>
       <description>&lt;p&gt;本人确信自己不是标题党，尽管标题有明显特征……&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;老实说这是我的黑历史，真的。&lt;/p&gt;
@@ -1466,15 +1466,15 @@ end
 看我不敢去高档场所就约我一起去，给我钱去付款。（表面上AA，实际绝大部分都是他出的）&lt;/p&gt;
 &lt;p&gt;还有的原因是他们家是独生子女家庭，没人陪着去玩挺孤单的。&lt;/p&gt;
 &lt;p&gt;记录一下当时去吃的画面：&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/tIqclG.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/tIqclG.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;为什么说不土呢？因为人家懂生活啊，你见过给你做过饭吃的死党吗？&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/tIqNMr.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/tIqNMr.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;然后在回归原话题，正是因为出去玩，年少的我学会了喝酒……&lt;/p&gt;
 &lt;p&gt;起因是两个同学约我去购物，中午在麦当劳吃饭，随后她俩就去下面71便利店买了三瓶啤酒。&lt;/p&gt;
 &lt;p&gt;就是酱紫的：&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/tIqpjd.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/tIqpjd.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;还好我们都不会太过火，就只是一点点慢慢喝。&lt;/p&gt;
 &lt;p&gt;（真正过火的在新年家族聚会上，几十号亲戚，自己逞能在1分钟内往嘴里灌了一开水壶的红酒后，当晚硬是没吐，就……再没敢碰过酒。）&lt;/p&gt;
@@ -1511,10 +1511,32 @@ end
     
     <item>
       <title></title>
-      <link>https://dowblog.rr.nu/posts/%E7%94%9F%E5%BD%93%E5%A4%8D%E5%BD%92%E6%9D%A5%E6%AD%BB%E5%BD%93%E9%95%BF%E7%9B%B8%E6%80%9D/</link>
+      <link>https://gitblog.dowblog.top/posts/new/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E7%94%9F%E5%BD%93%E5%A4%8D%E5%BD%92%E6%9D%A5%E6%AD%BB%E5%BD%93%E9%95%BF%E7%9B%B8%E6%80%9D/</guid>
+      <guid>https://gitblog.dowblog.top/posts/new/</guid>
+      <description>&lt;p&gt;随着多个依赖的更新修复多处兼容性、多平台问题：
+1、pip 不再拥有原requirements.txt内的onnxruntime==1.11.1，修改为1.16.0，
+更高的版本在Windows上onnxruntime官方已经确认有问题：&lt;a href=&#34;https://github.com/onnx/onnx/issues/6267&#34;&gt;[1.16.2] ONNX not built correctly for Windows&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2、在train.py修改保存模型名以修复Windows平台不支持冒号作为文件名的问题&lt;/p&gt;
+&lt;p&gt;3、&lt;/p&gt;
+&lt;p&gt;防止传入后预测框丢失的情况&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>随着多个依赖的更新修复多处兼容性、多平台问题：
+1、pip 不再拥有原requirements.txt内的onnxruntime==1.11.1，修改为1.16.0，
+更高的版本在Windows上onnxruntime官方已经确认有问题：<a href="https://github.com/onnx/onnx/issues/6267">[1.16.2] ONNX not built correctly for Windows</a></p>
+<p>2、在train.py修改保存模型名以修复Windows平台不支持冒号作为文件名的问题</p>
+<p>3、</p>
+<p>防止传入后预测框丢失的情况</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://gitblog.dowblog.top/posts/%E7%94%9F%E5%BD%93%E5%A4%8D%E5%BD%92%E6%9D%A5%E6%AD%BB%E5%BD%93%E9%95%BF%E7%9B%B8%E6%80%9D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/%E7%94%9F%E5%BD%93%E5%A4%8D%E5%BD%92%E6%9D%A5%E6%AD%BB%E5%BD%93%E9%95%BF%E7%9B%B8%E6%80%9D/</guid>
       <description>&lt;p&gt;dddd&lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<p>dddd</p>
@@ -1523,10 +1545,10 @@ end
     
     <item>
       <title>Hello World</title>
-      <link>https://dowblog.rr.nu/posts/hello-world/</link>
+      <link>https://gitblog.dowblog.top/posts/hello-world/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/hello-world/</guid>
+      <guid>https://gitblog.dowblog.top/posts/hello-world/</guid>
       <description>&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h2&gt;
 &lt;h3 id=&#34;run-server&#34;&gt;Run server&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo server

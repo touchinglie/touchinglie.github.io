@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>blog on Dow Blog</title>
-    <link>https://dowblog.rr.nu/tags/blog/</link>
+    <link>https://gitblog.dowblog.top/tags/blog/</link>
     <description>Recent content in blog on Dow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 14 Dec 2023 18:00:00 +0000</lastBuildDate><atom:link href="https://dowblog.rr.nu/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Dec 2023 18:00:00 +0000</lastBuildDate><atom:link href="https://gitblog.dowblog.top/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>折腾</title>
-      <link>https://dowblog.rr.nu/posts/%E6%8A%98%E8%85%BE/</link>
+      <link>https://gitblog.dowblog.top/posts/%E6%8A%98%E8%85%BE/</link>
       <pubDate>Thu, 14 Dec 2023 18:00:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E6%8A%98%E8%85%BE/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E6%8A%98%E8%85%BE/</guid>
       <description>&lt;h2 id=&#34;目前学完pythonjs基础哩&#34;&gt;目前学完Python、Js基础哩&lt;/h2&gt;
 &lt;p&gt;朝着Java前进，但是还要过高数线代期末考，麻了&lt;/p&gt;
 &lt;p&gt;考完想用python和nodejs分别给博客写一个后端部署在Vercel上，但是博客用的是Github Action推的，直接改可能出问题，想着用后端直接从GitHub推，估计挺难。主要是后端和本地action源码会不同步。&lt;/p&gt;
@@ -29,10 +29,10 @@
     
     <item>
       <title>有关秩的笔记（线性代数系列）</title>
-      <link>https://dowblog.rr.nu/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</link>
+      <link>https://gitblog.dowblog.top/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</link>
       <pubDate>Mon, 13 Nov 2023 14:21:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E6%9C%89%E5%85%B3%E7%A7%A9%E7%9A%84%E7%AC%94%E8%AE%B0%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%B3%BB%E5%88%97/</guid>
       <description>&lt;p&gt;上了大学以后可以说线性代数和高等数学真的杀我，尤其是线性代数，开始并不觉得解方程有什么难度，后来难度上来以后，就是薄纱。第一个爆杀我的就是秩，真的抽象到不知道什么东西。&lt;/p&gt;
 &lt;p&gt;目前就记些笔记，搜集一下网上网友的教学：&lt;/p&gt;
 &lt;p&gt;知乎上比较好的：&lt;/p&gt;
@@ -59,10 +59,10 @@
     
     <item>
       <title>更新</title>
-      <link>https://dowblog.rr.nu/posts/%E6%9B%B4%E6%96%B0/</link>
+      <link>https://gitblog.dowblog.top/posts/%E6%9B%B4%E6%96%B0/</link>
       <pubDate>Thu, 24 Mar 2022 11:10:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E6%9B%B4%E6%96%B0/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E6%9B%B4%E6%96%B0/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;&lt;em&gt;本博客第三次更新&lt;/em&gt;
 &lt;strong&gt;Here we start！&lt;/strong&gt;&lt;/p&gt;
@@ -81,7 +81,7 @@ deploy
 （当然这视个人网络情况而定，不过网站的漏洞包括XSS攻击都在用CSP等策略在修复了）&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;至于美化嘛……有时间再做&lt;/strong&gt;
 毕竟目前主要的是先做好优化&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/blog-lighthouse-test.webp&#34; alt=&#34;avatar&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/blog-lighthouse-test.webp&#34; alt=&#34;avatar&#34;  /&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;2022329&#34;&gt;2022.3.29&lt;/h3&gt;
 &lt;p&gt;目前仍在尝试部署域名稳定（指heroku自带域名🐶）的博客，系统是typecho
@@ -151,10 +151,10 @@ deploy
     
     <item>
       <title>（补）如何快速搭建一个网站？（不包含任何html、css、php代码）序章</title>
-      <link>https://dowblog.rr.nu/posts/%E8%A1%A5%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E4%B8%8D%E5%8C%85%E5%90%AB%E4%BB%BB%E4%BD%95htmlcssphp%E4%BB%A3%E7%A0%81%E5%BA%8F%E7%AB%A0/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%A1%A5%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E4%B8%8D%E5%8C%85%E5%90%AB%E4%BB%BB%E4%BD%95htmlcssphp%E4%BB%A3%E7%A0%81%E5%BA%8F%E7%AB%A0/</link>
       <pubDate>Mon, 13 Apr 2020 23:21:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%A1%A5%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E4%B8%8D%E5%8C%85%E5%90%AB%E4%BB%BB%E4%BD%95htmlcssphp%E4%BB%A3%E7%A0%81%E5%BA%8F%E7%AB%A0/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E4%B8%8D%E5%8C%85%E5%90%AB%E4%BB%BB%E4%BD%95htmlcssphp%E4%BB%A3%E7%A0%81%E5%BA%8F%E7%AB%A0/</guid>
       <description>&lt;h5 id=&#34;以下描述的过程纯粹是为在网络方面零基础小白的提供的比喻并不准确同时为了确保任何零基础无任何学习计算机经历的人也能学会多处内容会做详细解释很啰嗦以下ip均指ipv4地址就是虚拟网络世界中的身份证&#34;&gt;以下描述的过程纯粹是为在网络方面零基础小白的提供的比喻，并不准确，同时为了确保任何零基础、无任何学习计算机经历的人也能学会，多处内容会做详细解释，很啰嗦。（以下IP均指IPV4地址，就是虚拟网络世界中的身份证）&lt;/h5&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
@@ -273,27 +273,27 @@ deploy
     
     <item>
       <title>（补）更新日志</title>
-      <link>https://dowblog.rr.nu/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
       <pubDate>Thu, 09 Apr 2020 11:21:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
       <description>&lt;h2 id=&#34;这里是博客的更新日志&#34;&gt;这里是博客的更新日志&lt;/h2&gt;
 &lt;p&gt;4.8 &lt;strong&gt;博客搭建完毕&lt;/strong&gt;，域名申请成功：oblog.ml（4月10日更换了DNS服务商，可用！) 是因为DNS解析方依然木有解析……只能直接用穿透搭建了。&lt;/p&gt;
 &lt;p&gt;4.9 &lt;strong&gt;添加外观以及特殊功能&lt;/strong&gt;,&lt;strong&gt;晚9点左右更换DNS解析方，可以正式使用域名了！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;4.10 &lt;strong&gt;论坛域名修正，去除端口号，论坛CDN加速节奏带起！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;论坛目前界面：&lt;a href=&#34;https://dowblog.rr.nu/img/20201009BBS.webp&#34; title=&#34;2020年4月10日论坛界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/20201009BBS.webp&#34; alt=&#34;2020年4月10日论坛界面&#34;  title=&#34;2020年4月10日论坛界面&#34;  /&gt;
+&lt;p&gt;论坛目前界面：&lt;a href=&#34;https://gitblog.dowblog.top/img/20201009BBS.webp&#34; title=&#34;2020年4月10日论坛界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/20201009BBS.webp&#34; alt=&#34;2020年4月10日论坛界面&#34;  title=&#34;2020年4月10日论坛界面&#34;  /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;博客目前界面：&lt;a href=&#34;https://dowblog.rr.nu/img/20200410Blog.webp&#34; title=&#34;2020年10月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/20200410Blog.webp&#34; alt=&#34;2020年4月10日博客界面&#34;  title=&#34;2020年10月4日博客界面&#34;  /&gt;
+&lt;p&gt;博客目前界面：&lt;a href=&#34;https://gitblog.dowblog.top/img/20200410Blog.webp&#34; title=&#34;2020年10月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/20200410Blog.webp&#34; alt=&#34;2020年4月10日博客界面&#34;  title=&#34;2020年10月4日博客界面&#34;  /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;4.11 由于CDN方被这次疫情的突然袭击损失巨大，服务器有丢包不稳定，&lt;strong&gt;因此博客会在4月20号之前停止使用CDN加速&lt;/strong&gt;，届时博客加载速度将变慢一些（大约100ms左右，我的网络可ping到80ms左右）。同时更换了网站托管的服务器来弥补速度：美国俄勒冈的AWS更换至新加坡。&lt;/p&gt;
 &lt;p&gt;4.12 看来今天网速很好，早上9点ping论坛的速度为58ms，ping博客的速度有19ms。&lt;/p&gt;
 &lt;p&gt;4.20 不知道为什么，DNS始终解析到CDN商的中国服务器下，改了也木有用。等了十天后ping出来的ip依旧是CDN的服务器。绝了……&lt;/p&gt;
 &lt;p&gt;4.22 &lt;strong&gt;更新第二个域名oscarblog.ml&lt;/strong&gt;,之前的根域名用不了，于是切换了第二个域名。同时&lt;strong&gt;更新主题、优化缓存&lt;/strong&gt;，现在博客的访问速度即使没有CDN加速也能ping到60ms左右的延迟了。&lt;strong&gt;新增友情链接。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;4.23&lt;strong&gt;更新多个备用域名，不常启用。同时成功实现https！已开启HSTS，全站强制https。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;4.24博客目前界面：&lt;a href=&#34;https://dowblog.rr.nu/img/20200424Blog.webp&#34; title=&#34;2020年4月24日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/20200424Blog.webp&#34; alt=&#34;2020年4月24日论坛界面&#34;  title=&#34;2020年4月24日博客界面&#34;  /&gt;
+&lt;p&gt;4.24博客目前界面：&lt;a href=&#34;https://gitblog.dowblog.top/img/20200424Blog.webp&#34; title=&#34;2020年4月24日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/20200424Blog.webp&#34; alt=&#34;2020年4月24日论坛界面&#34;  title=&#34;2020年4月24日博客界面&#34;  /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;5.4&lt;strong&gt;更新界面，扩展功能。&lt;/strong&gt;（页面调用得十分痛苦，一天里不知道又制造了多少惊喜的bug）&lt;/p&gt;
-&lt;p&gt;博客5月4号界面：&lt;a href=&#34;https://dowblog.rr.nu/img/20200504Blog.webp&#34; title=&#34;2020年5月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dowblog.rr.nu/img/20200504Blog.webp&#34; alt=&#34;2020年5月4日论坛界面&#34;  title=&#34;2020年5月4日博客界面&#34;  /&gt;
+&lt;p&gt;博客5月4号界面：&lt;a href=&#34;https://gitblog.dowblog.top/img/20200504Blog.webp&#34; title=&#34;2020年5月4日博客界面&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/20200504Blog.webp&#34; alt=&#34;2020年5月4日论坛界面&#34;  title=&#34;2020年5月4日博客界面&#34;  /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;现在可访问博客的域名有：
 &lt;a href=&#34;https://dowblog.rr.nu/&#34;&gt;Dow&amp;rsquo;s blog&lt;/a&gt;

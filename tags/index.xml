@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Dow Blog</title>
-    <link>https://dowblog.rr.nu/tags/</link>
+    <link>https://gitblog.dowblog.top/tags/</link>
     <description>Recent content in Tags on Dow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 13 Apr 2024 07:50:00 +0000</lastBuildDate><atom:link href="https://dowblog.rr.nu/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Apr 2024 07:50:00 +0000</lastBuildDate><atom:link href="https://gitblog.dowblog.top/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>study</title>
-      <link>https://dowblog.rr.nu/tags/study/</link>
+      <link>https://gitblog.dowblog.top/tags/study/</link>
       <pubDate>Sat, 13 Apr 2024 07:50:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/tags/study/</guid>
+      <guid>https://gitblog.dowblog.top/tags/study/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>blog</title>
-      <link>https://dowblog.rr.nu/tags/blog/</link>
+      <link>https://gitblog.dowblog.top/tags/blog/</link>
       <pubDate>Thu, 14 Dec 2023 18:00:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/tags/blog/</guid>
+      <guid>https://gitblog.dowblog.top/tags/blog/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>first</title>
-      <link>https://dowblog.rr.nu/tags/first/</link>
+      <link>https://gitblog.dowblog.top/tags/first/</link>
       <pubDate>Mon, 14 Mar 2022 11:30:03 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/tags/first/</guid>
+      <guid>https://gitblog.dowblog.top/tags/first/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>life</title>
-      <link>https://dowblog.rr.nu/tags/life/</link>
+      <link>https://gitblog.dowblog.top/tags/life/</link>
       <pubDate>Wed, 26 Jan 2022 19:56:45 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/tags/life/</guid>
+      <guid>https://gitblog.dowblog.top/tags/life/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>school</title>
-      <link>https://dowblog.rr.nu/tags/school/</link>
+      <link>https://gitblog.dowblog.top/tags/school/</link>
       <pubDate>Fri, 21 Aug 2020 22:00:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/tags/school/</guid>
+      <guid>https://gitblog.dowblog.top/tags/school/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>start</title>
-      <link>https://dowblog.rr.nu/tags/start/</link>
+      <link>https://gitblog.dowblog.top/tags/start/</link>
       <pubDate>Wed, 08 Apr 2020 18:44:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/tags/start/</guid>
+      <guid>https://gitblog.dowblog.top/tags/start/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

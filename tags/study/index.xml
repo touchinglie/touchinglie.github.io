@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>study on Dow Blog</title>
-    <link>https://dowblog.rr.nu/tags/study/</link>
+    <link>https://gitblog.dowblog.top/tags/study/</link>
     <description>Recent content in study on Dow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 13 Apr 2024 07:50:00 +0000</lastBuildDate><atom:link href="https://dowblog.rr.nu/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Apr 2024 07:50:00 +0000</lastBuildDate><atom:link href="https://gitblog.dowblog.top/tags/study/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>简单python图形化程序开发（tkiner、sqlite3）</title>
-      <link>https://dowblog.rr.nu/posts/%E7%AE%80%E5%8D%95python%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91tkinersqlite3/</link>
+      <link>https://gitblog.dowblog.top/posts/%E7%AE%80%E5%8D%95python%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91tkinersqlite3/</link>
       <pubDate>Sat, 13 Apr 2024 07:50:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E7%AE%80%E5%8D%95python%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91tkinersqlite3/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E7%AE%80%E5%8D%95python%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91tkinersqlite3/</guid>
       <description>&lt;h5 id=&#34;折腾前引学校任务图形化界面直接无脑tkiner&#34;&gt;折腾前引：学校任务图形化界面直接无脑tkiner，&lt;/h5&gt;
 &lt;h5 id=&#34;自己想长期开发的python项目才用qt框架pyside6库&#34;&gt;自己想长期开发的python项目才用qt框架（pyside6库），&lt;/h5&gt;
 &lt;h5 id=&#34;想处理大量同类数据及保证程序独立性再加数据库&#34;&gt;想处理大量同类数据及保证程序独立性再加数据库。&lt;/h5&gt;
@@ -36,10 +36,10 @@
 &lt;p&gt;&lt;del&gt;主要是学校作业犯不上这么玩命&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;学长也劝我没必要，于是便转tkiner这个python自带的小型库。
 国内的tkiner教程的严重滞后，也没有太多人用。
-python Wiki提供了国外第三方较为完善的教程：
-&lt;a href=&#34;https://coderslegacy.com/python/python-gui/&#34;&gt;Python GUI with Tkinter&lt;/a&gt;
-&lt;a href=&#34;https://tkdocs.com/tutorial/index.html&#34;&gt;TkDocs Tutorial&lt;/a&gt;
-第二个是官方教程但第一个很不错。&lt;/p&gt;
+python Wiki提供了国外第三方较为完善的教程：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://coderslegacy.com/python/python-gui/&#34;&gt;Python GUI with Tkinter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://tkdocs.com/tutorial/index.html&#34;&gt;TkDocs Tutorial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;第二个是官方教程但第一个很不错。&lt;/p&gt;
 &lt;p&gt;对这个程序我的基本设想是数据库操作与主程序界面分离，分为main.py负责图形化界面，logincheck.py负责登录数据库的核验，functionpack.py负责学生管理系统的数据库操作。&lt;/p&gt;
 &lt;p&gt;数据库用的是sqlite，毕竟不可能每个使用者都为了这个系统安装mysql。&lt;/p&gt;
 &lt;hr&gt;
@@ -199,10 +199,10 @@ def open_child_window():
 <p><del>主要是学校作业犯不上这么玩命</del></p>
 <p>学长也劝我没必要，于是便转tkiner这个python自带的小型库。
 国内的tkiner教程的严重滞后，也没有太多人用。
-python Wiki提供了国外第三方较为完善的教程：
-<a href="https://coderslegacy.com/python/python-gui/">Python GUI with Tkinter</a>
-<a href="https://tkdocs.com/tutorial/index.html">TkDocs Tutorial</a>
-第二个是官方教程但第一个很不错。</p>
+python Wiki提供了国外第三方较为完善的教程：</p>
+<p><a href="https://coderslegacy.com/python/python-gui/">Python GUI with Tkinter</a></p>
+<p><a href="https://tkdocs.com/tutorial/index.html">TkDocs Tutorial</a></p>
+<p>第二个是官方教程但第一个很不错。</p>
 <p>对这个程序我的基本设想是数据库操作与主程序界面分离，分为main.py负责图形化界面，logincheck.py负责登录数据库的核验，functionpack.py负责学生管理系统的数据库操作。</p>
 <p>数据库用的是sqlite，毕竟不可能每个使用者都为了这个系统安装mysql。</p>
 <hr>
@@ -343,10 +343,10 @@ def open_child_window():
     
     <item>
       <title>排列数基础(常见模型)笔记</title>
-      <link>https://dowblog.rr.nu/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
+      <link>https://gitblog.dowblog.top/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Fri, 08 Apr 2022 19:36:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E6%8E%92%E5%88%97%E6%95%B0%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;这里是学习笔记，注意检索关键词&lt;/p&gt;
 &lt;p&gt;语法引用 $\LaTeX$ ，未显示准确需转码&lt;/p&gt;
@@ -383,10 +383,10 @@ def open_child_window():
     
     <item>
       <title>排列数(组合数与阶乘)笔记</title>
-      <link>https://dowblog.rr.nu/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://gitblog.dowblog.top/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Wed, 06 Apr 2022 19:36:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E6%8E%92%E5%88%97%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;这里是学习笔记，注意检索关键词&lt;/p&gt;
 &lt;p&gt;语法引用 $\LaTeX$ ，未显示准确需转码&lt;/p&gt;
@@ -589,10 +589,10 @@ def open_child_window():
     
     <item>
       <title>（补）还有67天</title>
-      <link>https://dowblog.rr.nu/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</link>
+      <link>https://gitblog.dowblog.top/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</link>
       <pubDate>Thu, 14 May 2020 23:15:00 +0000</pubDate>
       
-      <guid>https://dowblog.rr.nu/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</guid>
+      <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5%E8%BF%98%E6%9C%8967%E5%A4%A9/</guid>
       <description>&lt;h2 id=&#34;我真的好难啊&#34;&gt;我真的好难啊&lt;/h2&gt;
 &lt;p&gt;距离大考还有67天，桌台上的作业是按摞计算的，写完一本还要再发四本。
 不知道老师是怎么找到这破博客的，上课时提到“你好像挺闲啊”……
