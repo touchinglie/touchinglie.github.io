@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>daily on Dow Blog</title>
+    <link>https://gitblog.dowblog.top/tags/daily/</link>
+    <description>Recent content in daily on Dow Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 11 Jul 2026 05:52:09 +0000</lastBuildDate><atom:link href="https://gitblog.dowblog.top/tags/daily/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>软件2026设置代理统计指南</title>
+      <link>https://gitblog.dowblog.top/posts/%E8%BD%AF%E4%BB%B62026%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E7%BB%9F%E8%AE%A1%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Sat, 11 Jul 2026 05:52:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/%E8%BD%AF%E4%BB%B62026%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E7%BB%9F%E8%AE%A1%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;p&gt;自从同时使用Windows和Linux双系统后，面对很多软件都需要开代理数据才可能下载成功，这里总结一下常用软件都在哪里设置会走代理。&lt;/p&gt;
+&lt;h3 id=&#34;linux最广泛的代理设置方式系统环境变量设置&#34;&gt;Linux最广泛的代理设置方式（系统环境变量设置）&lt;/h3&gt;
+&lt;p&gt;直接在终端输入，每行后回车：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;http_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;https_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注意后面的代理地址如果是IP的话，一定不要在等号后面的http加s，https的加密依赖于域名而不是IP地址，
+加上加密，验证错误包代理不成功的（惊讶于很多学计算机的都不知道）&lt;/p&gt;
+&lt;p&gt;如果你启动的代理服务没有设置验证（用户名和密码不存在），那么把（http://）和（@）之间的部分带上（@）一起去掉就好，
+就像以下这种形式：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;http_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;https_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;而有些软件包读的是大写的环境变量，那就再接着设置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HTTP_PROXY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HTTPS_PROXY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;大多数Linux软件包都严格依照上面的通用规则，但像docker，apt一类会比较独特，要额外设置。&lt;/p&gt;
+&lt;h3 id=&#34;linux中docker的代理设置方式&#34;&gt;linux中docker的代理设置方式&lt;/h3&gt;
+&lt;p&gt;这里网上有很多临时设置的方法，然而我实测下来很多失效的，所以只提供官方指定的一种全局代理方法：&lt;/p&gt;
+&lt;p&gt;搜索有没有属于docker的配置文件daemon.json，如果没有就创建/etc/docker/daemon.json，然后输入：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;proxies&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;http-proxy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://（你的代理地址）:代理端口&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;https-proxy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://（你的代理地址）:代理端口&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;no-proxy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;localhost,127.0.0.1,.example.com,192.168.1.0/24&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;保存后再在终端执行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl daemon-reload
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl restart docker
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;别忘了将最后（192.168.1.0/24）的部分改为你的内网CIDR，好让内网docker仓库绕过代理。&lt;/p&gt;
+&lt;p&gt;因为Windows平台的docker仍处于实验性的状态，并且docker在Windows上性能不佳，
+本教程只会说明Linux上docker的代理设置方法。&lt;/p&gt;
+&lt;h3 id=&#34;git的代理设置&#34;&gt;git的代理设置&lt;/h3&gt;
+&lt;p&gt;上GitHub或者其它git仓库时clone或者下载同步非常慢，找镜像源就不如设置代理快了。&lt;/p&gt;
+&lt;p&gt;git也像docker一样有自己的环境变量，直接终端执行可以查询到：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果是只查看全局配置则命令后（&amp;ndash;list）前加上（&amp;ndash;global）&lt;/p&gt;
+&lt;p&gt;如果是要设置代理，则终端执行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global http.proxy http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global https.proxy http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;有一说只有http.proxy的设置有用，我也只在官方文档找到了http.proxy，但都设置也好，不会有大影响。&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>自从同时使用Windows和Linux双系统后，面对很多软件都需要开代理数据才可能下载成功，这里总结一下常用软件都在哪里设置会走代理。</p>
+<h3 id="linux最广泛的代理设置方式系统环境变量设置">Linux最广泛的代理设置方式（系统环境变量设置）</h3>
+<p>直接在终端输入，每行后回车：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">http_proxy</span><span class="o">=</span>http://（你的代理地址）:代理端口
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">https_proxy</span><span class="o">=</span>http://（你的代理地址）:代理端口
+</span></span></code></pre></div><p>注意后面的代理地址如果是IP的话，一定不要在等号后面的http加s，https的加密依赖于域名而不是IP地址，
+加上加密，验证错误包代理不成功的（惊讶于很多学计算机的都不知道）</p>
+<p>如果你启动的代理服务没有设置验证（用户名和密码不存在），那么把（http://）和（@）之间的部分带上（@）一起去掉就好，
+就像以下这种形式：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">http_proxy</span><span class="o">=</span>http://（你的代理地址）:代理端口
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">https_proxy</span><span class="o">=</span>http://（你的代理地址）:代理端口
+</span></span></code></pre></div><p>而有些软件包读的是大写的环境变量，那就再接着设置：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HTTP_PROXY</span><span class="o">=</span>http://（你的代理地址）:代理端口
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HTTPS_PROXY</span><span class="o">=</span>http://（你的代理地址）:代理端口
+</span></span></code></pre></div><p>大多数Linux软件包都严格依照上面的通用规则，但像docker，apt一类会比较独特，要额外设置。</p>
+<h3 id="linux中docker的代理设置方式">linux中docker的代理设置方式</h3>
+<p>这里网上有很多临时设置的方法，然而我实测下来很多失效的，所以只提供官方指定的一种全局代理方法：</p>
+<p>搜索有没有属于docker的配置文件daemon.json，如果没有就创建/etc/docker/daemon.json，然后输入：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="nt">&#34;proxies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;http-proxy&#34;</span><span class="p">:</span> <span class="s2">&#34;http://（你的代理地址）:代理端口&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;https-proxy&#34;</span><span class="p">:</span> <span class="s2">&#34;http://（你的代理地址）:代理端口&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;no-proxy&#34;</span><span class="p">:</span> <span class="s2">&#34;localhost,127.0.0.1,.example.com,192.168.1.0/24&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>保存后再在终端执行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo systemctl restart docker
+</span></span></code></pre></div><p>别忘了将最后（192.168.1.0/24）的部分改为你的内网CIDR，好让内网docker仓库绕过代理。</p>
+<p>因为Windows平台的docker仍处于实验性的状态，并且docker在Windows上性能不佳，
+本教程只会说明Linux上docker的代理设置方法。</p>
+<h3 id="git的代理设置">git的代理设置</h3>
+<p>上GitHub或者其它git仓库时clone或者下载同步非常慢，找镜像源就不如设置代理快了。</p>
+<p>git也像docker一样有自己的环境变量，直接终端执行可以查询到：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --list
+</span></span></code></pre></div><p>如果是只查看全局配置则命令后（&ndash;list）前加上（&ndash;global）</p>
+<p>如果是要设置代理，则终端执行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global http.proxy http://（你的代理地址）:代理端口
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git config --global https.proxy http://（你的代理地址）:代理端口
+</span></span></code></pre></div><p>有一说只有http.proxy的设置有用，我也只在官方文档找到了http.proxy，但都设置也好，不会有大影响。</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Windows作死找补笔记</title>
+      <link>https://gitblog.dowblog.top/posts/windows%E4%BD%9C%E6%AD%BB%E6%89%BE%E8%A1%A5%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 24 May 2026 03:33:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/windows%E4%BD%9C%E6%AD%BB%E6%89%BE%E8%A1%A5%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;记录Windows作死后出现的问题与恢复的方法&lt;/p&gt;
+&lt;h3 id=&#34;xxx某windows-app无法注册包&#34;&gt;xxx(某Windows APP)无法注册包&lt;/h3&gt;
+&lt;p&gt;有非常多原因，我的话是乱改系统文件权限，然后windows store和照片之类的Windows APP软件就都打不开了。&lt;/p&gt;
+&lt;p&gt;搜索后先尝试恢复文件夹权限归属。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ icacls &lt;span class=&#34;s2&#34;&gt;&amp;#34;C:\Program Files\WindowsApps&amp;#34;&lt;/span&gt; /reset /t /c /q
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试未果，继续用另外微软问答上的回答，在管理员权限下的Windows PowerShell依次输入：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sfc /SCANNOW
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ Dism /Online /Cleanup-Image /ScanHealth
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ Dism /Online /Cleanup-Image /CheckHealth
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ DISM /Online /Cleanup-image /RestoreHealth
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;按教程说应该重启后，继续在管理员权限下的Windows PowerShell依次输入下面命令，我没重启直接输的：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sfc /SCANNOW
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ Get-AppXPackage &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Foreach &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;Add-AppxPackage -DisableDevelopmentMode -Register “&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_&lt;/span&gt;.InstallLocation&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\A&lt;/span&gt;ppXManifest.xml”&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ add-appxpackage -register &lt;span class=&#34;s2&#34;&gt;&amp;#34;C:\Program Files\WindowsApps\*Store*\AppxManifest.xml&amp;#34;&lt;/span&gt; -disabledevelopmentmode
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试成功打开Windows APP类软件，解决问题。&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>记录Windows作死后出现的问题与恢复的方法</p>
+<h3 id="xxx某windows-app无法注册包">xxx(某Windows APP)无法注册包</h3>
+<p>有非常多原因，我的话是乱改系统文件权限，然后windows store和照片之类的Windows APP软件就都打不开了。</p>
+<p>搜索后先尝试恢复文件夹权限归属。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ icacls <span class="s2">&#34;C:\Program Files\WindowsApps&#34;</span> /reset /t /c /q
+</span></span></code></pre></div><p>测试未果，继续用另外微软问答上的回答，在管理员权限下的Windows PowerShell依次输入：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sfc /SCANNOW
+</span></span><span class="line"><span class="cl">$ Dism /Online /Cleanup-Image /ScanHealth
+</span></span><span class="line"><span class="cl">$ Dism /Online /Cleanup-Image /CheckHealth
+</span></span><span class="line"><span class="cl">$ DISM /Online /Cleanup-image /RestoreHealth
+</span></span></code></pre></div><p>按教程说应该重启后，继续在管理员权限下的Windows PowerShell依次输入下面命令，我没重启直接输的：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sfc /SCANNOW
+</span></span><span class="line"><span class="cl">$ Get-AppXPackage <span class="p">|</span> Foreach <span class="o">{</span>Add-AppxPackage -DisableDevelopmentMode -Register “<span class="k">$(</span><span class="nv">$_</span>.InstallLocation<span class="k">)</span><span class="se">\A</span>ppXManifest.xml”<span class="o">}</span>
+</span></span><span class="line"><span class="cl">$ add-appxpackage -register <span class="s2">&#34;C:\Program Files\WindowsApps\*Store*\AppxManifest.xml&#34;</span> -disabledevelopmentmode
+</span></span></code></pre></div><p>测试成功打开Windows APP类软件，解决问题。</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>alpine搭建iscsi并挂载到windows</title>
+      <link>https://gitblog.dowblog.top/posts/alpine%E6%90%AD%E5%BB%BAiscsi%E5%B9%B6%E6%8C%82%E8%BD%BD%E5%88%B0windows/</link>
+      <pubDate>Sun, 29 Mar 2026 01:00:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/alpine%E6%90%AD%E5%BB%BAiscsi%E5%B9%B6%E6%8C%82%E8%BD%BD%E5%88%B0windows/</guid>
+      <description>&lt;p&gt;想玩玩war thunder，但是主机硬盘空间不足哩大悲~
+下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，经过n番折腾终于还是放弃samba协议了QAQ。&lt;/p&gt;
+&lt;p&gt;转而使用能在Windows上被识别为本地原生磁盘的iSCSI协议来整扩展游戏盘，这种协议&lt;/p&gt;
+&lt;h3 id=&#34;反向代理pve的方法&#34;&gt;反向代理PVE的方法&lt;/h3&gt;
+&lt;p&gt;因为PVE9.0开始web端只提供https服务而不提供任何http服务，会导致caddy除了转发时禁用安全认证或者直接转发unix://以外几乎没有办法转发PVE的https，而且要转发https为https还必须保证PVE&lt;/p&gt;
+&lt;h3 id=&#34;sudo-systemctl-restart-caddy时报错loading-new-config-loading-http-app-module-provision-http-getting-tls-app-loading-tls-app-module-provision-tls-loading-certificates-open-pem-permission-denied&#34;&gt;sudo systemctl restart caddy时报错loading new config: loading http app module: provision http: getting tls app: loading tls app module: provision tls: loading certificates: open …….pem permission denied&lt;/h3&gt;
+&lt;p&gt;gopls cannot access its persistent index (disk full?): can&amp;rsquo;t create cache: mkdir Access is denied.&lt;/p&gt;
+&lt;p&gt;make -j4
+[ 50%] Building CXX object CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o
+/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp: In function ‘int main()’:
+/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:122:13: error: ‘CV_CAP_PROP_FRAME_WIDTH’ was not declared in this scope
+122 |     cap.set(CV_CAP_PROP_FRAME_WIDTH, frameWidth);
+|             ^~~~~~~~~~~~~~~~~~~~~~~
+/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:123:13: error: ‘CV_CAP_PROP_FRAME_HEIGHT’ was not declared in this scope
+123 |     cap.set(CV_CAP_PROP_FRAME_HEIGHT, frameHeight);
+|             ^~~~~~~~~~~~~~~~~~~~~~~~
+make[2]: *** [CMakeFiles/YOLOv5ncnn-vulkan.dir/build.make:76: CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/YOLOv5ncnn-vulkan.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>想玩玩war thunder，但是主机硬盘空间不足哩大悲~
+下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，经过n番折腾终于还是放弃samba协议了QAQ。</p>
+<p>转而使用能在Windows上被识别为本地原生磁盘的iSCSI协议来整扩展游戏盘，这种协议</p>
+<h3 id="反向代理pve的方法">反向代理PVE的方法</h3>
+<p>因为PVE9.0开始web端只提供https服务而不提供任何http服务，会导致caddy除了转发时禁用安全认证或者直接转发unix://以外几乎没有办法转发PVE的https，而且要转发https为https还必须保证PVE</p>
+<h3 id="sudo-systemctl-restart-caddy时报错loading-new-config-loading-http-app-module-provision-http-getting-tls-app-loading-tls-app-module-provision-tls-loading-certificates-open-pem-permission-denied">sudo systemctl restart caddy时报错loading new config: loading http app module: provision http: getting tls app: loading tls app module: provision tls: loading certificates: open …….pem permission denied</h3>
+<p>gopls cannot access its persistent index (disk full?): can&rsquo;t create cache: mkdir Access is denied.</p>
+<p>make -j4
+[ 50%] Building CXX object CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o
+/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp: In function ‘int main()’:
+/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:122:13: error: ‘CV_CAP_PROP_FRAME_WIDTH’ was not declared in this scope
+122 |     cap.set(CV_CAP_PROP_FRAME_WIDTH, frameWidth);
+|             ^~~~~~~~~~~~~~~~~~~~~~~
+/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:123:13: error: ‘CV_CAP_PROP_FRAME_HEIGHT’ was not declared in this scope
+123 |     cap.set(CV_CAP_PROP_FRAME_HEIGHT, frameHeight);
+|             ^~~~~~~~~~~~~~~~~~~~~~~~
+make[2]: *** [CMakeFiles/YOLOv5ncnn-vulkan.dir/build.make:76: CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/YOLOv5ncnn-vulkan.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,519 @@
     <description>Recent content in Posts on Dow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 13 Apr 2024 07:50:00 +0000</lastBuildDate><atom:link href="https://gitblog.dowblog.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Jul 2026 05:52:09 +0000</lastBuildDate><atom:link href="https://gitblog.dowblog.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>软件2026设置代理统计指南</title>
+      <link>https://gitblog.dowblog.top/posts/%E8%BD%AF%E4%BB%B62026%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E7%BB%9F%E8%AE%A1%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Sat, 11 Jul 2026 05:52:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/%E8%BD%AF%E4%BB%B62026%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E7%BB%9F%E8%AE%A1%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;p&gt;自从同时使用Windows和Linux双系统后，面对很多软件都需要开代理数据才可能下载成功，这里总结一下常用软件都在哪里设置会走代理。&lt;/p&gt;
+&lt;h3 id=&#34;linux最广泛的代理设置方式系统环境变量设置&#34;&gt;Linux最广泛的代理设置方式（系统环境变量设置）&lt;/h3&gt;
+&lt;p&gt;直接在终端输入，每行后回车：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;http_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;https_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注意后面的代理地址如果是IP的话，一定不要在等号后面的http加s，https的加密依赖于域名而不是IP地址，
+加上加密，验证错误包代理不成功的（惊讶于很多学计算机的都不知道）&lt;/p&gt;
+&lt;p&gt;如果你启动的代理服务没有设置验证（用户名和密码不存在），那么把（http://）和（@）之间的部分带上（@）一起去掉就好，
+就像以下这种形式：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;http_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;https_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;而有些软件包读的是大写的环境变量，那就再接着设置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HTTP_PROXY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HTTPS_PROXY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;大多数Linux软件包都严格依照上面的通用规则，但像docker，apt一类会比较独特，要额外设置。&lt;/p&gt;
+&lt;h3 id=&#34;linux中docker的代理设置方式&#34;&gt;linux中docker的代理设置方式&lt;/h3&gt;
+&lt;p&gt;这里网上有很多临时设置的方法，然而我实测下来很多失效的，所以只提供官方指定的一种全局代理方法：&lt;/p&gt;
+&lt;p&gt;搜索有没有属于docker的配置文件daemon.json，如果没有就创建/etc/docker/daemon.json，然后输入：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;proxies&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;http-proxy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://（你的代理地址）:代理端口&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;https-proxy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://（你的代理地址）:代理端口&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;no-proxy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;localhost,127.0.0.1,.example.com,192.168.1.0/24&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;保存后再在终端执行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl daemon-reload
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl restart docker
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;别忘了将最后（192.168.1.0/24）的部分改为你的内网CIDR，好让内网docker仓库绕过代理。&lt;/p&gt;
+&lt;p&gt;因为Windows平台的docker仍处于实验性的状态，并且docker在Windows上性能不佳，
+本教程只会说明Linux上docker的代理设置方法。&lt;/p&gt;
+&lt;h3 id=&#34;git的代理设置&#34;&gt;git的代理设置&lt;/h3&gt;
+&lt;p&gt;上GitHub或者其它git仓库时clone或者下载同步非常慢，找镜像源就不如设置代理快了。&lt;/p&gt;
+&lt;p&gt;git也像docker一样有自己的环境变量，直接终端执行可以查询到：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果是只查看全局配置则命令后（&amp;ndash;list）前加上（&amp;ndash;global）&lt;/p&gt;
+&lt;p&gt;如果是要设置代理，则终端执行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global http.proxy http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global https.proxy http://（你的代理地址）:代理端口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;有一说只有http.proxy的设置有用，我也只在官方文档找到了http.proxy，但都设置也好，不会有大影响。&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>自从同时使用Windows和Linux双系统后，面对很多软件都需要开代理数据才可能下载成功，这里总结一下常用软件都在哪里设置会走代理。</p>
+<h3 id="linux最广泛的代理设置方式系统环境变量设置">Linux最广泛的代理设置方式（系统环境变量设置）</h3>
+<p>直接在终端输入，每行后回车：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">http_proxy</span><span class="o">=</span>http://（你的代理地址）:代理端口
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">https_proxy</span><span class="o">=</span>http://（你的代理地址）:代理端口
+</span></span></code></pre></div><p>注意后面的代理地址如果是IP的话，一定不要在等号后面的http加s，https的加密依赖于域名而不是IP地址，
+加上加密，验证错误包代理不成功的（惊讶于很多学计算机的都不知道）</p>
+<p>如果你启动的代理服务没有设置验证（用户名和密码不存在），那么把（http://）和（@）之间的部分带上（@）一起去掉就好，
+就像以下这种形式：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">http_proxy</span><span class="o">=</span>http://（你的代理地址）:代理端口
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">https_proxy</span><span class="o">=</span>http://（你的代理地址）:代理端口
+</span></span></code></pre></div><p>而有些软件包读的是大写的环境变量，那就再接着设置：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HTTP_PROXY</span><span class="o">=</span>http://（你的代理地址）:代理端口
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HTTPS_PROXY</span><span class="o">=</span>http://（你的代理地址）:代理端口
+</span></span></code></pre></div><p>大多数Linux软件包都严格依照上面的通用规则，但像docker，apt一类会比较独特，要额外设置。</p>
+<h3 id="linux中docker的代理设置方式">linux中docker的代理设置方式</h3>
+<p>这里网上有很多临时设置的方法，然而我实测下来很多失效的，所以只提供官方指定的一种全局代理方法：</p>
+<p>搜索有没有属于docker的配置文件daemon.json，如果没有就创建/etc/docker/daemon.json，然后输入：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="nt">&#34;proxies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;http-proxy&#34;</span><span class="p">:</span> <span class="s2">&#34;http://（你的代理地址）:代理端口&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;https-proxy&#34;</span><span class="p">:</span> <span class="s2">&#34;http://（你的代理地址）:代理端口&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;no-proxy&#34;</span><span class="p">:</span> <span class="s2">&#34;localhost,127.0.0.1,.example.com,192.168.1.0/24&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>保存后再在终端执行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo systemctl restart docker
+</span></span></code></pre></div><p>别忘了将最后（192.168.1.0/24）的部分改为你的内网CIDR，好让内网docker仓库绕过代理。</p>
+<p>因为Windows平台的docker仍处于实验性的状态，并且docker在Windows上性能不佳，
+本教程只会说明Linux上docker的代理设置方法。</p>
+<h3 id="git的代理设置">git的代理设置</h3>
+<p>上GitHub或者其它git仓库时clone或者下载同步非常慢，找镜像源就不如设置代理快了。</p>
+<p>git也像docker一样有自己的环境变量，直接终端执行可以查询到：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --list
+</span></span></code></pre></div><p>如果是只查看全局配置则命令后（&ndash;list）前加上（&ndash;global）</p>
+<p>如果是要设置代理，则终端执行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global http.proxy http://（你的代理地址）:代理端口
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git config --global https.proxy http://（你的代理地址）:代理端口
+</span></span></code></pre></div><p>有一说只有http.proxy的设置有用，我也只在官方文档找到了http.proxy，但都设置也好，不会有大影响。</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Windows作死找补笔记</title>
+      <link>https://gitblog.dowblog.top/posts/windows%E4%BD%9C%E6%AD%BB%E6%89%BE%E8%A1%A5%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 24 May 2026 03:33:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/windows%E4%BD%9C%E6%AD%BB%E6%89%BE%E8%A1%A5%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;记录Windows作死后出现的问题与恢复的方法&lt;/p&gt;
+&lt;h3 id=&#34;xxx某windows-app无法注册包&#34;&gt;xxx(某Windows APP)无法注册包&lt;/h3&gt;
+&lt;p&gt;有非常多原因，我的话是乱改系统文件权限，然后windows store和照片之类的Windows APP软件就都打不开了。&lt;/p&gt;
+&lt;p&gt;搜索后先尝试恢复文件夹权限归属。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ icacls &lt;span class=&#34;s2&#34;&gt;&amp;#34;C:\Program Files\WindowsApps&amp;#34;&lt;/span&gt; /reset /t /c /q
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试未果，继续用另外微软问答上的回答，在管理员权限下的Windows PowerShell依次输入：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sfc /SCANNOW
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ Dism /Online /Cleanup-Image /ScanHealth
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ Dism /Online /Cleanup-Image /CheckHealth
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ DISM /Online /Cleanup-image /RestoreHealth
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;按教程说应该重启后，继续在管理员权限下的Windows PowerShell依次输入下面命令，我没重启直接输的：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sfc /SCANNOW
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ Get-AppXPackage &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Foreach &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;Add-AppxPackage -DisableDevelopmentMode -Register “&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_&lt;/span&gt;.InstallLocation&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\A&lt;/span&gt;ppXManifest.xml”&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ add-appxpackage -register &lt;span class=&#34;s2&#34;&gt;&amp;#34;C:\Program Files\WindowsApps\*Store*\AppxManifest.xml&amp;#34;&lt;/span&gt; -disabledevelopmentmode
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试成功打开Windows APP类软件，解决问题。&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>记录Windows作死后出现的问题与恢复的方法</p>
+<h3 id="xxx某windows-app无法注册包">xxx(某Windows APP)无法注册包</h3>
+<p>有非常多原因，我的话是乱改系统文件权限，然后windows store和照片之类的Windows APP软件就都打不开了。</p>
+<p>搜索后先尝试恢复文件夹权限归属。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ icacls <span class="s2">&#34;C:\Program Files\WindowsApps&#34;</span> /reset /t /c /q
+</span></span></code></pre></div><p>测试未果，继续用另外微软问答上的回答，在管理员权限下的Windows PowerShell依次输入：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sfc /SCANNOW
+</span></span><span class="line"><span class="cl">$ Dism /Online /Cleanup-Image /ScanHealth
+</span></span><span class="line"><span class="cl">$ Dism /Online /Cleanup-Image /CheckHealth
+</span></span><span class="line"><span class="cl">$ DISM /Online /Cleanup-image /RestoreHealth
+</span></span></code></pre></div><p>按教程说应该重启后，继续在管理员权限下的Windows PowerShell依次输入下面命令，我没重启直接输的：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sfc /SCANNOW
+</span></span><span class="line"><span class="cl">$ Get-AppXPackage <span class="p">|</span> Foreach <span class="o">{</span>Add-AppxPackage -DisableDevelopmentMode -Register “<span class="k">$(</span><span class="nv">$_</span>.InstallLocation<span class="k">)</span><span class="se">\A</span>ppXManifest.xml”<span class="o">}</span>
+</span></span><span class="line"><span class="cl">$ add-appxpackage -register <span class="s2">&#34;C:\Program Files\WindowsApps\*Store*\AppxManifest.xml&#34;</span> -disabledevelopmentmode
+</span></span></code></pre></div><p>测试成功打开Windows APP类软件，解决问题。</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>编译时遇到的各种问题合集</title>
+      <link>https://gitblog.dowblog.top/posts/%E7%BC%96%E8%AF%91%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/</link>
+      <pubDate>Sun, 24 May 2026 01:00:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/%E7%BC%96%E8%AF%91%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/</guid>
+      <description>&lt;p&gt;尝试记录下编译中遇到的一些问题&lt;/p&gt;
+&lt;h3 id=&#34;cmake合集&#34;&gt;cmake合集&lt;/h3&gt;
+&lt;h4 id=&#34;cpp-error--was-not-declared-in-this-scope&#34;&gt;*.cpp:*:*: error: ‘*’ was not declared in this scope&lt;/h4&gt;
+&lt;p&gt;看下面的例子：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ make -j4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; 50%&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Building CXX object CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/home/&lt;span class=&#34;se&#34;&gt;\*&lt;/span&gt;/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp: In &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; ‘int main&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;’:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/home/&lt;span class=&#34;se&#34;&gt;\*&lt;/span&gt;/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:122:13: error: ‘CV_CAP_PROP_FRAME_WIDTH’ was not declared in this scope
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;m&#34;&gt;122&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;     cap.set&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;CV_CAP_PROP_FRAME_WIDTH, frameWidth&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;             ^~~~~~~~~~~~~~~~~~~~~~~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/home/&lt;span class=&#34;se&#34;&gt;\*&lt;/span&gt;/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:123:13: error: ‘CV_CAP_PROP_FRAME_HEIGHT’ was not declared in this scope
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;m&#34;&gt;123&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;     cap.set&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;CV_CAP_PROP_FRAME_HEIGHT, frameHeight&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;             ^~~~~~~~~~~~~~~~~~~~~~~~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;2&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: *** &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;CMakeFiles/YOLOv5ncnn-vulkan.dir/build.make:76: CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Error &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: *** &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;CMakeFiles/Makefile2:83: CMakeFiles/YOLOv5ncnn-vulkan.dir/all&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Error &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make: *** &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Makefile:91: all&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Error &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;“was not declared in this scope”这里就说明函数并未在使用的区域声明过，要么是自己写错了函数声明的区域（非全局）；要么就是这项目使用的库版本对不上你系统安装的版本，两个版本之间这个函数名改了，这个时候就只有自己去搜修改后的函数名了。&lt;/p&gt;
+&lt;p&gt;上面这个例子就是opencv3的项目用opencv4的库编译时找不到“CV_CAP_PROP_FRAME_HEIGHT”和“CV_CAP_PROP_FRAME_WIDTH”的报错，opencv4将这两函数分别改名为了“CAP_PROP_FRAME_HEIGHT”和“CAP_PROP_FRAME_WIDTH”，项目里全局搜索替换就好。&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>尝试记录下编译中遇到的一些问题</p>
+<h3 id="cmake合集">cmake合集</h3>
+<h4 id="cpp-error--was-not-declared-in-this-scope">*.cpp:*:*: error: ‘*’ was not declared in this scope</h4>
+<p>看下面的例子：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ make -j4
+</span></span><span class="line"><span class="cl"><span class="o">[</span> 50%<span class="o">]</span> Building CXX object CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o
+</span></span><span class="line"><span class="cl">/home/<span class="se">\*</span>/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp: In <span class="k">function</span> ‘int main<span class="o">()</span>’:
+</span></span><span class="line"><span class="cl">/home/<span class="se">\*</span>/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:122:13: error: ‘CV_CAP_PROP_FRAME_WIDTH’ was not declared in this scope
+</span></span><span class="line"><span class="cl">  <span class="m">122</span> <span class="p">|</span>     cap.set<span class="o">(</span>CV_CAP_PROP_FRAME_WIDTH, frameWidth<span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">|</span>             ^~~~~~~~~~~~~~~~~~~~~~~
+</span></span><span class="line"><span class="cl">/home/<span class="se">\*</span>/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:123:13: error: ‘CV_CAP_PROP_FRAME_HEIGHT’ was not declared in this scope
+</span></span><span class="line"><span class="cl">  <span class="m">123</span> <span class="p">|</span>     cap.set<span class="o">(</span>CV_CAP_PROP_FRAME_HEIGHT, frameHeight<span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">|</span>             ^~~~~~~~~~~~~~~~~~~~~~~~
+</span></span><span class="line"><span class="cl">make<span class="o">[</span>2<span class="o">]</span>: *** <span class="o">[</span>CMakeFiles/YOLOv5ncnn-vulkan.dir/build.make:76: CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o<span class="o">]</span> Error <span class="m">1</span>
+</span></span><span class="line"><span class="cl">make<span class="o">[</span>1<span class="o">]</span>: *** <span class="o">[</span>CMakeFiles/Makefile2:83: CMakeFiles/YOLOv5ncnn-vulkan.dir/all<span class="o">]</span> Error <span class="m">2</span>
+</span></span><span class="line"><span class="cl">make: *** <span class="o">[</span>Makefile:91: all<span class="o">]</span> Error <span class="m">2</span>
+</span></span></code></pre></div><p>“was not declared in this scope”这里就说明函数并未在使用的区域声明过，要么是自己写错了函数声明的区域（非全局）；要么就是这项目使用的库版本对不上你系统安装的版本，两个版本之间这个函数名改了，这个时候就只有自己去搜修改后的函数名了。</p>
+<p>上面这个例子就是opencv3的项目用opencv4的库编译时找不到“CV_CAP_PROP_FRAME_HEIGHT”和“CV_CAP_PROP_FRAME_WIDTH”的报错，opencv4将这两函数分别改名为了“CAP_PROP_FRAME_HEIGHT”和“CAP_PROP_FRAME_WIDTH”，项目里全局搜索替换就好。</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>alpine搭建iscsi并挂载到windows</title>
+      <link>https://gitblog.dowblog.top/posts/alpine%E6%90%AD%E5%BB%BAiscsi%E5%B9%B6%E6%8C%82%E8%BD%BD%E5%88%B0windows/</link>
+      <pubDate>Sun, 29 Mar 2026 01:00:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/alpine%E6%90%AD%E5%BB%BAiscsi%E5%B9%B6%E6%8C%82%E8%BD%BD%E5%88%B0windows/</guid>
+      <description>&lt;p&gt;想玩玩war thunder，但是主机硬盘空间不足哩大悲~
+下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，经过n番折腾终于还是放弃samba协议了QAQ。&lt;/p&gt;
+&lt;p&gt;转而使用能在Windows上被识别为本地原生磁盘的iSCSI协议来整扩展游戏盘，这种协议&lt;/p&gt;
+&lt;h3 id=&#34;反向代理pve的方法&#34;&gt;反向代理PVE的方法&lt;/h3&gt;
+&lt;p&gt;因为PVE9.0开始web端只提供https服务而不提供任何http服务，会导致caddy除了转发时禁用安全认证或者直接转发unix://以外几乎没有办法转发PVE的https，而且要转发https为https还必须保证PVE&lt;/p&gt;
+&lt;h3 id=&#34;sudo-systemctl-restart-caddy时报错loading-new-config-loading-http-app-module-provision-http-getting-tls-app-loading-tls-app-module-provision-tls-loading-certificates-open-pem-permission-denied&#34;&gt;sudo systemctl restart caddy时报错loading new config: loading http app module: provision http: getting tls app: loading tls app module: provision tls: loading certificates: open …….pem permission denied&lt;/h3&gt;
+&lt;p&gt;gopls cannot access its persistent index (disk full?): can&amp;rsquo;t create cache: mkdir Access is denied.&lt;/p&gt;
+&lt;p&gt;make -j4
+[ 50%] Building CXX object CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o
+/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp: In function ‘int main()’:
+/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:122:13: error: ‘CV_CAP_PROP_FRAME_WIDTH’ was not declared in this scope
+122 |     cap.set(CV_CAP_PROP_FRAME_WIDTH, frameWidth);
+|             ^~~~~~~~~~~~~~~~~~~~~~~
+/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:123:13: error: ‘CV_CAP_PROP_FRAME_HEIGHT’ was not declared in this scope
+123 |     cap.set(CV_CAP_PROP_FRAME_HEIGHT, frameHeight);
+|             ^~~~~~~~~~~~~~~~~~~~~~~~
+make[2]: *** [CMakeFiles/YOLOv5ncnn-vulkan.dir/build.make:76: CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/YOLOv5ncnn-vulkan.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>想玩玩war thunder，但是主机硬盘空间不足哩大悲~
+下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，经过n番折腾终于还是放弃samba协议了QAQ。</p>
+<p>转而使用能在Windows上被识别为本地原生磁盘的iSCSI协议来整扩展游戏盘，这种协议</p>
+<h3 id="反向代理pve的方法">反向代理PVE的方法</h3>
+<p>因为PVE9.0开始web端只提供https服务而不提供任何http服务，会导致caddy除了转发时禁用安全认证或者直接转发unix://以外几乎没有办法转发PVE的https，而且要转发https为https还必须保证PVE</p>
+<h3 id="sudo-systemctl-restart-caddy时报错loading-new-config-loading-http-app-module-provision-http-getting-tls-app-loading-tls-app-module-provision-tls-loading-certificates-open-pem-permission-denied">sudo systemctl restart caddy时报错loading new config: loading http app module: provision http: getting tls app: loading tls app module: provision tls: loading certificates: open …….pem permission denied</h3>
+<p>gopls cannot access its persistent index (disk full?): can&rsquo;t create cache: mkdir Access is denied.</p>
+<p>make -j4
+[ 50%] Building CXX object CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o
+/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp: In function ‘int main()’:
+/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:122:13: error: ‘CV_CAP_PROP_FRAME_WIDTH’ was not declared in this scope
+122 |     cap.set(CV_CAP_PROP_FRAME_WIDTH, frameWidth);
+|             ^~~~~~~~~~~~~~~~~~~~~~~
+/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:123:13: error: ‘CV_CAP_PROP_FRAME_HEIGHT’ was not declared in this scope
+123 |     cap.set(CV_CAP_PROP_FRAME_HEIGHT, frameHeight);
+|             ^~~~~~~~~~~~~~~~~~~~~~~~
+make[2]: *** [CMakeFiles/YOLOv5ncnn-vulkan.dir/build.make:76: CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/YOLOv5ncnn-vulkan.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>使用Caddy中的一些经验</title>
+      <link>https://gitblog.dowblog.top/posts/%E4%BD%BF%E7%94%A8caddy%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/</link>
+      <pubDate>Sun, 29 Mar 2026 01:00:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/%E4%BD%BF%E7%94%A8caddy%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/</guid>
+      <description>&lt;h3 id=&#34;反向代理pve的方法&#34;&gt;反向代理PVE的方法&lt;/h3&gt;
+&lt;p&gt;因为PVE9.0开始web端只提供https服务而不提供任何http服务，会导致caddy除了转发时禁用安全认证或者直接转发unix://以外几乎没有办法转发PVE的https，而且要转发https为https还必须保证PVE&lt;/p&gt;
+&lt;h3 id=&#34;sudo-systemctl-restart-caddy时报错loading-new-config-loading-http-app-module-provision-http-getting-tls-app-loading-tls-app-module-provision-tls-loading-certificates-open-pem-permission-denied&#34;&gt;sudo systemctl restart caddy时报错loading new config: loading http app module: provision http: getting tls app: loading tls app module: provision tls: loading certificates: open …….pem permission denied&lt;/h3&gt;
+&lt;p&gt;gopls cannot access its persistent index (disk full?): can&amp;rsquo;t create cache: mkdir Access is denied.&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<h3 id="反向代理pve的方法">反向代理PVE的方法</h3>
+<p>因为PVE9.0开始web端只提供https服务而不提供任何http服务，会导致caddy除了转发时禁用安全认证或者直接转发unix://以外几乎没有办法转发PVE的https，而且要转发https为https还必须保证PVE</p>
+<h3 id="sudo-systemctl-restart-caddy时报错loading-new-config-loading-http-app-module-provision-http-getting-tls-app-loading-tls-app-module-provision-tls-loading-certificates-open-pem-permission-denied">sudo systemctl restart caddy时报错loading new config: loading http app module: provision http: getting tls app: loading tls app module: provision tls: loading certificates: open …….pem permission denied</h3>
+<p>gopls cannot access its persistent index (disk full?): can&rsquo;t create cache: mkdir Access is denied.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>使用PVE v9.0中的一些经验</title>
+      <link>https://gitblog.dowblog.top/posts/%E4%BD%BF%E7%94%A8pve%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/</link>
+      <pubDate>Sun, 29 Mar 2026 01:00:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/%E4%BD%BF%E7%94%A8pve%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/</guid>
+      <description>&lt;p&gt;注意使用博主PVE版本为9.0.3&lt;/p&gt;
+&lt;h2 id=&#34;ct模板相关&#34;&gt;CT模板相关&lt;/h2&gt;
+&lt;h3 id=&#34;最建议使用的模板&#34;&gt;最建议使用的模板&lt;/h3&gt;
+&lt;p&gt;最好用的模板实际上是alpine linux，官方有专门虚拟化的版本，虚拟化环境下不需要固件驱动因此系统镜像非常小，完整系统iso镜像仅70.25MB；而PVE官方alpine linux的CT模板仅3.32MB，创建完毕后更新包管理器源也仅占用16.4MB。快且小，就是gcc库不是gnu的而是musl的，因此很多&lt;/p&gt;
+&lt;h3 id=&#34;创建时报错task-error-unable-to-create-ct-101---unsupported-debian-version-131&#34;&gt;创建时报错TASK ERROR: unable to create CT 101 - unsupported debian version &amp;lsquo;13.1&amp;rsquo;&lt;/h3&gt;
+&lt;p&gt;其实-^-就是PVE官方升级CT模块时忘改支持的系统版本了，手动在/usr/share/perl5/PVE/LXC/Setup/Debian.pm修改：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;die&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;unsupported debian version &amp;#39;$version&amp;#39;\n&amp;#34;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$version&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$version&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;为&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;die&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;unsupported debian version &amp;#39;$version&amp;#39;\n&amp;#34;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$version&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$version&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重启PVE重新创建CT容器即可。&lt;/p&gt;
+&lt;p&gt;不想重启PVE就重启pve守护进程来读取配置，命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl restart pvedaemon
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参考原文链接：
+&lt;a href=&#34;https://forum.proxmox.com/threads/debian-13-1-lxc-template-fails-to-create-start-fix.171435/&#34;&gt;Debian 13.1 LXC template fails to create/start (FIX)&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;用alpine-linux模板安装docker时报错mount-mounting-none-on-sysfscgroup-failed-resource-busy&#34;&gt;用alpine linux模板安装docker时报错mount: mounting none on /sys/fs/cgroup failed: Resource busy&lt;/h3&gt;
+&lt;p&gt;PVE中alpine linux的模板很小，很精简。但正常配置完启动安装docker时会报错（能正常用但Docker 统计不会报告 CPU 或内存使用率）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~: service cgroups start
+mount: mounting none on /sys/fs/cgroup failed: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;一搜发现时PVE独有在alpine linux的模板上的问题，原因是容器基于命名空间，非完整虚拟机，而在PVE里用CT模板也实际在用命名空间，里面装docker本质上是嵌套命名空间，而模板内Docker能否运行要看PVE配置/docker版本/命名空间是否支持，目前通过正常手段明显是不支持的。&lt;/p&gt;
+&lt;p&gt;所以剩下两条路径，即PVE创建alpine linux虚拟机然后装docker，或者用Debian的CT模板装docker，第一条亲测没问题，大概总占用400MB，第二条网上用户反映是正常的。&lt;/p&gt;
+&lt;p&gt;参考原文链接：
+&lt;a href=&#34;https://forum.proxmox.com/threads/cannot-start-cgroups-service-in-alpine-lxc.143511/&#34;&gt;Cannot start &amp;ldquo;cgroups&amp;rdquo; service in Alpine LXC&lt;/a&gt;&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>注意使用博主PVE版本为9.0.3</p>
+<h2 id="ct模板相关">CT模板相关</h2>
+<h3 id="最建议使用的模板">最建议使用的模板</h3>
+<p>最好用的模板实际上是alpine linux，官方有专门虚拟化的版本，虚拟化环境下不需要固件驱动因此系统镜像非常小，完整系统iso镜像仅70.25MB；而PVE官方alpine linux的CT模板仅3.32MB，创建完毕后更新包管理器源也仅占用16.4MB。快且小，就是gcc库不是gnu的而是musl的，因此很多</p>
+<h3 id="创建时报错task-error-unable-to-create-ct-101---unsupported-debian-version-131">创建时报错TASK ERROR: unable to create CT 101 - unsupported debian version &lsquo;13.1&rsquo;</h3>
+<p>其实-^-就是PVE官方升级CT模块时忘改支持的系统版本了，手动在/usr/share/perl5/PVE/LXC/Setup/Debian.pm修改：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="nb">die</span> <span class="s">&#34;unsupported debian version &#39;$version&#39;\n&#34;</span> <span class="k">if</span> <span class="o">!</span><span class="p">(</span><span class="nv">$version</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="nv">$version</span> <span class="o">&lt;=</span> <span class="mi">13</span><span class="p">);</span>
+</span></span></code></pre></div><p>为</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="nb">die</span> <span class="s">&#34;unsupported debian version &#39;$version&#39;\n&#34;</span> <span class="k">if</span> <span class="o">!</span><span class="p">(</span><span class="nv">$version</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="nv">$version</span> <span class="o">&lt;=</span> <span class="mi">14</span><span class="p">);</span>
+</span></span></code></pre></div><p>重启PVE重新创建CT容器即可。</p>
+<p>不想重启PVE就重启pve守护进程来读取配置，命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl restart pvedaemon
+</span></span></code></pre></div><p>参考原文链接：
+<a href="https://forum.proxmox.com/threads/debian-13-1-lxc-template-fails-to-create-start-fix.171435/">Debian 13.1 LXC template fails to create/start (FIX)</a></p>
+<h3 id="用alpine-linux模板安装docker时报错mount-mounting-none-on-sysfscgroup-failed-resource-busy">用alpine linux模板安装docker时报错mount: mounting none on /sys/fs/cgroup failed: Resource busy</h3>
+<p>PVE中alpine linux的模板很小，很精简。但正常配置完启动安装docker时会报错（能正常用但Docker 统计不会报告 CPU 或内存使用率）：</p>
+<pre><code>~: service cgroups start
+mount: mounting none on /sys/fs/cgroup failed: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+sh: write error: Resource busy
+</code></pre>
+<p>一搜发现时PVE独有在alpine linux的模板上的问题，原因是容器基于命名空间，非完整虚拟机，而在PVE里用CT模板也实际在用命名空间，里面装docker本质上是嵌套命名空间，而模板内Docker能否运行要看PVE配置/docker版本/命名空间是否支持，目前通过正常手段明显是不支持的。</p>
+<p>所以剩下两条路径，即PVE创建alpine linux虚拟机然后装docker，或者用Debian的CT模板装docker，第一条亲测没问题，大概总占用400MB，第二条网上用户反映是正常的。</p>
+<p>参考原文链接：
+<a href="https://forum.proxmox.com/threads/cannot-start-cgroups-service-in-alpine-lxc.143511/">Cannot start &ldquo;cgroups&rdquo; service in Alpine LXC</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>使用vscode中的一些经验</title>
+      <link>https://gitblog.dowblog.top/posts/%E4%BD%BF%E7%94%A8vscode%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/</link>
+      <pubDate>Sun, 29 Mar 2026 01:00:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/%E4%BD%BF%E7%94%A8vscode%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/</guid>
+      <description>&lt;h3 id=&#34;gopls-cannot-access-its-persistent-index-disk-full-cant-create-cache-mkdir-access-is-denied&#34;&gt;gopls cannot access its persistent index (disk full?): can&amp;rsquo;t create cache: mkdir Access is denied.&lt;/h3&gt;
+</description>
+      <content:encoded><![CDATA[<h3 id="gopls-cannot-access-its-persistent-index-disk-full-cant-create-cache-mkdir-access-is-denied">gopls cannot access its persistent index (disk full?): can&rsquo;t create cache: mkdir Access is denied.</h3>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>对工作中学习使用docker的小结</title>
+      <link>https://gitblog.dowblog.top/posts/%E5%AF%B9%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8docker%E7%9A%84%E5%B0%8F%E7%BB%93/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/%E5%AF%B9%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8docker%E7%9A%84%E5%B0%8F%E7%BB%93/</guid>
+      <description>&lt;p&gt;工作中获得很多对平日里耳熟能详这些工具的使用经验，以及这些工具的意义在何处，
+这里记录一点在工作过程中学习到的docker相关知识小结。&lt;/p&gt;
+&lt;h3 id=&#34;docker轻量化的原因&#34;&gt;docker轻量化的原因&lt;/h3&gt;
+&lt;p&gt;docker较传统虚拟化，每个容器都少虚拟了一整套系统，转而直接共享宿主机系统内隔离出来的每个shell，
+去除了虚拟shell对宿主shell之间的性能损耗，同时在结构上多个系统消失了，只剩下docker虚拟层，虚拟的体量（仅用户空间）相较整个系统而言非常小。多线程多进程对硬件CPU、内存（较以往碎片化的分页）和硬盘（IO吞吐）的利用强度都大大提高了。&lt;/p&gt;
+&lt;h3 id=&#34;docker连接网络方式&#34;&gt;docker连接网络方式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;none：隔离容器与主机&lt;/li&gt;
+&lt;li&gt;container模式：和其他容器共享网络，有特殊限制&lt;/li&gt;
+&lt;li&gt;overlay：虚拟的是整个网络，将各个连接overlay的容器连接到一个虚拟网络里&lt;/li&gt;
+&lt;li&gt;bridge模式：桥接模式但可以端口映射来访问容器内服务&lt;/li&gt;
+&lt;li&gt;host模式：作为独立的主机连接网络，但在OSI第四层传输层，不支持不基于TCP和UDP外的数据通信协议传输&lt;/li&gt;
+&lt;li&gt;ipvlan：同host，虚拟在轻量级OSI第二层数据链路层，因此允许TCP和UDP外的数据通信协议传输&lt;/li&gt;
+&lt;li&gt;Macvlan：同host，较ipvlan来说更底层，直接模拟设备MAC地址而非IP地址，仅3.9以上linux内核可用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;docker常用指令&#34;&gt;docker常用指令&lt;/h3&gt;
+&lt;h5 id=&#34;基础指令&#34;&gt;基础指令&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;run - 创建并启动一个新的容器&lt;/li&gt;
+&lt;li&gt;start/stop/restart - 启动、停止和重启容器&lt;/li&gt;
+&lt;li&gt;kill - 立即终止正在运行的容器&lt;/li&gt;
+&lt;li&gt;rm - 删除已经停止的容器&lt;/li&gt;
+&lt;li&gt;exec - 在运行中容器内执行一条命令&lt;/li&gt;
+&lt;li&gt;ps - 列出 Docker 容器&lt;/li&gt;
+&lt;li&gt;top - 显示容器中正在运行的进程&lt;/li&gt;
+&lt;li&gt;attach - 允许用户附加到正在运行的容器并与其交互&lt;/li&gt;
+&lt;li&gt;pull - 从 Docker 注册表（例如 Docker Hub）中拉取（下载）镜像到本地&lt;/li&gt;
+&lt;li&gt;info - 显示 Docker 的系统级信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;复合指令&#34;&gt;复合指令&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;docker ps（列出运行中的容器）&lt;/li&gt;
+&lt;li&gt;docker ps -a（列出所有的容器）&lt;/li&gt;
+&lt;li&gt;docker exec -it 容器名 /bin/bash（在运行中的容器内启动一个交互式的 Bash shell。-i 保持标准输入打开，-t 分配一个伪终端tty。）&lt;/li&gt;
+&lt;li&gt;sudo docker run -d &amp;ndash;name 容器名 &amp;ndash;restart always 容器应用名:标签（以始终自重启方式运行此容器）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;docker-compose使用&#34;&gt;docker compose使用&lt;/h5&gt;
+&lt;p&gt;docker好用，但如果某些应用要配合多个容器才能使用的话，就要让这几个容器同时启动，而且要让几个容器可以建立隔离的网络
+docker compose就是用来干这个的。创建一个docker-compose.yml，写好配置，在同级目录下输入docker-compose up -d即可。&lt;/p&gt;
+&lt;p&gt;需要说明的是docker compose需要独立安装&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo curl -L &amp;quot;https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)&amp;quot; -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+docker-compose --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;无报错正常输出即安装完毕&lt;/p&gt;
+&lt;p&gt;值得一提的是，alpine linux官方有提供apk安装源，记得启用community源&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apk add docker-cli-compose
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;在docker-compose中使用syncthing&#34;&gt;在docker compose中使用syncthing&lt;/h5&gt;
+&lt;p&gt;官方指引：&lt;a href=&#34;https://github.com/syncthing/syncthing/blob/main/README-Docker.md&#34;&gt;Docker Container for Syncthing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;官方docker-compose.yml文件内容：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+version: &amp;quot;3&amp;quot;
+services:
+  syncthing:
+    image: syncthing/syncthing
+    container_name: syncthing
+    hostname: my-syncthing
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - STGUIADDRESS=
+    volumes:
+      - /wherever/st-sync:/var/syncthing
+    network_mode: host
+    restart: unless-stopped
+    healthcheck:
+      test: curl -fkLsS -m 2 127.0.0.1:8384/rest/noauth/health | grep -o --color=never OK || exit 1
+      interval: 1m
+      timeout: 10s
+      retries: 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;创建好容器后，syncthing默认只允许本地回环地址127.0.0.1访问，因此修改配置文件来开发全/特定地址web GUI访问。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;vi /var/syncthing/config/config.xml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;将其中&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;gui enabled=&amp;quot;true&amp;quot; tls=&amp;quot;false&amp;quot; sendBasicAuthPrompt=&amp;quot;false&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下一行address标签里的127.0.0.1改为0.0.0.0或者你要访问的地址。最后重启容器即可：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker ps | grep syncthing
+docker restart {容器ID}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;打开{你之前设置的地址:8384}就能访问syncthing了&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>工作中获得很多对平日里耳熟能详这些工具的使用经验，以及这些工具的意义在何处，
+这里记录一点在工作过程中学习到的docker相关知识小结。</p>
+<h3 id="docker轻量化的原因">docker轻量化的原因</h3>
+<p>docker较传统虚拟化，每个容器都少虚拟了一整套系统，转而直接共享宿主机系统内隔离出来的每个shell，
+去除了虚拟shell对宿主shell之间的性能损耗，同时在结构上多个系统消失了，只剩下docker虚拟层，虚拟的体量（仅用户空间）相较整个系统而言非常小。多线程多进程对硬件CPU、内存（较以往碎片化的分页）和硬盘（IO吞吐）的利用强度都大大提高了。</p>
+<h3 id="docker连接网络方式">docker连接网络方式</h3>
+<ul>
+<li>none：隔离容器与主机</li>
+<li>container模式：和其他容器共享网络，有特殊限制</li>
+<li>overlay：虚拟的是整个网络，将各个连接overlay的容器连接到一个虚拟网络里</li>
+<li>bridge模式：桥接模式但可以端口映射来访问容器内服务</li>
+<li>host模式：作为独立的主机连接网络，但在OSI第四层传输层，不支持不基于TCP和UDP外的数据通信协议传输</li>
+<li>ipvlan：同host，虚拟在轻量级OSI第二层数据链路层，因此允许TCP和UDP外的数据通信协议传输</li>
+<li>Macvlan：同host，较ipvlan来说更底层，直接模拟设备MAC地址而非IP地址，仅3.9以上linux内核可用</li>
+</ul>
+<h3 id="docker常用指令">docker常用指令</h3>
+<h5 id="基础指令">基础指令</h5>
+<ul>
+<li>run - 创建并启动一个新的容器</li>
+<li>start/stop/restart - 启动、停止和重启容器</li>
+<li>kill - 立即终止正在运行的容器</li>
+<li>rm - 删除已经停止的容器</li>
+<li>exec - 在运行中容器内执行一条命令</li>
+<li>ps - 列出 Docker 容器</li>
+<li>top - 显示容器中正在运行的进程</li>
+<li>attach - 允许用户附加到正在运行的容器并与其交互</li>
+<li>pull - 从 Docker 注册表（例如 Docker Hub）中拉取（下载）镜像到本地</li>
+<li>info - 显示 Docker 的系统级信息</li>
+</ul>
+<h5 id="复合指令">复合指令</h5>
+<ul>
+<li>docker ps（列出运行中的容器）</li>
+<li>docker ps -a（列出所有的容器）</li>
+<li>docker exec -it 容器名 /bin/bash（在运行中的容器内启动一个交互式的 Bash shell。-i 保持标准输入打开，-t 分配一个伪终端tty。）</li>
+<li>sudo docker run -d &ndash;name 容器名 &ndash;restart always 容器应用名:标签（以始终自重启方式运行此容器）</li>
+</ul>
+<h5 id="docker-compose使用">docker compose使用</h5>
+<p>docker好用，但如果某些应用要配合多个容器才能使用的话，就要让这几个容器同时启动，而且要让几个容器可以建立隔离的网络
+docker compose就是用来干这个的。创建一个docker-compose.yml，写好配置，在同级目录下输入docker-compose up -d即可。</p>
+<p>需要说明的是docker compose需要独立安装</p>
+<pre><code>sudo curl -L &quot;https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+docker-compose --version
+</code></pre>
+<p>无报错正常输出即安装完毕</p>
+<p>值得一提的是，alpine linux官方有提供apk安装源，记得启用community源</p>
+<pre><code>apk add docker-cli-compose
+</code></pre>
+<h5 id="在docker-compose中使用syncthing">在docker compose中使用syncthing</h5>
+<p>官方指引：<a href="https://github.com/syncthing/syncthing/blob/main/README-Docker.md">Docker Container for Syncthing</a></p>
+<p>官方docker-compose.yml文件内容：</p>
+<pre><code>---
+version: &quot;3&quot;
+services:
+  syncthing:
+    image: syncthing/syncthing
+    container_name: syncthing
+    hostname: my-syncthing
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - STGUIADDRESS=
+    volumes:
+      - /wherever/st-sync:/var/syncthing
+    network_mode: host
+    restart: unless-stopped
+    healthcheck:
+      test: curl -fkLsS -m 2 127.0.0.1:8384/rest/noauth/health | grep -o --color=never OK || exit 1
+      interval: 1m
+      timeout: 10s
+      retries: 3
+</code></pre>
+<p>创建好容器后，syncthing默认只允许本地回环地址127.0.0.1访问，因此修改配置文件来开发全/特定地址web GUI访问。</p>
+<pre><code>vi /var/syncthing/config/config.xml
+</code></pre>
+<p>将其中</p>
+<pre><code>&lt;gui enabled=&quot;true&quot; tls=&quot;false&quot; sendBasicAuthPrompt=&quot;false&quot;&gt;
+</code></pre>
+<p>下一行address标签里的127.0.0.1改为0.0.0.0或者你要访问的地址。最后重启容器即可：</p>
+<pre><code>docker ps | grep syncthing
+docker restart {容器ID}
+</code></pre>
+<p>打开{你之前设置的地址:8384}就能访问syncthing了</p>]]></content:encoded>
+    </item>
+    
     <item>
       <title>简单python图形化程序开发（tkiner、sqlite3）</title>
       <link>https://gitblog.dowblog.top/posts/%E7%AE%80%E5%8D%95python%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91tkinersqlite3/</link>
