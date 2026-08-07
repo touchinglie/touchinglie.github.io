@@ -154,44 +154,52 @@
       
       <guid>https://gitblog.dowblog.top/posts/alpine%E6%90%AD%E5%BB%BAiscsi%E5%B9%B6%E6%8C%82%E8%BD%BD%E5%88%B0windows/</guid>
       <description>&lt;p&gt;想玩玩war thunder，但是主机硬盘空间不足哩大悲~
-下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，经过n番折腾终于还是放弃samba协议了QAQ。&lt;/p&gt;
-&lt;p&gt;转而使用能在Windows上被识别为本地原生磁盘的iSCSI协议来整扩展游戏盘，这种协议&lt;/p&gt;
-&lt;h3 id=&#34;反向代理pve的方法&#34;&gt;反向代理PVE的方法&lt;/h3&gt;
-&lt;p&gt;因为PVE9.0开始web端只提供https服务而不提供任何http服务，会导致caddy除了转发时禁用安全认证或者直接转发unix://以外几乎没有办法转发PVE的https，而且要转发https为https还必须保证PVE&lt;/p&gt;
-&lt;h3 id=&#34;sudo-systemctl-restart-caddy时报错loading-new-config-loading-http-app-module-provision-http-getting-tls-app-loading-tls-app-module-provision-tls-loading-certificates-open-pem-permission-denied&#34;&gt;sudo systemctl restart caddy时报错loading new config: loading http app module: provision http: getting tls app: loading tls app module: provision tls: loading certificates: open …….pem permission denied&lt;/h3&gt;
-&lt;p&gt;gopls cannot access its persistent index (disk full?): can&amp;rsquo;t create cache: mkdir Access is denied.&lt;/p&gt;
-&lt;p&gt;make -j4
-[ 50%] Building CXX object CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o
-/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp: In function ‘int main()’:
-/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:122:13: error: ‘CV_CAP_PROP_FRAME_WIDTH’ was not declared in this scope
-122 |     cap.set(CV_CAP_PROP_FRAME_WIDTH, frameWidth);
-|             ^~~~~~~~~~~~~~~~~~~~~~~
-/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:123:13: error: ‘CV_CAP_PROP_FRAME_HEIGHT’ was not declared in this scope
-123 |     cap.set(CV_CAP_PROP_FRAME_HEIGHT, frameHeight);
-|             ^~~~~~~~~~~~~~~~~~~~~~~~
-make[2]: *** [CMakeFiles/YOLOv5ncnn-vulkan.dir/build.make:76: CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/YOLOv5ncnn-vulkan.dir/all] Error 2
-make: *** [Makefile:91: all] Error 2&lt;/p&gt;
+下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，
+其中原因也比较简单，BattlEye作为一种游戏防作弊引擎，会尝试对整个机器进行扫描，
+其中包括可疑硬件外设（防DMA硬件直接修改内存）、以及所有硬盘，这些操作很大一部分要求程序以管理员权限运行。
+而Windows官方的samba支持为了安全考虑，&lt;strong&gt;禁止其它用户访问到当前用户挂载的samba硬盘，就算是管理员也不行。&lt;/strong&gt;
+微软提供的解决方案是以特殊的管理员身份去挂载samba，但这样一来反而会出现新的问题，我正常的用户又访问不到samba挂载的硬盘了。
+经过n番折腾终于还是放弃samba协议了QAQ。&lt;/p&gt;
+&lt;p&gt;还好互联网冲浪比较早又比较频繁，知道一个早期协议能解决这扩展游戏盘的需求：&lt;/p&gt;
+&lt;h3 id=&#34;iscsi协议&#34;&gt;iSCSI协议&lt;/h3&gt;
+&lt;p&gt;iSCSI协议挂载的硬盘能在Windows上被识别为本地原生磁盘，这种协议比较特殊，IETF组织在早期设立的网络储存标准之一。&lt;/p&gt;
+&lt;p&gt;优点很明显：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原生挂载，&lt;strong&gt;不会被识别成网络硬盘而是本地插入的硬盘&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;读写上限很高，前提你设置得当，待会会提到设置问题&lt;/li&gt;
+&lt;li&gt;兼容性极好，作为早期最有名的网络存储协议，Windows、Linux肯定没问题，甚至很多Unix-Like都有支持。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但缺点同样明显：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不支持多机器同时读写/多target支持也会必定导致读写速度大幅下降&lt;/li&gt;
+&lt;li&gt;Windows在部分重启的情况下难以自行重连，必须手动断开再刷新连接&lt;/li&gt;
+&lt;li&gt;其中大量配置术语会涉及储存专业领域，晦涩难懂（本来就是给中小型企业提供通用服务的协议）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;刚好我正在折腾一台带PVE的服务器，PVE官方alpine linux的CT模板又刚好只需要3.32MB，docker是整不了，用来做iSCSI服务器就是再合适不过了。&lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<p>想玩玩war thunder，但是主机硬盘空间不足哩大悲~
-下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，经过n番折腾终于还是放弃samba协议了QAQ。</p>
-<p>转而使用能在Windows上被识别为本地原生磁盘的iSCSI协议来整扩展游戏盘，这种协议</p>
-<h3 id="反向代理pve的方法">反向代理PVE的方法</h3>
-<p>因为PVE9.0开始web端只提供https服务而不提供任何http服务，会导致caddy除了转发时禁用安全认证或者直接转发unix://以外几乎没有办法转发PVE的https，而且要转发https为https还必须保证PVE</p>
-<h3 id="sudo-systemctl-restart-caddy时报错loading-new-config-loading-http-app-module-provision-http-getting-tls-app-loading-tls-app-module-provision-tls-loading-certificates-open-pem-permission-denied">sudo systemctl restart caddy时报错loading new config: loading http app module: provision http: getting tls app: loading tls app module: provision tls: loading certificates: open …….pem permission denied</h3>
-<p>gopls cannot access its persistent index (disk full?): can&rsquo;t create cache: mkdir Access is denied.</p>
-<p>make -j4
-[ 50%] Building CXX object CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o
-/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp: In function ‘int main()’:
-/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:122:13: error: ‘CV_CAP_PROP_FRAME_WIDTH’ was not declared in this scope
-122 |     cap.set(CV_CAP_PROP_FRAME_WIDTH, frameWidth);
-|             ^~~~~~~~~~~~~~~~~~~~~~~
-/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:123:13: error: ‘CV_CAP_PROP_FRAME_HEIGHT’ was not declared in this scope
-123 |     cap.set(CV_CAP_PROP_FRAME_HEIGHT, frameHeight);
-|             ^~~~~~~~~~~~~~~~~~~~~~~~
-make[2]: *** [CMakeFiles/YOLOv5ncnn-vulkan.dir/build.make:76: CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/YOLOv5ncnn-vulkan.dir/all] Error 2
-make: *** [Makefile:91: all] Error 2</p>
+下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，
+其中原因也比较简单，BattlEye作为一种游戏防作弊引擎，会尝试对整个机器进行扫描，
+其中包括可疑硬件外设（防DMA硬件直接修改内存）、以及所有硬盘，这些操作很大一部分要求程序以管理员权限运行。
+而Windows官方的samba支持为了安全考虑，<strong>禁止其它用户访问到当前用户挂载的samba硬盘，就算是管理员也不行。</strong>
+微软提供的解决方案是以特殊的管理员身份去挂载samba，但这样一来反而会出现新的问题，我正常的用户又访问不到samba挂载的硬盘了。
+经过n番折腾终于还是放弃samba协议了QAQ。</p>
+<p>还好互联网冲浪比较早又比较频繁，知道一个早期协议能解决这扩展游戏盘的需求：</p>
+<h3 id="iscsi协议">iSCSI协议</h3>
+<p>iSCSI协议挂载的硬盘能在Windows上被识别为本地原生磁盘，这种协议比较特殊，IETF组织在早期设立的网络储存标准之一。</p>
+<p>优点很明显：</p>
+<ul>
+<li>原生挂载，<strong>不会被识别成网络硬盘而是本地插入的硬盘</strong></li>
+<li>读写上限很高，前提你设置得当，待会会提到设置问题</li>
+<li>兼容性极好，作为早期最有名的网络存储协议，Windows、Linux肯定没问题，甚至很多Unix-Like都有支持。</li>
+</ul>
+<p>但缺点同样明显：</p>
+<ul>
+<li>不支持多机器同时读写/多target支持也会必定导致读写速度大幅下降</li>
+<li>Windows在部分重启的情况下难以自行重连，必须手动断开再刷新连接</li>
+<li>其中大量配置术语会涉及储存专业领域，晦涩难懂（本来就是给中小型企业提供通用服务的协议）</li>
+</ul>
+<p>刚好我正在折腾一台带PVE的服务器，PVE官方alpine linux的CT模板又刚好只需要3.32MB，docker是整不了，用来做iSCSI服务器就是再合适不过了。</p>
 ]]></content:encoded>
     </item>
     

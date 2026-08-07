@@ -200,44 +200,52 @@
       
       <guid>https://gitblog.dowblog.top/posts/alpine%E6%90%AD%E5%BB%BAiscsi%E5%B9%B6%E6%8C%82%E8%BD%BD%E5%88%B0windows/</guid>
       <description>&lt;p&gt;想玩玩war thunder，但是主机硬盘空间不足哩大悲~
-下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，经过n番折腾终于还是放弃samba协议了QAQ。&lt;/p&gt;
-&lt;p&gt;转而使用能在Windows上被识别为本地原生磁盘的iSCSI协议来整扩展游戏盘，这种协议&lt;/p&gt;
-&lt;h3 id=&#34;反向代理pve的方法&#34;&gt;反向代理PVE的方法&lt;/h3&gt;
-&lt;p&gt;因为PVE9.0开始web端只提供https服务而不提供任何http服务，会导致caddy除了转发时禁用安全认证或者直接转发unix://以外几乎没有办法转发PVE的https，而且要转发https为https还必须保证PVE&lt;/p&gt;
-&lt;h3 id=&#34;sudo-systemctl-restart-caddy时报错loading-new-config-loading-http-app-module-provision-http-getting-tls-app-loading-tls-app-module-provision-tls-loading-certificates-open-pem-permission-denied&#34;&gt;sudo systemctl restart caddy时报错loading new config: loading http app module: provision http: getting tls app: loading tls app module: provision tls: loading certificates: open …….pem permission denied&lt;/h3&gt;
-&lt;p&gt;gopls cannot access its persistent index (disk full?): can&amp;rsquo;t create cache: mkdir Access is denied.&lt;/p&gt;
-&lt;p&gt;make -j4
-[ 50%] Building CXX object CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o
-/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp: In function ‘int main()’:
-/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:122:13: error: ‘CV_CAP_PROP_FRAME_WIDTH’ was not declared in this scope
-122 |     cap.set(CV_CAP_PROP_FRAME_WIDTH, frameWidth);
-|             ^~~~~~~~~~~~~~~~~~~~~~~
-/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:123:13: error: ‘CV_CAP_PROP_FRAME_HEIGHT’ was not declared in this scope
-123 |     cap.set(CV_CAP_PROP_FRAME_HEIGHT, frameHeight);
-|             ^~~~~~~~~~~~~~~~~~~~~~~~
-make[2]: *** [CMakeFiles/YOLOv5ncnn-vulkan.dir/build.make:76: CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/YOLOv5ncnn-vulkan.dir/all] Error 2
-make: *** [Makefile:91: all] Error 2&lt;/p&gt;
+下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，
+其中原因也比较简单，BattlEye作为一种游戏防作弊引擎，会尝试对整个机器进行扫描，
+其中包括可疑硬件外设（防DMA硬件直接修改内存）、以及所有硬盘，这些操作很大一部分要求程序以管理员权限运行。
+而Windows官方的samba支持为了安全考虑，&lt;strong&gt;禁止其它用户访问到当前用户挂载的samba硬盘，就算是管理员也不行。&lt;/strong&gt;
+微软提供的解决方案是以特殊的管理员身份去挂载samba，但这样一来反而会出现新的问题，我正常的用户又访问不到samba挂载的硬盘了。
+经过n番折腾终于还是放弃samba协议了QAQ。&lt;/p&gt;
+&lt;p&gt;还好互联网冲浪比较早又比较频繁，知道一个早期协议能解决这扩展游戏盘的需求：&lt;/p&gt;
+&lt;h3 id=&#34;iscsi协议&#34;&gt;iSCSI协议&lt;/h3&gt;
+&lt;p&gt;iSCSI协议挂载的硬盘能在Windows上被识别为本地原生磁盘，这种协议比较特殊，IETF组织在早期设立的网络储存标准之一。&lt;/p&gt;
+&lt;p&gt;优点很明显：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原生挂载，&lt;strong&gt;不会被识别成网络硬盘而是本地插入的硬盘&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;读写上限很高，前提你设置得当，待会会提到设置问题&lt;/li&gt;
+&lt;li&gt;兼容性极好，作为早期最有名的网络存储协议，Windows、Linux肯定没问题，甚至很多Unix-Like都有支持。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但缺点同样明显：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不支持多机器同时读写/多target支持也会必定导致读写速度大幅下降&lt;/li&gt;
+&lt;li&gt;Windows在部分重启的情况下难以自行重连，必须手动断开再刷新连接&lt;/li&gt;
+&lt;li&gt;其中大量配置术语会涉及储存专业领域，晦涩难懂（本来就是给中小型企业提供通用服务的协议）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;刚好我正在折腾一台带PVE的服务器，PVE官方alpine linux的CT模板又刚好只需要3.32MB，docker是整不了，用来做iSCSI服务器就是再合适不过了。&lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<p>想玩玩war thunder，但是主机硬盘空间不足哩大悲~
-下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，经过n番折腾终于还是放弃samba协议了QAQ。</p>
-<p>转而使用能在Windows上被识别为本地原生磁盘的iSCSI协议来整扩展游戏盘，这种协议</p>
-<h3 id="反向代理pve的方法">反向代理PVE的方法</h3>
-<p>因为PVE9.0开始web端只提供https服务而不提供任何http服务，会导致caddy除了转发时禁用安全认证或者直接转发unix://以外几乎没有办法转发PVE的https，而且要转发https为https还必须保证PVE</p>
-<h3 id="sudo-systemctl-restart-caddy时报错loading-new-config-loading-http-app-module-provision-http-getting-tls-app-loading-tls-app-module-provision-tls-loading-certificates-open-pem-permission-denied">sudo systemctl restart caddy时报错loading new config: loading http app module: provision http: getting tls app: loading tls app module: provision tls: loading certificates: open …….pem permission denied</h3>
-<p>gopls cannot access its persistent index (disk full?): can&rsquo;t create cache: mkdir Access is denied.</p>
-<p>make -j4
-[ 50%] Building CXX object CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o
-/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp: In function ‘int main()’:
-/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:122:13: error: ‘CV_CAP_PROP_FRAME_WIDTH’ was not declared in this scope
-122 |     cap.set(CV_CAP_PROP_FRAME_WIDTH, frameWidth);
-|             ^~~~~~~~~~~~~~~~~~~~~~~
-/home/radxa/yolov5maligpu/YOLOv5-ncnn-arm/YOLOv5ncnn-vulkan/src/YOLOv5ncnn-vulkan.cpp:123:13: error: ‘CV_CAP_PROP_FRAME_HEIGHT’ was not declared in this scope
-123 |     cap.set(CV_CAP_PROP_FRAME_HEIGHT, frameHeight);
-|             ^~~~~~~~~~~~~~~~~~~~~~~~
-make[2]: *** [CMakeFiles/YOLOv5ncnn-vulkan.dir/build.make:76: CMakeFiles/YOLOv5ncnn-vulkan.dir/src/YOLOv5ncnn-vulkan.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/YOLOv5ncnn-vulkan.dir/all] Error 2
-make: *** [Makefile:91: all] Error 2</p>
+下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，
+其中原因也比较简单，BattlEye作为一种游戏防作弊引擎，会尝试对整个机器进行扫描，
+其中包括可疑硬件外设（防DMA硬件直接修改内存）、以及所有硬盘，这些操作很大一部分要求程序以管理员权限运行。
+而Windows官方的samba支持为了安全考虑，<strong>禁止其它用户访问到当前用户挂载的samba硬盘，就算是管理员也不行。</strong>
+微软提供的解决方案是以特殊的管理员身份去挂载samba，但这样一来反而会出现新的问题，我正常的用户又访问不到samba挂载的硬盘了。
+经过n番折腾终于还是放弃samba协议了QAQ。</p>
+<p>还好互联网冲浪比较早又比较频繁，知道一个早期协议能解决这扩展游戏盘的需求：</p>
+<h3 id="iscsi协议">iSCSI协议</h3>
+<p>iSCSI协议挂载的硬盘能在Windows上被识别为本地原生磁盘，这种协议比较特殊，IETF组织在早期设立的网络储存标准之一。</p>
+<p>优点很明显：</p>
+<ul>
+<li>原生挂载，<strong>不会被识别成网络硬盘而是本地插入的硬盘</strong></li>
+<li>读写上限很高，前提你设置得当，待会会提到设置问题</li>
+<li>兼容性极好，作为早期最有名的网络存储协议，Windows、Linux肯定没问题，甚至很多Unix-Like都有支持。</li>
+</ul>
+<p>但缺点同样明显：</p>
+<ul>
+<li>不支持多机器同时读写/多target支持也会必定导致读写速度大幅下降</li>
+<li>Windows在部分重启的情况下难以自行重连，必须手动断开再刷新连接</li>
+<li>其中大量配置术语会涉及储存专业领域，晦涩难懂（本来就是给中小型企业提供通用服务的协议）</li>
+</ul>
+<p>刚好我正在折腾一台带PVE的服务器，PVE官方alpine linux的CT模板又刚好只需要3.32MB，docker是整不了，用来做iSCSI服务器就是再合适不过了。</p>
 ]]></content:encoded>
     </item>
     
@@ -268,7 +276,7 @@ make: *** [Makefile:91: all] Error 2</p>
       <description>&lt;p&gt;注意使用博主PVE版本为9.0.3&lt;/p&gt;
 &lt;h2 id=&#34;ct模板相关&#34;&gt;CT模板相关&lt;/h2&gt;
 &lt;h3 id=&#34;最建议使用的模板&#34;&gt;最建议使用的模板&lt;/h3&gt;
-&lt;p&gt;最好用的模板实际上是alpine linux，官方有专门虚拟化的版本，虚拟化环境下不需要固件驱动因此系统镜像非常小，完整系统iso镜像仅70.25MB；而PVE官方alpine linux的CT模板仅3.32MB，创建完毕后更新包管理器源也仅占用16.4MB。快且小，就是gcc库不是gnu的而是musl的，因此很多&lt;/p&gt;
+&lt;p&gt;最好用的模板实际上是alpine linux，官方有专门虚拟化的版本，虚拟化环境下不需要固件驱动因此系统镜像非常小，完整系统iso镜像仅70.25MB；而PVE官方alpine linux的CT模板仅3.32MB，创建完毕后更新包管理器源也仅占用16.4MB。快且小，就是gcc库不是gnu的而是musl的，因此很多程序都没办法直接使用。&lt;/p&gt;
 &lt;h3 id=&#34;创建时报错task-error-unable-to-create-ct-101---unsupported-debian-version-131&#34;&gt;创建时报错TASK ERROR: unable to create CT 101 - unsupported debian version &amp;lsquo;13.1&amp;rsquo;&lt;/h3&gt;
 &lt;p&gt;其实-^-就是PVE官方升级CT模块时忘改支持的系统版本了，手动在/usr/share/perl5/PVE/LXC/Setup/Debian.pm修改：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;die&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;unsupported debian version &amp;#39;$version&amp;#39;\n&amp;#34;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$version&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$version&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
@@ -300,7 +308,7 @@ sh: write error: Resource busy
       <content:encoded><![CDATA[<p>注意使用博主PVE版本为9.0.3</p>
 <h2 id="ct模板相关">CT模板相关</h2>
 <h3 id="最建议使用的模板">最建议使用的模板</h3>
-<p>最好用的模板实际上是alpine linux，官方有专门虚拟化的版本，虚拟化环境下不需要固件驱动因此系统镜像非常小，完整系统iso镜像仅70.25MB；而PVE官方alpine linux的CT模板仅3.32MB，创建完毕后更新包管理器源也仅占用16.4MB。快且小，就是gcc库不是gnu的而是musl的，因此很多</p>
+<p>最好用的模板实际上是alpine linux，官方有专门虚拟化的版本，虚拟化环境下不需要固件驱动因此系统镜像非常小，完整系统iso镜像仅70.25MB；而PVE官方alpine linux的CT模板仅3.32MB，创建完毕后更新包管理器源也仅占用16.4MB。快且小，就是gcc库不是gnu的而是musl的，因此很多程序都没办法直接使用。</p>
 <h3 id="创建时报错task-error-unable-to-create-ct-101---unsupported-debian-version-131">创建时报错TASK ERROR: unable to create CT 101 - unsupported debian version &lsquo;13.1&rsquo;</h3>
 <p>其实-^-就是PVE官方升级CT模块时忘改支持的系统版本了，手动在/usr/share/perl5/PVE/LXC/Setup/Debian.pm修改：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="nb">die</span> <span class="s">&#34;unsupported debian version &#39;$version&#39;\n&#34;</span> <span class="k">if</span> <span class="o">!</span><span class="p">(</span><span class="nv">$version</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="nv">$version</span> <span class="o">&lt;=</span> <span class="mi">13</span><span class="p">);</span>
@@ -328,18 +336,6 @@ sh: write error: Resource busy
 <p>所以剩下两条路径，即PVE创建alpine linux虚拟机然后装docker，或者用Debian的CT模板装docker，第一条亲测没问题，大概总占用400MB，第二条网上用户反映是正常的。</p>
 <p>参考原文链接：
 <a href="https://forum.proxmox.com/threads/cannot-start-cgroups-service-in-alpine-lxc.143511/">Cannot start &ldquo;cgroups&rdquo; service in Alpine LXC</a></p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>使用vscode中的一些经验</title>
-      <link>https://gitblog.dowblog.top/posts/%E4%BD%BF%E7%94%A8vscode%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/</link>
-      <pubDate>Sun, 29 Mar 2026 01:00:09 +0000</pubDate>
-      
-      <guid>https://gitblog.dowblog.top/posts/%E4%BD%BF%E7%94%A8vscode%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/</guid>
-      <description>&lt;h3 id=&#34;gopls-cannot-access-its-persistent-index-disk-full-cant-create-cache-mkdir-access-is-denied&#34;&gt;gopls cannot access its persistent index (disk full?): can&amp;rsquo;t create cache: mkdir Access is denied.&lt;/h3&gt;
-</description>
-      <content:encoded><![CDATA[<h3 id="gopls-cannot-access-its-persistent-index-disk-full-cant-create-cache-mkdir-access-is-denied">gopls cannot access its persistent index (disk full?): can&rsquo;t create cache: mkdir Access is denied.</h3>
 ]]></content:encoded>
     </item>
     
@@ -2016,28 +2012,6 @@ end
 <p>（真正过火的在新年家族聚会上，几十号亲戚，自己逞能在1分钟内往嘴里灌了一开水壶的红酒后，当晚硬是没吐，就……再没敢碰过酒。）</p>
 <p>话说自己想下次做个美食合集，看看我这几年都吃了什么 /doge（狗头防打</p>
 <p>时不时发面前美食迫害班里吃货+1</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://gitblog.dowblog.top/posts/new/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gitblog.dowblog.top/posts/new/</guid>
-      <description>&lt;p&gt;随着多个依赖的更新修复多处兼容性、多平台问题：
-1、pip 不再拥有原requirements.txt内的onnxruntime==1.11.1，修改为1.16.0，
-更高的版本在Windows上onnxruntime官方已经确认有问题：&lt;a href=&#34;https://github.com/onnx/onnx/issues/6267&#34;&gt;[1.16.2] ONNX not built correctly for Windows&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2、在train.py修改保存模型名以修复Windows平台不支持冒号作为文件名的问题&lt;/p&gt;
-&lt;p&gt;3、&lt;/p&gt;
-&lt;p&gt;防止传入后预测框丢失的情况&lt;/p&gt;
-</description>
-      <content:encoded><![CDATA[<p>随着多个依赖的更新修复多处兼容性、多平台问题：
-1、pip 不再拥有原requirements.txt内的onnxruntime==1.11.1，修改为1.16.0，
-更高的版本在Windows上onnxruntime官方已经确认有问题：<a href="https://github.com/onnx/onnx/issues/6267">[1.16.2] ONNX not built correctly for Windows</a></p>
-<p>2、在train.py修改保存模型名以修复Windows平台不支持冒号作为文件名的问题</p>
-<p>3、</p>
-<p>防止传入后预测框丢失的情况</p>
 ]]></content:encoded>
     </item>
     
