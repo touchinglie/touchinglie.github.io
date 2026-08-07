@@ -265,7 +265,14 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后添加ACL访问控制，下面iqn.2005-03.org.open-iscsi:a3beddeaf977的部分需要替换为自己要连接Initiator的机器WWN：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/&amp;gt; iscsi/iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319/tpg1/acls create &lt;span class=&#34;nv&#34;&gt;wwn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;iqn.2005-03.org.open-iscsi:a3beddeaf977
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;服务端就配置好了，Windows可以自行从“iSCSI发起程序”应用直接连接。&lt;/p&gt;
-&lt;p&gt;参考原文链接：&lt;a href=&#34;https://johnsiu.com/blog/alpine-iscsi-target/&#34;&gt;John Siu 博客 | Alpine iSCSI 目标&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考原文链接：
+&lt;a href=&#34;https://johnsiu.com/blog/alpine-iscsi-target/&#34;&gt;John Siu 博客 | Alpine iSCSI 目标&lt;/a&gt;
+&lt;a href=&#34;https://wiki.alpinelinux.org/wiki/Linux_iSCSI_Target_(TCM)&#34;&gt;Linux iSCSI Target (TCM) - Alpine Linux&lt;/a&gt;
+&lt;a href=&#34;https://www.cnblogs.com/liujunjun/p/15619650.html&#34;&gt;IP网络存储iSCSI的概念与工作原理 - 星火撩原 - 博客园&lt;/a&gt;
+&lt;a href=&#34;https://www.xiexianbin.cn/storage/how-to-use-iscsi/&#34;&gt;iSCSI 存储网络完整指南 | 谢先斌的博客&lt;/a&gt;
+&lt;a href=&#34;https://www.cnblogs.com/leehang/p/18889462&#34;&gt;iSCSI存储协议详解 - LeeHang - 博客园&lt;/a&gt;
+&lt;a href=&#34;https://wiki.archlinux.org/title/ISCSI/LIO&#34;&gt;ISCSI/LIO - ArchWiki&lt;/a&gt;
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/ISCSI&#34;&gt;iSCSI - 維基百科，自由的百科全書&lt;/a&gt;&lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<p>想玩玩war thunder，但是主机硬盘空间不足哩大悲~
 下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，
@@ -333,7 +340,14 @@
 </span></span></code></pre></div><p>最后添加ACL访问控制，下面iqn.2005-03.org.open-iscsi:a3beddeaf977的部分需要替换为自己要连接Initiator的机器WWN：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/&gt; iscsi/iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319/tpg1/acls create <span class="nv">wwn</span><span class="o">=</span>iqn.2005-03.org.open-iscsi:a3beddeaf977
 </span></span></code></pre></div><p>服务端就配置好了，Windows可以自行从“iSCSI发起程序”应用直接连接。</p>
-<p>参考原文链接：<a href="https://johnsiu.com/blog/alpine-iscsi-target/">John Siu 博客 | Alpine iSCSI 目标</a></p>
+<p>参考原文链接：
+<a href="https://johnsiu.com/blog/alpine-iscsi-target/">John Siu 博客 | Alpine iSCSI 目标</a>
+<a href="https://wiki.alpinelinux.org/wiki/Linux_iSCSI_Target_(TCM)">Linux iSCSI Target (TCM) - Alpine Linux</a>
+<a href="https://www.cnblogs.com/liujunjun/p/15619650.html">IP网络存储iSCSI的概念与工作原理 - 星火撩原 - 博客园</a>
+<a href="https://www.xiexianbin.cn/storage/how-to-use-iscsi/">iSCSI 存储网络完整指南 | 谢先斌的博客</a>
+<a href="https://www.cnblogs.com/leehang/p/18889462">iSCSI存储协议详解 - LeeHang - 博客园</a>
+<a href="https://wiki.archlinux.org/title/ISCSI/LIO">ISCSI/LIO - ArchWiki</a>
+<a href="https://zh.wikipedia.org/wiki/ISCSI">iSCSI - 維基百科，自由的百科全書</a></p>
 ]]></content:encoded>
     </item>
     
