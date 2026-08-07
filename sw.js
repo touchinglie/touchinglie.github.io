@@ -1,7 +1,7 @@
 importScripts('https://cdn.jsdelivr.net/npm/workbox-sw@7.4.1/build/workbox-sw.min.js');
 
 // 缓存版本号
-let cacheVersion = '0.0.2';
+let cacheVersion = '0.0.3';
 // 最大条目数
 const maxEntries = 100;
 
