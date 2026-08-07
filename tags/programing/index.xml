@@ -349,5 +349,713 @@ docker restart {容器ID}
 ]]></content:encoded>
     </item>
     
+    <item>
+      <title>我的GitHub新项目！</title>
+      <link>https://gitblog.dowblog.top/posts/%E6%88%91%E7%9A%84github%E6%96%B0%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Tue, 29 Oct 2024 05:24:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/%E6%88%91%E7%9A%84github%E6%96%B0%E9%A1%B9%E7%9B%AE/</guid>
+      <description>&lt;p&gt;这个在国内的网络肯定在看不到项目卡片的了，可以点进去看&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/touchinglie/FastestStreamDet&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://github-stats-extended.vercel.app/api/pin/?username=touchinglie&amp;amp;repo=FastestStreamDet&#34; alt=&#34;Readme Card&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/touchinglie/FastestStreamDet/actions/workflows/python-package.yml&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://github.com/touchinglie/FastestStreamDet/actions/workflows/python-package.yml/badge.svg?branch=main&#34; alt=&#34;Python package&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;项目简介：&lt;/p&gt;
+&lt;p&gt;一个基于FastestDet的单文件多类型输入推理实现&lt;/p&gt;
+&lt;p&gt;FastestDet原有的示例是只能输入单张图片的，而且没有对很多情况做判断，同时也是两年前最后一次commit的老项目了，所以做了流处理，以及修复推理的一些bug后，最后再杂糅了很多其它主流框架日常使用的功能（另类炼丹炉确信）。&lt;/p&gt;
+&lt;p&gt;做这个项目最主要是qiuqiu大佬当时在业余时间里写出的框架真的很小（膜拜ing），很适合单类推理以及嵌入式设备上的部署，有现实中的实用价值，详细可以见我上一篇博客的内容。同时呢我觉得其实这个是可以作为我后来在深度学习这个方向的一个努力方向的，这个我还要单独写一篇论文，就是这一类小型模型其实会成为未来（广义）人工智能的下一个主流方向，大模型的发展就如同2010那时候硬件条件不匹配的情况，是已经要到顶了的。&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>这个在国内的网络肯定在看不到项目卡片的了，可以点进去看</p>
+<p><a href="https://github.com/touchinglie/FastestStreamDet"><img loading="lazy" src="https://github-stats-extended.vercel.app/api/pin/?username=touchinglie&amp;repo=FastestStreamDet" alt="Readme Card"  />
+</a></p>
+<p><a href="https://github.com/touchinglie/FastestStreamDet/actions/workflows/python-package.yml"><img loading="lazy" src="https://github.com/touchinglie/FastestStreamDet/actions/workflows/python-package.yml/badge.svg?branch=main" alt="Python package"  />
+</a></p>
+<p>项目简介：</p>
+<p>一个基于FastestDet的单文件多类型输入推理实现</p>
+<p>FastestDet原有的示例是只能输入单张图片的，而且没有对很多情况做判断，同时也是两年前最后一次commit的老项目了，所以做了流处理，以及修复推理的一些bug后，最后再杂糅了很多其它主流框架日常使用的功能（另类炼丹炉确信）。</p>
+<p>做这个项目最主要是qiuqiu大佬当时在业余时间里写出的框架真的很小（膜拜ing），很适合单类推理以及嵌入式设备上的部署，有现实中的实用价值，详细可以见我上一篇博客的内容。同时呢我觉得其实这个是可以作为我后来在深度学习这个方向的一个努力方向的，这个我还要单独写一篇论文，就是这一类小型模型其实会成为未来（广义）人工智能的下一个主流方向，大模型的发展就如同2010那时候硬件条件不匹配的情况，是已经要到顶了的。</p>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>实验室三次考核开发日志</title>
+      <link>https://gitblog.dowblog.top/posts/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E4%B8%89%E6%AC%A1%E8%80%83%E6%A0%B8%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Wed, 21 Aug 2024 10:22:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E4%B8%89%E6%AC%A1%E8%80%83%E6%A0%B8%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/</guid>
+      <description>&lt;p&gt;此处为实验室第三轮考核的开发日志，意在锻炼独立完成项目能力，学习更多实践的技术，解决部署难点
+这个项目完成后我将公开发布至GitHub，与另一个我与群友一起构建的小数据集项目一同作为我的GitHub处男库/doge
+先将要求贴出：&lt;/p&gt;
+&lt;p&gt;最终考核题形式为：每个人独立完成一个目标检测/目标分类小项目（深度学习组选题为甲骨文（数据集会给出），其他组目标检测选题为检测车牌，分类选题为红绿灯，二选一，数据集需自行上网采集），框架自选，模型自主训练
+1.数据集收集-数据处理-训练-测试-部署，要求部署到服务器/网页/开发板，整套流程均需独立完成。
+2.九月开学后实验室会提供多个树莓派开发板以及一个带npu的开发板，开学两个星期后验收成果（如有硬件设备可以自己先完成，没有的可以使用虚拟机或云服务器练手）
+&amp;mdash;&amp;mdash;&amp;ndash;深度学习组&amp;mdash;&amp;mdash;&amp;mdash;：
+1.分析数据集中可能存在的噪点，进行图像降噪处理。
+2.使用数据增强技术对于小样本数据的增强，分别使用传统数据增强技术或深度学习的数据增强技术。从训练效果评估自己数据增强后的效果。
+3.尽可能做图像特征工程，并保证处理完数据后的模型效果更好
+&amp;mdash;&amp;mdash;&amp;mdash;web组&amp;mdash;&amp;mdash;&amp;ndash;：要求做ui(简易的页面就好，样式好看一点，可以加分)，前端请求的后端接口要求返回类别和置信度两个参数，通信要求后端部署在云服务器或者局域网设备。(思路参考，使用socket 完成，可以加分)（博主是web组的）
+&amp;mdash;&amp;mdash;&amp;mdash;-其它组&amp;mdash;&amp;mdash;&amp;ndash;：部署到开发板，要求做加速，如GPU/NPU/NCNN加速
+（注：模型训练得分指标以map指标和f1得分为主，考核使用的测试集不公布，得分以不公布的数据集为主）
+考核时需阐述个人的完成流程，采用的处理，简单介绍所完成的项目，实现项目时要编写日志，考核前一天上交（旨在梳理个人所学知识），各方向考核侧重点不一样但是考核标准统一，祝大家学习愉快&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;此处以下即为个人开发日志&#34;&gt;此处以下即为个人开发日志&lt;/h2&gt;
+&lt;h1 id=&#34;813&#34;&gt;8.13&lt;/h1&gt;
+&lt;p&gt;开始查看模型框架，网上其实有Resnet的现成品模型，不过过于古早，识别效果凑合，
+yolov8对部署设备性能要求还是太高，于是转向yolov5，本来最适合的是无anchor的nanonet，
+最新的研究方向之一，对性能的要求最低还有不输于yolov5的识别效果，但其仅不支持Windows，
+那我就没有现成合适设备训练模型了。&lt;/p&gt;
+&lt;h1 id=&#34;814&#34;&gt;8.14&lt;/h1&gt;
+&lt;p&gt;总共从网上搜集好近25万张的数据集（ccpd和一些Kaggle上的零散数据集），大部分有标签数
+据但都是老旧的Resnet文件名内嵌形式，只能想办法一张张打标签，期间想过通过训练标准模型
+将后面一部分数据集检测到的数据做标签，不过怕模型网络退化效果越来越差。一部分数据集为
+提高模型鲁棒性还做了高斯模糊。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726993309959.webp&#34; alt=&#34;1726993309959&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;于是想办法将Resnet标签转换成yolo格式，25万张的数据必须写脚本，但要对文件名中非矩形
+边界框坐标（参照系未知，按贡献者的说明是以右下为原点建立坐标系）转换成yolo以左上为原
+点建立坐标系且归一化xywh的格式属实头大，决定先处理单张样例做测试，具体是利用pillow获
+取数据分辨率（xy最大最小）来对应结合文件名标签计算归一化后坐标，以yolo形式并行储存。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726993268461.webp&#34; alt=&#34;1726993268461&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726993296853.webp&#34; alt=&#34;1726993296853&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;初步写好脚本。&lt;/p&gt;
+&lt;h1 id=&#34;815&#34;&gt;8.15&lt;/h1&gt;
+&lt;p&gt;凌晨结合网上的指导跑完了25万张数据集预备，接下来是网络结构设计，就在原yolov5s的基础
+上修改，初步想法是在yolov5.7中降低模型宽度以减小特征图，这训练一个模型。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726993958972.webp&#34; alt=&#34;1726993958972&#34;  /&gt;
+
+另外一个就是YOLOv5-ShuffleNetv2，参照YOLOv5-Lite在yolov5.0中减少concat来降低对显存大的需求，
+又因为是简单的单类检测任务，就将backbone中Conv改为Shuffle_Block，同时将下采样的Focus层
+（仅在yolov5.6之前存在，后被改为Conv层）卷积核换成32x32，确实会快很多，毕竟yolov5s的
+模型到后面卷积核都有512个，量大。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726994391045.webp&#34; alt=&#34;1726994391045&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;先改来跑跑看，后续不行再换yolov5-Lite。设置了epochs、batch、cfg、data、imgsz，开始
+训练。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726994447650.webp&#34; alt=&#34;1726994447650&#34;  /&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;816&#34;&gt;8.16&lt;/h1&gt;
+&lt;p&gt;到午后yolov5.7的模型已经基本训练出来了，目前测试效果一般，鲁棒性不是很好，但是验证集
+（非训练时的数百张验证）中的图片检测效果良好，按学长的说法应该是过拟合了。模型大小
+为5.81MB，小但是不够小，至少很难部署在小型开发板上。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726994524263.webp&#34; alt=&#34;1726994524263&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;于是开始训练YOLOv5-ShuffleNetv2的模型，可惜忘记改nc的类了，训练到半夜发现模型推理没框，大悲重来。&lt;/p&gt;
+&lt;h1 id=&#34;817&#34;&gt;8.17&lt;/h1&gt;
+&lt;p&gt;YOLOv5-ShuffleNetv2模型训练好了，模型做好剪枝后出乎意料的小，才1.56MB大，可惜这一套都是在
+yolo5.0上做的，用着其它架构上没有的Focus层，5.6后都不支持跑推理。这个模型效果挺好，跟之前训练好
+的模型差不多，也是单类对网络规模没太多需求的缘故了。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726994611088.webp&#34; alt=&#34;1726994611088&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;优先使用之前的模型，较新还能转格式，之后部署不行的话再做替换。&lt;/p&gt;
+&lt;h1 id=&#34;818&#34;&gt;8.18&lt;/h1&gt;
+&lt;p&gt;问题重重，把pytorch的pt格式转为通用微软开发的onnx时首先遇到环境不符合，发现是numpy的版本过低，
+但重安装numpy库时还是报错，后来查询onnx在GitHub上的Issue时得知onnx1.16.2是有问题的，遂按照官方
+开发者提供的方案降级到1.16.1即可。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/onnx/onnx/issues/6267&#34;&gt;[1.16.2] ONNX not built correctly for Windows&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;后又遇到onnx转换成功后推理显示输入输出不对，
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726995788253.png&#34; alt=&#34;1726995788253&#34;  /&gt;
+
+于是可视化模型检查输入输出，没查出问题，询问学长得知
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726995972024.webp&#34; alt=&#34;1726995972024&#34;  /&gt;
+
+转模型时文件的参数batch-size并非训练时的batch-size，而是每次推理的输入张数，改回1后转出来的模型
+正常推理。&lt;/p&gt;
+&lt;h1 id=&#34;819&#34;&gt;8.19&lt;/h1&gt;
+&lt;p&gt;开始着手构建后端，计划采用flask，开发快，也不需要并发，同时能把更多时间用于开发多平台前端。
+总体部署思路：
+前端uniapp写，界面好看，多端部署，向后端api接口用socket请求传输输入和结果画面以及置信度和
+框四个点坐标，部署在小型esp等设备上
+后端对socket连接请求回应，保持长连接，启动推理输入输出结果，直到前端发出中止指令或者推理完
+成，部署在树莓派或者开发板上。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726996174385.webp&#34; alt=&#34;1726996174385&#34;  /&gt;
+
+模型初步写出，看接下来慢慢完善。&lt;/p&gt;
+&lt;h1 id=&#34;820&#34;&gt;8.20&lt;/h1&gt;
+&lt;p&gt;遇到麻烦：尽管开了flask的多线程，启动Response仍是十分艰难的事情，打开需要的时间太长（20min）
+，于是询问学长，后自己复查代码时发现逻辑有误，于是提前打开摄像头的时刻，后后端接收socket画面正常。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726996365551.webp&#34; alt=&#34;1726996365551&#34;  /&gt;
+
+开始考虑使用什么设备部署后端，首先肯定是常用的jetson系列，但价格高，普遍要1000~5000元，于是想到
+用k210,参考已有案例后认为推理速度慢，部署要用c且内存储存都极其有限，遂继续寻找。&lt;/p&gt;
+&lt;h1 id=&#34;821&#34;&gt;8.21&lt;/h1&gt;
+&lt;p&gt;发现rknn设备的性价比较高，首先放弃了主流rk3588系列的开发板，价格还是居高不下，在500-1000元左右，更
+重要的是其中算力6TOPS冗余过头了，于是看上了rk3568的radxa开发板，CPU就有1TOPS算力只要200多块还有GPU加NPU，&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726998731691.webp&#34; alt=&#34;1726998731691&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726998723470.webp&#34; alt=&#34;1726998723470&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726998741577.webp&#34; alt=&#34;1726998741577&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726998748441.webp&#34; alt=&#34;1726998748441&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;要实在觉得扒行，过来看NUC5兄dei：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726998828804.webp&#34; alt=&#34;1726998828804&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;可惜教程几乎为零，网上教程只有GPT生成的胡言乱语。还有重要的是1TOPS如何实现实时推流？于是想到FastestDet这个轻量级的推理架构，可惜就是还要对数据集进行二次处理，实际还是yolo的模型标准，不过网络大改，改到只剩单检测头，&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726999251581.webp&#34; alt=&#34;1726999251581&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;就一个5x5分组卷积并行网络结构融合不同感知野（yolov5是三检测头），0.24M的参数，FastestDet的作者刚好也是
+用rk3568测试的这个模型，70.62ms的推理速度（ncnn）啊。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726999303203.webp&#34; alt=&#34;1726999303203&#34;  /&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;822&#34;&gt;8.22&lt;/h1&gt;
+&lt;p&gt;处理yolo数据，FastestDet的数据集输入格式类似与yolo，但有类是单独写成一个.names文件，以及数据集每个文件
+都需要按行写好绝对路径，依照所在文件夹（训练的train，验证的val）划分，写在train.txt或val.txt里：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.   #所在数据集源目录
+├── category.names        # .names 类名标签文件
+├── train                 # 训练用数据集
+│   ├── 000001.jpg        # jpg与label按文件名一一对应
+│   ├── 000001.txt
+│   ├── 000002.jpg
+│   ├── 000002.txt
+│   ├── 000003.jpg
+│   └── 000003.txt
+├── train.txt              # 训练数据集每个文件绝对路径
+├── val                    # 按yaml配置里写的n个epoch后验证当前数据mAP精度，这里单类所以其实就是AP
+│   ├── 000043.jpg
+│   ├── 000043.txt
+│   ├── 000057.jpg
+│   ├── 000057.txt
+│   ├── 000070.jpg
+│   └── 000070.txt
+└── val.txt                # 验证数据集每个文件绝对路径
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装FastestDet的环境需要特别说明，这个requirements里的onnx和pytorch都得额外用conda自己
+整，删除requirements.txt里的：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;onnx==1.12.0
+onnx_simplifier==0.3.10
+onnxruntime==1.11.1
+onnxsim==0.4.0
+torch==1.11.0+cu113
+torchsummary==1.5.1
+torchvision==0.12.0+cu113
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;conda创建一个python3.8的环境,作者所要求的opencv_python版本最高只支持到python3.8，具体是3.5-3.8
+先单独安装torch+cuda：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;再使用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;conda install onnxruntime==1.16.1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;按前面提到的最好用onnxruntime&amp;lt;=1.16.1，更高的版本在Windows上官方已经确认有问题&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/onnx/onnx/issues/6267&#34;&gt;[1.16.2] ONNX not built correctly for Windows&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;830&#34;&gt;8.30&lt;/h1&gt;
+&lt;p&gt;这几天电脑专注于训练模型。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726999365482.webp&#34; alt=&#34;1726999365482&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;开始训练了50epochs没有保存成功，也没有报错，后逐行查看时发现train.py在
+利用torch.save保存模型时是：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;torch.save(self.model.state_dict(), &amp;quot;checkpoint/weight_AP05:%f_%d-epoch.pth&amp;quot;%(mAP05, epoch))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里可以看到模型文件名是：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;weight_AP05:%f_%d-epoch.pth
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这绝对是在linux上写的代码，其中:冒号在Windows系统里是不能作为文件名的，故这里保存失败也没有报错说明，我
+在这里删除:即可正常保存模型，默认在checkpoint里。&lt;/p&gt;
+&lt;p&gt;转换模型的时候启动环境，先修改test.py更换onnx-runtime的版本，在文件里搜索opset_version将后面的11改成12，
+否则会报&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ONNX: export failure ❌ 0.3s: Exporting the operator silu to ONNX opset version 11 is not support，
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这是因为onnx11不支持silu算子，在终端输入：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python test.py --yaml configs/（yaml配置文件名） --weight weights/（.pth模型名） --img data/（想要推理验证的图片名） --onnx（转换成onnx保存模型）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;项目根目录底下就会有两个onnx模型文件出现：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;FastestDet.onnx
+FastestDetSim.onnx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1726999740334.webp&#34; alt=&#34;1726999740334&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;和训练对应的.names一起放到FastestDet里作者给的example/onnx-runtime里，
+runtime.py中onnxruntime.InferenceSession函数里，
+改为FastestDetSim.onnx（模型名）, providers=[&amp;ldquo;AzureExecutionProvider&amp;rdquo;, &amp;ldquo;CPUExecutionProvider&amp;rdquo;]
+（onnx在某个版本后必须要提供providers参数确定跑模型的是cpu还是gpu，这里的CPUExecutionProvider即指的是CPU）&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1727000130490.webp&#34; alt=&#34;1727000130490&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;后运行python runtime.py生成result.jpg查看转换后模型推理结果，验证模型是否正确。&lt;/p&gt;
+&lt;h1 id=&#34;831&#34;&gt;8.31&lt;/h1&gt;
+&lt;p&gt;模型训练好后就准备板段部署，官方radxa严格限定板子只能使用官方魔改过的debian bullseye系统或者社区的armbian，&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/radxa-build/rock-3a/releases/tag/b25&#34;&gt;Radxa-built system images for ROCK 3A&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我这里使用的是debian 命令行(cli)版本，配置环境更改/etc/apt/sources.list文件换&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://mirrors.tuna.tsinghua.edu.cn/help/debian/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;里的清华源镜像。安装python3.9.2（bullseye版本最新支持的）。
+使用nmcli连接网络，sudo apt update更新包名，接下来
+pip install以上依赖，除了不用conda环境，单独安装使用pip外，与Windows系统操作步骤一样。
+另为了开发便利，可选择安装samba和nano（强烈建议，比vim方便），在终端依次输入：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get install samba
+sudo apt-get install nano
+sudo nano /etc/samba/smb.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在文件尾部添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[root]
+comment = For my Radxa board developing
+path = /
+available = yes
+valid users = radxa
+public = yes
+writable = yes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;依次按下ctrl+x，y保存文件后设置samba用户与密码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo smbpasswd -a radxa
+sudo systemctl restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;随即可在路由端查看板子ip，直接在文件管理器路径处输入\(板子ip)回车就可将文件在板子和电脑手机间传输。&lt;/p&gt;
+&lt;h1 id=&#34;93&#34;&gt;9.3&lt;/h1&gt;
+&lt;p&gt;这里不使用radxa npu的缘故是200块的板子只有2G的运行内存，用官方系统软硬件管理工具rsetup开启后板子会被
+长期强制占用700多MB的内存（不使用npu计算也会），同时依照FastestDet作者的说法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.ncnn不支持npu推理&lt;/li&gt;
+&lt;li&gt;2.实际调用rknn api对模型进行npu推理测试，耗时反而比cpu慢一倍&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这和网络结构有关，Depthwise卷积在npu效率都不是很高，
+npu反而是个累赘，因而不通电开启npu。
+npu的开启和rknpu模型的转换另开一文说明。&lt;/p&gt;
+&lt;h1 id=&#34;97&#34;&gt;9.7&lt;/h1&gt;
+&lt;p&gt;前几天分别在写flask与onnx模型在板端的推理更正代码，推理与数据传输从电脑到板子性能下降，很多bug也就都来了，
+比如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[ERROR:000.216] global net_ impl.cpp:1178 getLayershapesRecursively Exception message: Opencv(4.10.0) /io/opencv/modules/
+dnn/src/layers/reshape_layer.cpp:109: error: (-215:Assertion failed) total(srcshape, srcRange.start, srcRange.end)== ma
+Traceback(most recent call last):File &amp;quot;/home/radxa/FastestDet-opencv-dnn/main.py&amp;quot;,line 96, in &amp;lt;module&amp;gt;
+srcimg = model.detect(srcimg)File &amp;quot;/home/radxa/FastestDet-opencv-dnn/main.py&amp;quot;,line 81, is detectpred.
+= self.net.forward(self.net.getUnconnectedOutLayersNames())[0]srcShape,srcRange.start,srcRange.end)== maskTotal in function
+cv2.error: 0pencv(4.10.0) /io/opencv/modules/dnn/src/layers/reshape_layer.cpp:109: error: (-215:Assertion failed) 
+total(srcShape,srcRange.start,srcRange.end)== maskTotal in function &#39;computeShapeByReshapeMask
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个库是使用opencv的dnn库单独实现板端推理，但opencv早就删除或单独建库了大多数dnn的函数，因而换成之前目录下的example，里面有一个非常不完整的示例，单独使用会秒报错:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ValueError ： operands could not be broadcast together with shapes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里打开文件，可以看到nms去重时有一个判断&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;while order.size &amp;gt; 0:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里.size是作者在查看numpy置信度数组的形状是否大于零，保留置信度最高的框；但是.size方法会将数组展平，是
+一个隐性的np.reshape方法，如果数组是一维乃至空数组时就会报错广播操作不可行。解决方法是用not is替代。
+类似的问题就是这个模板没有考虑到没识别到目标如何处理，一味地丢进nms做二维切片：x1 = dets[:, 0]
+会报&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用print(dets)或是被放入nms中的pred显示出来，会发现是一维的空数组，因而做二维切片就会报错。解决方案
+也很简单就是在把pred传入nms前做列表长度的判断，结合前一个问题这里应当写if pred is []:return[None]
+那么还会发现一个问题，如果板子推理太慢，视频实时流自然会很慢，由于dets这里指针地址储存的类型在传入前
+判断的是有目标被检测到被放进了nms，又在切片时变成下一帧无检测目标，依旧会报错，所以加两次判断，一次
+在传入nms前筛，一次在切片前筛，是兼顾性能与运行稳定的选择。&lt;/p&gt;
+&lt;p&gt;注意到上面是返回[None]，这是有目标检测到时不可能的结果，于是先在原来if &lt;strong&gt;name&lt;/strong&gt; == &amp;ldquo;&lt;strong&gt;main&lt;/strong&gt;&amp;quot;:后面的内容全部改成用一个run()函数包装方便flask调用，同时在run()里推理步骤bboxes=detection()下面做判断，一旦bboxes返回[None]，就直接将开始传入run()函数Mat矩阵类型的虚参img转成字节流直接给浏览器解析，避免后处理，之后我会找到详细方法。&lt;/p&gt;
+&lt;h1 id=&#34;98&#34;&gt;9.8&lt;/h1&gt;
+&lt;p&gt;对example的改动基本完成，现重新用flask写好前后端统合推理与摄像头实时流，保证这个应用能真正实现对车牌
+的识别，以及低成本的基本部署应用，市面上的摄像头普遍价格在150~200元之间，为最大程度低成本完成成品，选择由esp32cam负责画面捕捉，仅用31元就有wifi蓝牙摄像头集成模组。&lt;/p&gt;
+&lt;p&gt;大体构想是连接局域网通过socket传输给板子，板子推理后用yield将esp32cam摄像头获取到的字节码通过websocket不断更新前端页面的画面，另外用定时器设置Ajax定时刷新推理结果局部更新网页结果终端。&lt;/p&gt;
+&lt;p&gt;那么细节到实现上就要考虑新的问题，socket获取到的字节码画面在每一步以什么格式处理？怎样用python转换成合适的格式处理？不同设备以什么协议传输数据？对应上面的步骤可以一一明晰：&lt;/p&gt;
+&lt;p&gt;首先esp32cam作为输入端只能获取到字节码格式的视频流，考虑到esp32仅有4MB的SPI Flash低性能，通过基于UDP的socket协议传输画面在局域网是优于TCP的，故选择UDP。&lt;/p&gt;
+&lt;p&gt;先给esp32cam刷Micropython，电脑按网上下载安装好Thonny后，去找适配自己esp32cam的Micropython固件bin文件，官方的固件都没有camera库，无法使用摄像头。&lt;/p&gt;
+&lt;p&gt;固件烧录可参考
+&lt;a href=&#34;https://www.bilibili.com/read/cv27647802&#34;&gt;esp32cam开发板烧录micropython固件报错问题（完美解决）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;拿到固件后，如果esp32cam有底板一定不能用底板烧录，市面上所有底板（包括更通用的CH340以及更稳定的FT232RL芯片均是如此）都只能配合驱动烧录Arduino的c++程序，刷micropython只能使用usb转ttl的模块刷机板严格用母对母的杜邦线&lt;/p&gt;
+&lt;p&gt;严格按5v对5v，gnd（负极）对gnd，RXD对TXD，TXD对RXD的顺序来接线，尤其正负极不能接反，否则很快烧板子，之前一次接反后立刻断开接线处还是极烫，务必注意用电安全。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1727001936861.webp&#34; alt=&#34;1727001936861&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1727001951239.webp&#34; alt=&#34;1727001951239&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;最后为初始化固件刷入，需让esp32cam进入boot模式，故再用母对母杜邦线短接其上右端相邻的两排针IO0与gnd，usb插入电脑，打开thonny烧录固件，在看到Done后断开右端IO0与gnd的短接，选择好设备端口后按确定即可。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1727001960332.webp&#34; alt=&#34;1727001960332&#34;  /&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;99&#34;&gt;9.9&lt;/h1&gt;
+&lt;p&gt;随后编写名为 main.py（esp32通电后默认执行此文件名的py程序）的micropython文件，导入camera库，设置wifi连接与摄像头参数，&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1727002348079.webp&#34; alt=&#34;1727002348079&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;最后创建socket套字节（即由ip:port组成的元组）实例化的对象，这里涉及UDP与TCP不同的通信过程方式。&lt;/p&gt;
+&lt;p&gt;TCP是先由服务端绑定IP端口创建TCP连接的监听服务，后等待客户端一对一主动发出对接TCP请求报文控制位SYN为1、随机化序列号的握手包（HandShaking）表示希望建立TCP连接，服务端收到后返回报头SYN和ACK（表示确认应答，就跟微信群发一句收到一样）均为1、随机化序列号且确认应答号为前一个序列号+1的的握手包表示收到同意连接，客户端再最后回应服务端一个报头ACK为1、确认应答号为前一个序列号+1且包含字节流的应答报文，TCP连接就算成功建立了，接下来就是字节流，再之后就是TCP通过四次握手断开已传输完毕要释放的TCP连接。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1727002447645.webp&#34; alt=&#34;1727002447645&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;UDP呢，没有连接这种复杂的概念，自然也就可以一对多以及更快的传输速度，就跟大街上要个人到耳边骂（TCP）和大街上点名道姓的骂（UDP）一样的，我就这样喊，听没听到那就不一定了，相比TCP初始化、绑定(bind)、监听(listen)、等待(accpet)、请求连接(connect)、传输（send）、关闭连接(close)这一串复杂的socket实现，UDP不需要服务端先开始监听等待，初始化完绑好IP端口直接就开始不停地喊，服务端想听的时候就初始化绑定开听，简单得不能再简单，就是网络不好会只能收到只言片语（丢包率高）。
+python的socket库初始化时就要考虑选择以何种模式使用socket连接，socket.socket()中所需两个虚参是地址类型以及通信协议，&lt;/p&gt;
+&lt;p&gt;两者使用的过程在上一段都已说明，不再多言。&lt;/p&gt;
+&lt;p&gt;图像字节码流使用socket的UDP传到上位机即Radxa Rock3A这块板子后，要想用给onnxruntime推理，必须转成opencvMat矩阵的格式，&lt;/p&gt;
+&lt;p&gt;我目前找到最短的一条转换路径是：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;socket字节码 -&amp;gt; io库字节流 -&amp;gt; pillow库ImageFile -&amp;gt; numpy库ndarray -&amp;gt; opencv库MatLike
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;同样的，在推理图像处理好后输出依旧是要从MatLike转成byte字节码给浏览器解析，库支持流程就简单一些：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;opencv库RGB(三通道颜色标准)的MatLike -&amp;gt; opencv库BGR（只是将R和B两通道交换而已）的MatLike -&amp;gt;  numpy库ndarray -&amp;gt; byte字节码
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在转换成byte字节码后，写成html里字节码图像的格式并且嵌入：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;yield (b&amp;quot;--frame\r\n&amp;quot; b&amp;quot;content-type:image/jpeg\r\n\r\n&amp;quot; + res + b&amp;quot;\r\n&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里字符串前面的b是将字符串转换为字节字符串，表示字节的序列，这才能嵌入html。而这个yield方法是python内置的一个迭代器，例如yield([1,3,4])相当于：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for num in [1,3,4]:
+    return num
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;但是这样第一次return就跳出for了，不会继续迭代，而yield不会跳出，是不断按序返回值。使用yield就可以使字节流画面不断地返回更新，&lt;/p&gt;
+&lt;p&gt;这样就利用flask页面实现了一个简单的后端视频接口api，项目基本就完成了。&lt;/p&gt;
+&lt;h1 id=&#34;910&#34;&gt;9.10&lt;/h1&gt;
+&lt;p&gt;上板端跑这段flask会发现一个问题，每次监测到目标推理进程都会报错：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;img marked as output argument, but provided NumPy array marked as readonly
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;就依报错的说法能得知图像所属的数组ndarray有一个指示数组是否可写的标志，而在opencv4.9之前没有对numpy数组进行这个属性的判断，而是直接写入这个数组，自然会引发编译时的噩梦————段错误Segmentation fault（没其他错误说明）。&lt;/p&gt;
+&lt;p&gt;详细可见：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/opencv/opencv-python/issues/859&#34;&gt;Opencv does not check for numpy writeable flags when writing on array.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;但是opencv官方在&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/opencv/opencv/pull/24026&#34;&gt;fix: preserve NumPY writeable flag in output arguments&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;中修复了这个问题后（其实就是有报错说明了，告诉你这个数组不可读），有人又向opencv官方提了关于cv：：rectangle、cv：：circle(c++的，对应到Python里就是cv2.rectangle和cv2.circle)没修复完这个问题的Issue，
+而这两个函数正是推理程序在原有图片上打框的函数方法，因此传入图像为只读的ndarray时会报这个错误。
+解决方案是在图像绘制检测框前先将原有的图像转换成np.uint8类型（整型坐标会丢失精度）以获得一份拷贝，就可读了：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;img = img.astype(np.uint8)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;另外还值得一提的是我在测试example文件夹底下ncnn会爆出这个问题：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;error: (-215:Assertion failed) buf.checkVector(1, CV_8U) &amp;gt; 0 in function &#39;imwrite&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个问题是因为图像顶点坐标，维数和数据类型不与检查的标准相匹配，防止接下来填充的多边形形状不正确或程序崩溃。
+这就要再在检查前先转换好图像的数据类型以及检查模型是转成功的。&lt;/p&gt;
+&lt;p&gt;详细见：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://bbs.huaweicloud.com/blogs/419769
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;还有就是通用的一个网络问题，报错内容是：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GnuTLS recv error (-110): The TLS connection was non-properly terminated.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个问题一般是连接外网一些代码库平台下载文件时延迟过高或者连接失败，请直接出国上网/doge&lt;/p&gt;
+&lt;h1 id=&#34;成果展示&#34;&gt;成果展示&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;怎么写成yolov5了，恼（&lt;/li&gt;
+&lt;li&gt;马上改……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://gitblog.dowblog.top/img/develop/1727002698270.webp&#34; alt=&#34;1727002698270&#34;  /&gt;
+&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>此处为实验室第三轮考核的开发日志，意在锻炼独立完成项目能力，学习更多实践的技术，解决部署难点
+这个项目完成后我将公开发布至GitHub，与另一个我与群友一起构建的小数据集项目一同作为我的GitHub处男库/doge
+先将要求贴出：</p>
+<p>最终考核题形式为：每个人独立完成一个目标检测/目标分类小项目（深度学习组选题为甲骨文（数据集会给出），其他组目标检测选题为检测车牌，分类选题为红绿灯，二选一，数据集需自行上网采集），框架自选，模型自主训练
+1.数据集收集-数据处理-训练-测试-部署，要求部署到服务器/网页/开发板，整套流程均需独立完成。
+2.九月开学后实验室会提供多个树莓派开发板以及一个带npu的开发板，开学两个星期后验收成果（如有硬件设备可以自己先完成，没有的可以使用虚拟机或云服务器练手）
+&mdash;&mdash;&ndash;深度学习组&mdash;&mdash;&mdash;：
+1.分析数据集中可能存在的噪点，进行图像降噪处理。
+2.使用数据增强技术对于小样本数据的增强，分别使用传统数据增强技术或深度学习的数据增强技术。从训练效果评估自己数据增强后的效果。
+3.尽可能做图像特征工程，并保证处理完数据后的模型效果更好
+&mdash;&mdash;&mdash;web组&mdash;&mdash;&ndash;：要求做ui(简易的页面就好，样式好看一点，可以加分)，前端请求的后端接口要求返回类别和置信度两个参数，通信要求后端部署在云服务器或者局域网设备。(思路参考，使用socket 完成，可以加分)（博主是web组的）
+&mdash;&mdash;&mdash;-其它组&mdash;&mdash;&ndash;：部署到开发板，要求做加速，如GPU/NPU/NCNN加速
+（注：模型训练得分指标以map指标和f1得分为主，考核使用的测试集不公布，得分以不公布的数据集为主）
+考核时需阐述个人的完成流程，采用的处理，简单介绍所完成的项目，实现项目时要编写日志，考核前一天上交（旨在梳理个人所学知识），各方向考核侧重点不一样但是考核标准统一，祝大家学习愉快</p>
+<hr>
+<h2 id="此处以下即为个人开发日志">此处以下即为个人开发日志</h2>
+<h1 id="813">8.13</h1>
+<p>开始查看模型框架，网上其实有Resnet的现成品模型，不过过于古早，识别效果凑合，
+yolov8对部署设备性能要求还是太高，于是转向yolov5，本来最适合的是无anchor的nanonet，
+最新的研究方向之一，对性能的要求最低还有不输于yolov5的识别效果，但其仅不支持Windows，
+那我就没有现成合适设备训练模型了。</p>
+<h1 id="814">8.14</h1>
+<p>总共从网上搜集好近25万张的数据集（ccpd和一些Kaggle上的零散数据集），大部分有标签数
+据但都是老旧的Resnet文件名内嵌形式，只能想办法一张张打标签，期间想过通过训练标准模型
+将后面一部分数据集检测到的数据做标签，不过怕模型网络退化效果越来越差。一部分数据集为
+提高模型鲁棒性还做了高斯模糊。
+<img loading="lazy" src="/img/develop/1726993309959.webp" alt="1726993309959"  />
+</p>
+<p>于是想办法将Resnet标签转换成yolo格式，25万张的数据必须写脚本，但要对文件名中非矩形
+边界框坐标（参照系未知，按贡献者的说明是以右下为原点建立坐标系）转换成yolo以左上为原
+点建立坐标系且归一化xywh的格式属实头大，决定先处理单张样例做测试，具体是利用pillow获
+取数据分辨率（xy最大最小）来对应结合文件名标签计算归一化后坐标，以yolo形式并行储存。
+<img loading="lazy" src="/img/develop/1726993268461.webp" alt="1726993268461"  />
+
+<img loading="lazy" src="/img/develop/1726993296853.webp" alt="1726993296853"  />
+</p>
+<p>初步写好脚本。</p>
+<h1 id="815">8.15</h1>
+<p>凌晨结合网上的指导跑完了25万张数据集预备，接下来是网络结构设计，就在原yolov5s的基础
+上修改，初步想法是在yolov5.7中降低模型宽度以减小特征图，这训练一个模型。
+<img loading="lazy" src="/img/develop/1726993958972.webp" alt="1726993958972"  />
+
+另外一个就是YOLOv5-ShuffleNetv2，参照YOLOv5-Lite在yolov5.0中减少concat来降低对显存大的需求，
+又因为是简单的单类检测任务，就将backbone中Conv改为Shuffle_Block，同时将下采样的Focus层
+（仅在yolov5.6之前存在，后被改为Conv层）卷积核换成32x32，确实会快很多，毕竟yolov5s的
+模型到后面卷积核都有512个，量大。
+<img loading="lazy" src="/img/develop/1726994391045.webp" alt="1726994391045"  />
+</p>
+<p>先改来跑跑看，后续不行再换yolov5-Lite。设置了epochs、batch、cfg、data、imgsz，开始
+训练。
+<img loading="lazy" src="/img/develop/1726994447650.webp" alt="1726994447650"  />
+</p>
+<h1 id="816">8.16</h1>
+<p>到午后yolov5.7的模型已经基本训练出来了，目前测试效果一般，鲁棒性不是很好，但是验证集
+（非训练时的数百张验证）中的图片检测效果良好，按学长的说法应该是过拟合了。模型大小
+为5.81MB，小但是不够小，至少很难部署在小型开发板上。
+<img loading="lazy" src="/img/develop/1726994524263.webp" alt="1726994524263"  />
+</p>
+<p>于是开始训练YOLOv5-ShuffleNetv2的模型，可惜忘记改nc的类了，训练到半夜发现模型推理没框，大悲重来。</p>
+<h1 id="817">8.17</h1>
+<p>YOLOv5-ShuffleNetv2模型训练好了，模型做好剪枝后出乎意料的小，才1.56MB大，可惜这一套都是在
+yolo5.0上做的，用着其它架构上没有的Focus层，5.6后都不支持跑推理。这个模型效果挺好，跟之前训练好
+的模型差不多，也是单类对网络规模没太多需求的缘故了。
+<img loading="lazy" src="/img/develop/1726994611088.webp" alt="1726994611088"  />
+</p>
+<p>优先使用之前的模型，较新还能转格式，之后部署不行的话再做替换。</p>
+<h1 id="818">8.18</h1>
+<p>问题重重，把pytorch的pt格式转为通用微软开发的onnx时首先遇到环境不符合，发现是numpy的版本过低，
+但重安装numpy库时还是报错，后来查询onnx在GitHub上的Issue时得知onnx1.16.2是有问题的，遂按照官方
+开发者提供的方案降级到1.16.1即可。</p>
+<p><a href="https://github.com/onnx/onnx/issues/6267">[1.16.2] ONNX not built correctly for Windows</a></p>
+<p>后又遇到onnx转换成功后推理显示输入输出不对，
+<img loading="lazy" src="/img/develop/1726995788253.png" alt="1726995788253"  />
+
+于是可视化模型检查输入输出，没查出问题，询问学长得知
+<img loading="lazy" src="/img/develop/1726995972024.webp" alt="1726995972024"  />
+
+转模型时文件的参数batch-size并非训练时的batch-size，而是每次推理的输入张数，改回1后转出来的模型
+正常推理。</p>
+<h1 id="819">8.19</h1>
+<p>开始着手构建后端，计划采用flask，开发快，也不需要并发，同时能把更多时间用于开发多平台前端。
+总体部署思路：
+前端uniapp写，界面好看，多端部署，向后端api接口用socket请求传输输入和结果画面以及置信度和
+框四个点坐标，部署在小型esp等设备上
+后端对socket连接请求回应，保持长连接，启动推理输入输出结果，直到前端发出中止指令或者推理完
+成，部署在树莓派或者开发板上。
+<img loading="lazy" src="/img/develop/1726996174385.webp" alt="1726996174385"  />
+
+模型初步写出，看接下来慢慢完善。</p>
+<h1 id="820">8.20</h1>
+<p>遇到麻烦：尽管开了flask的多线程，启动Response仍是十分艰难的事情，打开需要的时间太长（20min）
+，于是询问学长，后自己复查代码时发现逻辑有误，于是提前打开摄像头的时刻，后后端接收socket画面正常。
+<img loading="lazy" src="/img/develop/1726996365551.webp" alt="1726996365551"  />
+
+开始考虑使用什么设备部署后端，首先肯定是常用的jetson系列，但价格高，普遍要1000~5000元，于是想到
+用k210,参考已有案例后认为推理速度慢，部署要用c且内存储存都极其有限，遂继续寻找。</p>
+<h1 id="821">8.21</h1>
+<p>发现rknn设备的性价比较高，首先放弃了主流rk3588系列的开发板，价格还是居高不下，在500-1000元左右，更
+重要的是其中算力6TOPS冗余过头了，于是看上了rk3568的radxa开发板，CPU就有1TOPS算力只要200多块还有GPU加NPU，</p>
+<p><img loading="lazy" src="/img/develop/1726998731691.webp" alt="1726998731691"  />
+
+<img loading="lazy" src="/img/develop/1726998723470.webp" alt="1726998723470"  />
+
+<img loading="lazy" src="/img/develop/1726998741577.webp" alt="1726998741577"  />
+
+<img loading="lazy" src="/img/develop/1726998748441.webp" alt="1726998748441"  />
+</p>
+<p>要实在觉得扒行，过来看NUC5兄dei：</p>
+<p><img loading="lazy" src="/img/develop/1726998828804.webp" alt="1726998828804"  />
+</p>
+<p>可惜教程几乎为零，网上教程只有GPT生成的胡言乱语。还有重要的是1TOPS如何实现实时推流？于是想到FastestDet这个轻量级的推理架构，可惜就是还要对数据集进行二次处理，实际还是yolo的模型标准，不过网络大改，改到只剩单检测头，</p>
+<p><img loading="lazy" src="/img/develop/1726999251581.webp" alt="1726999251581"  />
+</p>
+<p>就一个5x5分组卷积并行网络结构融合不同感知野（yolov5是三检测头），0.24M的参数，FastestDet的作者刚好也是
+用rk3568测试的这个模型，70.62ms的推理速度（ncnn）啊。</p>
+<p><img loading="lazy" src="/img/develop/1726999303203.webp" alt="1726999303203"  />
+</p>
+<h1 id="822">8.22</h1>
+<p>处理yolo数据，FastestDet的数据集输入格式类似与yolo，但有类是单独写成一个.names文件，以及数据集每个文件
+都需要按行写好绝对路径，依照所在文件夹（训练的train，验证的val）划分，写在train.txt或val.txt里：</p>
+<pre><code>.   #所在数据集源目录
+├── category.names        # .names 类名标签文件
+├── train                 # 训练用数据集
+│   ├── 000001.jpg        # jpg与label按文件名一一对应
+│   ├── 000001.txt
+│   ├── 000002.jpg
+│   ├── 000002.txt
+│   ├── 000003.jpg
+│   └── 000003.txt
+├── train.txt              # 训练数据集每个文件绝对路径
+├── val                    # 按yaml配置里写的n个epoch后验证当前数据mAP精度，这里单类所以其实就是AP
+│   ├── 000043.jpg
+│   ├── 000043.txt
+│   ├── 000057.jpg
+│   ├── 000057.txt
+│   ├── 000070.jpg
+│   └── 000070.txt
+└── val.txt                # 验证数据集每个文件绝对路径
+</code></pre>
+<p>安装FastestDet的环境需要特别说明，这个requirements里的onnx和pytorch都得额外用conda自己
+整，删除requirements.txt里的：</p>
+<pre><code>onnx==1.12.0
+onnx_simplifier==0.3.10
+onnxruntime==1.11.1
+onnxsim==0.4.0
+torch==1.11.0+cu113
+torchsummary==1.5.1
+torchvision==0.12.0+cu113
+</code></pre>
+<p>conda创建一个python3.8的环境,作者所要求的opencv_python版本最高只支持到python3.8，具体是3.5-3.8
+先单独安装torch+cuda：</p>
+<pre><code>conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
+</code></pre>
+<p>再使用</p>
+<pre><code>conda install onnxruntime==1.16.1
+</code></pre>
+<p>按前面提到的最好用onnxruntime&lt;=1.16.1，更高的版本在Windows上官方已经确认有问题</p>
+<p><a href="https://github.com/onnx/onnx/issues/6267">[1.16.2] ONNX not built correctly for Windows</a></p>
+<h1 id="830">8.30</h1>
+<p>这几天电脑专注于训练模型。</p>
+<p><img loading="lazy" src="/img/develop/1726999365482.webp" alt="1726999365482"  />
+</p>
+<p>开始训练了50epochs没有保存成功，也没有报错，后逐行查看时发现train.py在
+利用torch.save保存模型时是：</p>
+<pre><code>torch.save(self.model.state_dict(), &quot;checkpoint/weight_AP05:%f_%d-epoch.pth&quot;%(mAP05, epoch))
+</code></pre>
+<p>这里可以看到模型文件名是：</p>
+<pre><code>weight_AP05:%f_%d-epoch.pth
+</code></pre>
+<p>这绝对是在linux上写的代码，其中:冒号在Windows系统里是不能作为文件名的，故这里保存失败也没有报错说明，我
+在这里删除:即可正常保存模型，默认在checkpoint里。</p>
+<p>转换模型的时候启动环境，先修改test.py更换onnx-runtime的版本，在文件里搜索opset_version将后面的11改成12，
+否则会报</p>
+<pre><code>ONNX: export failure ❌ 0.3s: Exporting the operator silu to ONNX opset version 11 is not support，
+</code></pre>
+<p>这是因为onnx11不支持silu算子，在终端输入：</p>
+<pre><code>python test.py --yaml configs/（yaml配置文件名） --weight weights/（.pth模型名） --img data/（想要推理验证的图片名） --onnx（转换成onnx保存模型）
+</code></pre>
+<p>项目根目录底下就会有两个onnx模型文件出现：</p>
+<pre><code>FastestDet.onnx
+FastestDetSim.onnx
+</code></pre>
+<p><img loading="lazy" src="/img/develop/1726999740334.webp" alt="1726999740334"  />
+</p>
+<p>和训练对应的.names一起放到FastestDet里作者给的example/onnx-runtime里，
+runtime.py中onnxruntime.InferenceSession函数里，
+改为FastestDetSim.onnx（模型名）, providers=[&ldquo;AzureExecutionProvider&rdquo;, &ldquo;CPUExecutionProvider&rdquo;]
+（onnx在某个版本后必须要提供providers参数确定跑模型的是cpu还是gpu，这里的CPUExecutionProvider即指的是CPU）</p>
+<p><img loading="lazy" src="/img/develop/1727000130490.webp" alt="1727000130490"  />
+</p>
+<p>后运行python runtime.py生成result.jpg查看转换后模型推理结果，验证模型是否正确。</p>
+<h1 id="831">8.31</h1>
+<p>模型训练好后就准备板段部署，官方radxa严格限定板子只能使用官方魔改过的debian bullseye系统或者社区的armbian，</p>
+<p><a href="https://github.com/radxa-build/rock-3a/releases/tag/b25">Radxa-built system images for ROCK 3A</a></p>
+<p>我这里使用的是debian 命令行(cli)版本，配置环境更改/etc/apt/sources.list文件换</p>
+<pre><code>https://mirrors.tuna.tsinghua.edu.cn/help/debian/
+</code></pre>
+<p>里的清华源镜像。安装python3.9.2（bullseye版本最新支持的）。
+使用nmcli连接网络，sudo apt update更新包名，接下来
+pip install以上依赖，除了不用conda环境，单独安装使用pip外，与Windows系统操作步骤一样。
+另为了开发便利，可选择安装samba和nano（强烈建议，比vim方便），在终端依次输入：</p>
+<pre><code>sudo apt-get update
+sudo apt-get install samba
+sudo apt-get install nano
+sudo nano /etc/samba/smb.conf
+</code></pre>
+<p>在文件尾部添加：</p>
+<pre><code>[root]
+comment = For my Radxa board developing
+path = /
+available = yes
+valid users = radxa
+public = yes
+writable = yes
+</code></pre>
+<p>依次按下ctrl+x，y保存文件后设置samba用户与密码：</p>
+<pre><code>sudo smbpasswd -a radxa
+sudo systemctl restart
+</code></pre>
+<p>随即可在路由端查看板子ip，直接在文件管理器路径处输入\(板子ip)回车就可将文件在板子和电脑手机间传输。</p>
+<h1 id="93">9.3</h1>
+<p>这里不使用radxa npu的缘故是200块的板子只有2G的运行内存，用官方系统软硬件管理工具rsetup开启后板子会被
+长期强制占用700多MB的内存（不使用npu计算也会），同时依照FastestDet作者的说法：</p>
+<ul>
+<li>1.ncnn不支持npu推理</li>
+<li>2.实际调用rknn api对模型进行npu推理测试，耗时反而比cpu慢一倍</li>
+</ul>
+<p>这和网络结构有关，Depthwise卷积在npu效率都不是很高，
+npu反而是个累赘，因而不通电开启npu。
+npu的开启和rknpu模型的转换另开一文说明。</p>
+<h1 id="97">9.7</h1>
+<p>前几天分别在写flask与onnx模型在板端的推理更正代码，推理与数据传输从电脑到板子性能下降，很多bug也就都来了，
+比如：</p>
+<pre><code>[ERROR:000.216] global net_ impl.cpp:1178 getLayershapesRecursively Exception message: Opencv(4.10.0) /io/opencv/modules/
+dnn/src/layers/reshape_layer.cpp:109: error: (-215:Assertion failed) total(srcshape, srcRange.start, srcRange.end)== ma
+Traceback(most recent call last):File &quot;/home/radxa/FastestDet-opencv-dnn/main.py&quot;,line 96, in &lt;module&gt;
+srcimg = model.detect(srcimg)File &quot;/home/radxa/FastestDet-opencv-dnn/main.py&quot;,line 81, is detectpred.
+= self.net.forward(self.net.getUnconnectedOutLayersNames())[0]srcShape,srcRange.start,srcRange.end)== maskTotal in function
+cv2.error: 0pencv(4.10.0) /io/opencv/modules/dnn/src/layers/reshape_layer.cpp:109: error: (-215:Assertion failed) 
+total(srcShape,srcRange.start,srcRange.end)== maskTotal in function 'computeShapeByReshapeMask
+</code></pre>
+<p>这个库是使用opencv的dnn库单独实现板端推理，但opencv早就删除或单独建库了大多数dnn的函数，因而换成之前目录下的example，里面有一个非常不完整的示例，单独使用会秒报错:</p>
+<pre><code>ValueError ： operands could not be broadcast together with shapes
+</code></pre>
+<p>这里打开文件，可以看到nms去重时有一个判断</p>
+<pre><code>while order.size &gt; 0:
+</code></pre>
+<p>这里.size是作者在查看numpy置信度数组的形状是否大于零，保留置信度最高的框；但是.size方法会将数组展平，是
+一个隐性的np.reshape方法，如果数组是一维乃至空数组时就会报错广播操作不可行。解决方法是用not is替代。
+类似的问题就是这个模板没有考虑到没识别到目标如何处理，一味地丢进nms做二维切片：x1 = dets[:, 0]
+会报</p>
+<pre><code>IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed.
+</code></pre>
+<p>使用print(dets)或是被放入nms中的pred显示出来，会发现是一维的空数组，因而做二维切片就会报错。解决方案
+也很简单就是在把pred传入nms前做列表长度的判断，结合前一个问题这里应当写if pred is []:return[None]
+那么还会发现一个问题，如果板子推理太慢，视频实时流自然会很慢，由于dets这里指针地址储存的类型在传入前
+判断的是有目标被检测到被放进了nms，又在切片时变成下一帧无检测目标，依旧会报错，所以加两次判断，一次
+在传入nms前筛，一次在切片前筛，是兼顾性能与运行稳定的选择。</p>
+<p>注意到上面是返回[None]，这是有目标检测到时不可能的结果，于是先在原来if <strong>name</strong> == &ldquo;<strong>main</strong>&quot;:后面的内容全部改成用一个run()函数包装方便flask调用，同时在run()里推理步骤bboxes=detection()下面做判断，一旦bboxes返回[None]，就直接将开始传入run()函数Mat矩阵类型的虚参img转成字节流直接给浏览器解析，避免后处理，之后我会找到详细方法。</p>
+<h1 id="98">9.8</h1>
+<p>对example的改动基本完成，现重新用flask写好前后端统合推理与摄像头实时流，保证这个应用能真正实现对车牌
+的识别，以及低成本的基本部署应用，市面上的摄像头普遍价格在150~200元之间，为最大程度低成本完成成品，选择由esp32cam负责画面捕捉，仅用31元就有wifi蓝牙摄像头集成模组。</p>
+<p>大体构想是连接局域网通过socket传输给板子，板子推理后用yield将esp32cam摄像头获取到的字节码通过websocket不断更新前端页面的画面，另外用定时器设置Ajax定时刷新推理结果局部更新网页结果终端。</p>
+<p>那么细节到实现上就要考虑新的问题，socket获取到的字节码画面在每一步以什么格式处理？怎样用python转换成合适的格式处理？不同设备以什么协议传输数据？对应上面的步骤可以一一明晰：</p>
+<p>首先esp32cam作为输入端只能获取到字节码格式的视频流，考虑到esp32仅有4MB的SPI Flash低性能，通过基于UDP的socket协议传输画面在局域网是优于TCP的，故选择UDP。</p>
+<p>先给esp32cam刷Micropython，电脑按网上下载安装好Thonny后，去找适配自己esp32cam的Micropython固件bin文件，官方的固件都没有camera库，无法使用摄像头。</p>
+<p>固件烧录可参考
+<a href="https://www.bilibili.com/read/cv27647802">esp32cam开发板烧录micropython固件报错问题（完美解决）</a></p>
+<p>拿到固件后，如果esp32cam有底板一定不能用底板烧录，市面上所有底板（包括更通用的CH340以及更稳定的FT232RL芯片均是如此）都只能配合驱动烧录Arduino的c++程序，刷micropython只能使用usb转ttl的模块刷机板严格用母对母的杜邦线</p>
+<p>严格按5v对5v，gnd（负极）对gnd，RXD对TXD，TXD对RXD的顺序来接线，尤其正负极不能接反，否则很快烧板子，之前一次接反后立刻断开接线处还是极烫，务必注意用电安全。</p>
+<p><img loading="lazy" src="/img/develop/1727001936861.webp" alt="1727001936861"  />
+
+<img loading="lazy" src="/img/develop/1727001951239.webp" alt="1727001951239"  />
+</p>
+<p>最后为初始化固件刷入，需让esp32cam进入boot模式，故再用母对母杜邦线短接其上右端相邻的两排针IO0与gnd，usb插入电脑，打开thonny烧录固件，在看到Done后断开右端IO0与gnd的短接，选择好设备端口后按确定即可。</p>
+<p><img loading="lazy" src="/img/develop/1727001960332.webp" alt="1727001960332"  />
+</p>
+<h1 id="99">9.9</h1>
+<p>随后编写名为 main.py（esp32通电后默认执行此文件名的py程序）的micropython文件，导入camera库，设置wifi连接与摄像头参数，</p>
+<p><img loading="lazy" src="/img/develop/1727002348079.webp" alt="1727002348079"  />
+</p>
+<p>最后创建socket套字节（即由ip:port组成的元组）实例化的对象，这里涉及UDP与TCP不同的通信过程方式。</p>
+<p>TCP是先由服务端绑定IP端口创建TCP连接的监听服务，后等待客户端一对一主动发出对接TCP请求报文控制位SYN为1、随机化序列号的握手包（HandShaking）表示希望建立TCP连接，服务端收到后返回报头SYN和ACK（表示确认应答，就跟微信群发一句收到一样）均为1、随机化序列号且确认应答号为前一个序列号+1的的握手包表示收到同意连接，客户端再最后回应服务端一个报头ACK为1、确认应答号为前一个序列号+1且包含字节流的应答报文，TCP连接就算成功建立了，接下来就是字节流，再之后就是TCP通过四次握手断开已传输完毕要释放的TCP连接。</p>
+<p><img loading="lazy" src="/img/develop/1727002447645.webp" alt="1727002447645"  />
+</p>
+<p>UDP呢，没有连接这种复杂的概念，自然也就可以一对多以及更快的传输速度，就跟大街上要个人到耳边骂（TCP）和大街上点名道姓的骂（UDP）一样的，我就这样喊，听没听到那就不一定了，相比TCP初始化、绑定(bind)、监听(listen)、等待(accpet)、请求连接(connect)、传输（send）、关闭连接(close)这一串复杂的socket实现，UDP不需要服务端先开始监听等待，初始化完绑好IP端口直接就开始不停地喊，服务端想听的时候就初始化绑定开听，简单得不能再简单，就是网络不好会只能收到只言片语（丢包率高）。
+python的socket库初始化时就要考虑选择以何种模式使用socket连接，socket.socket()中所需两个虚参是地址类型以及通信协议，</p>
+<p>两者使用的过程在上一段都已说明，不再多言。</p>
+<p>图像字节码流使用socket的UDP传到上位机即Radxa Rock3A这块板子后，要想用给onnxruntime推理，必须转成opencvMat矩阵的格式，</p>
+<p>我目前找到最短的一条转换路径是：</p>
+<pre><code>socket字节码 -&gt; io库字节流 -&gt; pillow库ImageFile -&gt; numpy库ndarray -&gt; opencv库MatLike
+</code></pre>
+<p>同样的，在推理图像处理好后输出依旧是要从MatLike转成byte字节码给浏览器解析，库支持流程就简单一些：</p>
+<pre><code>opencv库RGB(三通道颜色标准)的MatLike -&gt; opencv库BGR（只是将R和B两通道交换而已）的MatLike -&gt;  numpy库ndarray -&gt; byte字节码
+</code></pre>
+<p>在转换成byte字节码后，写成html里字节码图像的格式并且嵌入：</p>
+<pre><code>yield (b&quot;--frame\r\n&quot; b&quot;content-type:image/jpeg\r\n\r\n&quot; + res + b&quot;\r\n&quot;)
+</code></pre>
+<p>这里字符串前面的b是将字符串转换为字节字符串，表示字节的序列，这才能嵌入html。而这个yield方法是python内置的一个迭代器，例如yield([1,3,4])相当于：</p>
+<pre><code>for num in [1,3,4]:
+    return num
+</code></pre>
+<p>但是这样第一次return就跳出for了，不会继续迭代，而yield不会跳出，是不断按序返回值。使用yield就可以使字节流画面不断地返回更新，</p>
+<p>这样就利用flask页面实现了一个简单的后端视频接口api，项目基本就完成了。</p>
+<h1 id="910">9.10</h1>
+<p>上板端跑这段flask会发现一个问题，每次监测到目标推理进程都会报错：</p>
+<pre><code>img marked as output argument, but provided NumPy array marked as readonly
+</code></pre>
+<p>就依报错的说法能得知图像所属的数组ndarray有一个指示数组是否可写的标志，而在opencv4.9之前没有对numpy数组进行这个属性的判断，而是直接写入这个数组，自然会引发编译时的噩梦————段错误Segmentation fault（没其他错误说明）。</p>
+<p>详细可见：</p>
+<p><a href="https://github.com/opencv/opencv-python/issues/859">Opencv does not check for numpy writeable flags when writing on array.</a></p>
+<p>但是opencv官方在</p>
+<p><a href="https://github.com/opencv/opencv/pull/24026">fix: preserve NumPY writeable flag in output arguments</a></p>
+<p>中修复了这个问题后（其实就是有报错说明了，告诉你这个数组不可读），有人又向opencv官方提了关于cv：：rectangle、cv：：circle(c++的，对应到Python里就是cv2.rectangle和cv2.circle)没修复完这个问题的Issue，
+而这两个函数正是推理程序在原有图片上打框的函数方法，因此传入图像为只读的ndarray时会报这个错误。
+解决方案是在图像绘制检测框前先将原有的图像转换成np.uint8类型（整型坐标会丢失精度）以获得一份拷贝，就可读了：</p>
+<pre><code>img = img.astype(np.uint8)
+</code></pre>
+<p>另外还值得一提的是我在测试example文件夹底下ncnn会爆出这个问题：</p>
+<pre><code>error: (-215:Assertion failed) buf.checkVector(1, CV_8U) &gt; 0 in function 'imwrite'
+</code></pre>
+<p>这个问题是因为图像顶点坐标，维数和数据类型不与检查的标准相匹配，防止接下来填充的多边形形状不正确或程序崩溃。
+这就要再在检查前先转换好图像的数据类型以及检查模型是转成功的。</p>
+<p>详细见：</p>
+<pre><code>https://bbs.huaweicloud.com/blogs/419769
+</code></pre>
+<p>还有就是通用的一个网络问题，报错内容是：</p>
+<pre><code>GnuTLS recv error (-110): The TLS connection was non-properly terminated.
+</code></pre>
+<p>这个问题一般是连接外网一些代码库平台下载文件时延迟过高或者连接失败，请直接出国上网/doge</p>
+<h1 id="成果展示">成果展示</h1>
+<ul>
+<li>怎么写成yolov5了，恼（</li>
+<li>马上改……</li>
+</ul>
+<p><img loading="lazy" src="/img/develop/1727002698270.webp" alt="1727002698270"  />
+</p>]]></content:encoded>
+    </item>
+    
   </channel>
 </rss>
