@@ -1,7 +1,7 @@
 importScripts('https://cdn.jsdelivr.net/npm/workbox-sw@7.4.1/build/workbox-sw.min.js');
 
 // 缓存版本号
-let cacheVersion = '0.0.1';
+let cacheVersion = '0.0.2';
 // 最大条目数
 const maxEntries = 100;
 
@@ -50,7 +50,7 @@ if (workbox) {
     );
     // 缓存 bootcdn、unpkg、jsdelivr 等公共库，用正则匹配
     workbox.routing.registerRoute(
-        new RegExp('^https://(?:cdn\.bootcdn\.net|unpkg\.com|cdn\.jsdelivr\.net)'),
+        new RegExp('^https://(?:cdn\.bootcdn\.net|unpkg\.com|*\.jsdelivr\.net)'),
         new workbox.strategies.CacheFirst({
             cacheName: 'cdn' + cacheVersion,
             fetchOptions: {
@@ -73,7 +73,13 @@ if (workbox) {
     );
     workbox.routing.registerRoute(
         new RegExp('.*\.(css|js)'),
-        new workbox.strategies.StaleWhileRevalidate()
+        new workbox.strategies.StaleWhileRevalidate(
+            {
+                fetchOptions: {
+                    mode: 'cors',
+                },
+            }
+        )
     );
 
     // 默认匹配剩下的请求
