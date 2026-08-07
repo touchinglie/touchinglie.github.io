@@ -50,7 +50,7 @@ if (workbox) {
     );
     // 缓存 bootcdn、unpkg、jsdelivr 等公共库，用正则匹配
     workbox.routing.registerRoute(
-        new RegExp('^https://(?:cdn\.bootcdn\.net|unpkg\.com|*\.jsdelivr\.net)'),
+        new RegExp('^https://(?:cdn\.bootcdn\.net|unpkg\.com|.*\.jsdelivr\.net)'),
         new workbox.strategies.CacheFirst({
             cacheName: 'cdn' + cacheVersion,
             fetchOptions: {
