@@ -160,9 +160,10 @@
 而Windows官方的samba支持为了安全考虑，&lt;strong&gt;禁止其它用户访问到当前用户挂载的samba硬盘，就算是管理员也不行。&lt;/strong&gt;
 微软提供的解决方案是以特殊的管理员身份去挂载samba，但这样一来反而会出现新的问题，我正常的用户又访问不到samba挂载的硬盘了。
 经过n番折腾终于还是放弃samba协议了QAQ。&lt;/p&gt;
-&lt;p&gt;还好互联网冲浪比较早又比较频繁，知道一个早期协议能解决这扩展游戏盘的需求：&lt;/p&gt;
+&lt;p&gt;还好互联网冲浪比较早又比较频繁，知道一个早期协议能解决这扩展游戏盘的需求。&lt;/p&gt;
 &lt;h3 id=&#34;iscsi协议&#34;&gt;iSCSI协议&lt;/h3&gt;
-&lt;p&gt;iSCSI协议挂载的硬盘能在Windows上被识别为本地原生磁盘，这种协议比较特殊，IETF组织在早期设立的网络储存标准之一。&lt;/p&gt;
+&lt;p&gt;iSCSI协议挂载的硬盘能在Windows上被识别为本地原生磁盘，这种协议比较特殊，IETF组织在早期设立的网络储存标准之一。
+它依赖IP进行寻址，客户端叫做Initiator，服务端叫做Target。&lt;/p&gt;
 &lt;p&gt;优点很明显：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;原生挂载，&lt;strong&gt;不会被识别成网络硬盘而是本地插入的硬盘&lt;/strong&gt;&lt;/li&gt;
@@ -175,7 +176,50 @@
 &lt;li&gt;Windows在部分重启的情况下难以自行重连，必须手动断开再刷新连接&lt;/li&gt;
 &lt;li&gt;其中大量配置术语会涉及储存专业领域，晦涩难懂（本来就是给中小型企业提供通用服务的协议）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;刚好我正在折腾一台带PVE的服务器，PVE官方alpine linux的CT模板又刚好只需要3.32MB，docker是整不了，用来做iSCSI服务器就是再合适不过了。&lt;/p&gt;
+&lt;p&gt;刚好我正在折腾一台带PVE的服务器，PVE官方alpine linux的CT模板又刚好只需要3.32MB，又小又轻便，docker是整不了，用来做iSCSI服务器就是再合适不过了。&lt;/p&gt;
+&lt;h3 id=&#34;iscsi协议在alpine-linux的基础配置&#34;&gt;iSCSI协议在alpine linux的基础配置&lt;/h3&gt;
+&lt;p&gt;配置好一台基础的alpine linux LXC容器，保证容器能正常与其它机器通信，随后先安装好targetcli软件包，终端输入每行后回车：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apk update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apk add targetcli
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rc-update add targetcli
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service targetcli start
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接下来从终端进入到targetcli软件自己的shell里，终端输入后回车：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;targetcli
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;看到提示信息与最后的待输入框&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;即意味着进入到targetcli shell里，其中不同于linux原生shell，仅部分指令可用。ls查看目录会扩展为正常shell下tree命令一样的树状文件目录结构列出。&lt;/p&gt;
+&lt;p&gt;接下来有三种方式，一个我们看到能直接用于读存文件的磁盘，对于用户来说可以抽象为这四部分：&lt;/p&gt;
+&lt;p&gt;物理磁盘硬件 &amp;lt;- 磁盘厂家主控 &amp;lt;- 分区表（MBR/GPT）&amp;lt;- 文件系统（NTFS/FAT32/exFAT/ext4/xfs/btrfs）&lt;/p&gt;
+&lt;p&gt;还有一部分是一般人基本不会在意的分区标识说明，有些系统会对这些标识说明作特殊处理。&lt;/p&gt;
+&lt;p&gt;而在iSCSI协议下设置时磁盘就在符合上面后两抽象层的前提下，允许将前面物理硬件和主控的部分进行替换，分为三种方案：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;整块物理磁盘（无分区表/无文件系统）&lt;/li&gt;
+&lt;li&gt;单个磁盘分区&lt;/li&gt;
+&lt;li&gt;单个文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这三种方案从上往下，性能从物理磁盘限制上限依次变差。
+这里用第三种方式单个文件做演示：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/&amp;gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; backstores/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/backstores&amp;gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; fileio
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/backstores/fileio&amp;gt; create disk01 /tmp/disk01.img 10G
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后的/tmp/disk01.img可以是任意磁盘文件，下面创建iSCSI target：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/backstores/fileio&amp;gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ../..
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/&amp;gt; iscsi/ create
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接下来会输出创建的iSCSI target信息：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Created target iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Created TPG 1.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Global pref &lt;span class=&#34;nv&#34;&gt;auto_add_default_portal&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Created default portal listening on all IPs &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0.0.0.0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, port 3260.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这里会以iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319原教程的WWN地址做演示。&lt;/p&gt;
+&lt;p&gt;如果有ipv6，执行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/&amp;gt; iscsi/iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319/tpg1/portals/ create ::0 &lt;span class=&#34;m&#34;&gt;3260&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;下面创建LUN：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/&amp;gt; iscsi/iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319/tpg1/luns create /backstores/fileio/disk01
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/&amp;gt; iscsi/iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319/tpg1/acls create &lt;span class=&#34;nv&#34;&gt;wwn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;iqn.2005-03.org.open-iscsi:a3beddeaf977
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后添加ACL访问控制，下面iqn.2005-03.org.open-iscsi:a3beddeaf977的部分需要替换为自己要连接Initiator的机器WWN：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/&amp;gt; iscsi/iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319/tpg1/acls create &lt;span class=&#34;nv&#34;&gt;wwn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;iqn.2005-03.org.open-iscsi:a3beddeaf977
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;服务端就配置好了，Windows可以自行从“iSCSI发起程序”应用直接连接。&lt;/p&gt;
+&lt;p&gt;参考原文链接：&lt;a href=&#34;https://johnsiu.com/blog/alpine-iscsi-target/&#34;&gt;John Siu 博客 | Alpine iSCSI 目标&lt;/a&gt;&lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<p>想玩玩war thunder，但是主机硬盘空间不足哩大悲~
 下了81GB的完整客户端到samba上后发现，BattlEye直接显示路径不存在，
@@ -184,9 +228,10 @@
 而Windows官方的samba支持为了安全考虑，<strong>禁止其它用户访问到当前用户挂载的samba硬盘，就算是管理员也不行。</strong>
 微软提供的解决方案是以特殊的管理员身份去挂载samba，但这样一来反而会出现新的问题，我正常的用户又访问不到samba挂载的硬盘了。
 经过n番折腾终于还是放弃samba协议了QAQ。</p>
-<p>还好互联网冲浪比较早又比较频繁，知道一个早期协议能解决这扩展游戏盘的需求：</p>
+<p>还好互联网冲浪比较早又比较频繁，知道一个早期协议能解决这扩展游戏盘的需求。</p>
 <h3 id="iscsi协议">iSCSI协议</h3>
-<p>iSCSI协议挂载的硬盘能在Windows上被识别为本地原生磁盘，这种协议比较特殊，IETF组织在早期设立的网络储存标准之一。</p>
+<p>iSCSI协议挂载的硬盘能在Windows上被识别为本地原生磁盘，这种协议比较特殊，IETF组织在早期设立的网络储存标准之一。
+它依赖IP进行寻址，客户端叫做Initiator，服务端叫做Target。</p>
 <p>优点很明显：</p>
 <ul>
 <li>原生挂载，<strong>不会被识别成网络硬盘而是本地插入的硬盘</strong></li>
@@ -199,7 +244,50 @@
 <li>Windows在部分重启的情况下难以自行重连，必须手动断开再刷新连接</li>
 <li>其中大量配置术语会涉及储存专业领域，晦涩难懂（本来就是给中小型企业提供通用服务的协议）</li>
 </ul>
-<p>刚好我正在折腾一台带PVE的服务器，PVE官方alpine linux的CT模板又刚好只需要3.32MB，docker是整不了，用来做iSCSI服务器就是再合适不过了。</p>
+<p>刚好我正在折腾一台带PVE的服务器，PVE官方alpine linux的CT模板又刚好只需要3.32MB，又小又轻便，docker是整不了，用来做iSCSI服务器就是再合适不过了。</p>
+<h3 id="iscsi协议在alpine-linux的基础配置">iSCSI协议在alpine linux的基础配置</h3>
+<p>配置好一台基础的alpine linux LXC容器，保证容器能正常与其它机器通信，随后先安装好targetcli软件包，终端输入每行后回车：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apk update
+</span></span><span class="line"><span class="cl">apk add targetcli
+</span></span><span class="line"><span class="cl">rc-update add targetcli
+</span></span><span class="line"><span class="cl">service targetcli start
+</span></span></code></pre></div><p>接下来从终端进入到targetcli软件自己的shell里，终端输入后回车：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">targetcli
+</span></span></code></pre></div><p>看到提示信息与最后的待输入框</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/&gt;
+</span></span></code></pre></div><p>即意味着进入到targetcli shell里，其中不同于linux原生shell，仅部分指令可用。ls查看目录会扩展为正常shell下tree命令一样的树状文件目录结构列出。</p>
+<p>接下来有三种方式，一个我们看到能直接用于读存文件的磁盘，对于用户来说可以抽象为这四部分：</p>
+<p>物理磁盘硬件 &lt;- 磁盘厂家主控 &lt;- 分区表（MBR/GPT）&lt;- 文件系统（NTFS/FAT32/exFAT/ext4/xfs/btrfs）</p>
+<p>还有一部分是一般人基本不会在意的分区标识说明，有些系统会对这些标识说明作特殊处理。</p>
+<p>而在iSCSI协议下设置时磁盘就在符合上面后两抽象层的前提下，允许将前面物理硬件和主控的部分进行替换，分为三种方案：</p>
+<ol>
+<li>整块物理磁盘（无分区表/无文件系统）</li>
+<li>单个磁盘分区</li>
+<li>单个文件</li>
+</ol>
+<p>这三种方案从上往下，性能从物理磁盘限制上限依次变差。
+这里用第三种方式单个文件做演示：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/&gt; <span class="nb">cd</span> backstores/
+</span></span><span class="line"><span class="cl">/backstores&gt; <span class="nb">cd</span> fileio
+</span></span><span class="line"><span class="cl">/backstores/fileio&gt; create disk01 /tmp/disk01.img 10G
+</span></span></code></pre></div><p>最后的/tmp/disk01.img可以是任意磁盘文件，下面创建iSCSI target：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/backstores/fileio&gt; <span class="nb">cd</span> ../..
+</span></span><span class="line"><span class="cl">/&gt; iscsi/ create
+</span></span></code></pre></div><p>接下来会输出创建的iSCSI target信息：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Created target iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319.
+</span></span><span class="line"><span class="cl">Created TPG 1.
+</span></span><span class="line"><span class="cl">Global pref <span class="nv">auto_add_default_portal</span><span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">Created default portal listening on all IPs <span class="o">(</span>0.0.0.0<span class="o">)</span>, port 3260.
+</span></span></code></pre></div><p>这里会以iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319原教程的WWN地址做演示。</p>
+<p>如果有ipv6，执行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/&gt; iscsi/iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319/tpg1/portals/ create ::0 <span class="m">3260</span>
+</span></span></code></pre></div><p>下面创建LUN：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/&gt; iscsi/iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319/tpg1/luns create /backstores/fileio/disk01
+</span></span><span class="line"><span class="cl">/&gt; iscsi/iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319/tpg1/acls create <span class="nv">wwn</span><span class="o">=</span>iqn.2005-03.org.open-iscsi:a3beddeaf977
+</span></span></code></pre></div><p>最后添加ACL访问控制，下面iqn.2005-03.org.open-iscsi:a3beddeaf977的部分需要替换为自己要连接Initiator的机器WWN：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/&gt; iscsi/iqn.2003-01.org.linux-iscsi.alpine-hp-01.x8664:sn.159f1aa77319/tpg1/acls create <span class="nv">wwn</span><span class="o">=</span>iqn.2005-03.org.open-iscsi:a3beddeaf977
+</span></span></code></pre></div><p>服务端就配置好了，Windows可以自行从“iSCSI发起程序”应用直接连接。</p>
+<p>参考原文链接：<a href="https://johnsiu.com/blog/alpine-iscsi-target/">John Siu 博客 | Alpine iSCSI 目标</a></p>
 ]]></content:encoded>
     </item>
     
