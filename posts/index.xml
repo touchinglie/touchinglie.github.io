@@ -618,6 +618,36 @@ docker restart {容器ID}
     </item>
     
     <item>
+      <title>手势识别作业MediaPipe与pyQt5的冲突问题</title>
+      <link>https://gitblog.dowblog.top/posts/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB%E4%BD%9C%E4%B8%9Amediapipe%E4%B8%8Epyqt5%E7%9A%84%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 26 Nov 2025 10:41:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB%E4%BD%9C%E4%B8%9Amediapipe%E4%B8%8Epyqt5%E7%9A%84%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;实习到尾声的这几天，同时要忙期末周作业答辩、复习还有工作。属于是连轴转的地步了。&lt;/p&gt;
+&lt;p&gt;在跟同学做答辩作业的时候，做的手势识别被干回来做了，n次搜索+ai求解和官方issue作者回答都解决不了，还是靠之前用python&lt;del&gt;吃过的史&lt;/del&gt;踩过的坑的经验还有工作经验排查解决了，记录一下。&lt;/p&gt;
+&lt;h3 id=&#34;环境python-31264位非虚拟环境&#34;&gt;环境python 3.12（64位）非虚拟环境&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;from mediapipe.python._framework_bindings import model_ckpt_util ImportError: DLL load failed while importing _framework_bindings: 动态链接库(DLL)初始化例程失败。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;省流解决方案安装好msvc-runtime先导入mediapipe再导入pyqt5&#34;&gt;省流解决方案：安装好msvc-runtime，先导入mediapipe再导入PyQt5&lt;/h3&gt;
+&lt;p&gt;一开始网上是这么说的，这个库在windows上缺少C++的开发库msvc-runtime，这是一个原因，因为mediapipe的官方文档可见主要是在linux上开发使用的，谷歌的库一如既往的尿性没完全适配windows，没对在windows下的用户加上msvc-runtime的库依赖，pip安装mediapipe时当然就不会安装msvc-runtime，而主体是C++编写的mediapipe就跑不起来。于是直接在终端下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python.exe -m pip install --user msvc-runtime
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;回车一气呵成，但报错还是原来DLL初始化失败，官方库的issue也是有人在执行后还是解决不了问题的，但又有一部分人是说work for me，于是根据经验猜测是库导入出了问题，看着一堆依赖：sys、cv2、numpy、mediapipe、PyQt5、pyautogui、comtypes、pycaw。先排除可能性最小的官方库和涉及com口调用的sys、comtypes、pycaw，就只剩下cv2、numpy、PyQt5、pyautogui四种，又因为是DLL出问题结合前面msvc-runtime的开发库C++运行时，直接先锁定Qt（原先就是C++的图形界面三方库，还是社区非官方移植的），果然将原先是PyQt5先导入后再导入mediapipe的导入顺序一调换过来，识别程序就正常工作了。&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>实习到尾声的这几天，同时要忙期末周作业答辩、复习还有工作。属于是连轴转的地步了。</p>
+<p>在跟同学做答辩作业的时候，做的手势识别被干回来做了，n次搜索+ai求解和官方issue作者回答都解决不了，还是靠之前用python<del>吃过的史</del>踩过的坑的经验还有工作经验排查解决了，记录一下。</p>
+<h3 id="环境python-31264位非虚拟环境">环境python 3.12（64位）非虚拟环境</h3>
+<pre><code>from mediapipe.python._framework_bindings import model_ckpt_util ImportError: DLL load failed while importing _framework_bindings: 动态链接库(DLL)初始化例程失败。
+</code></pre>
+<h3 id="省流解决方案安装好msvc-runtime先导入mediapipe再导入pyqt5">省流解决方案：安装好msvc-runtime，先导入mediapipe再导入PyQt5</h3>
+<p>一开始网上是这么说的，这个库在windows上缺少C++的开发库msvc-runtime，这是一个原因，因为mediapipe的官方文档可见主要是在linux上开发使用的，谷歌的库一如既往的尿性没完全适配windows，没对在windows下的用户加上msvc-runtime的库依赖，pip安装mediapipe时当然就不会安装msvc-runtime，而主体是C++编写的mediapipe就跑不起来。于是直接在终端下：</p>
+<pre><code>python.exe -m pip install --user msvc-runtime
+</code></pre>
+<p>回车一气呵成，但报错还是原来DLL初始化失败，官方库的issue也是有人在执行后还是解决不了问题的，但又有一部分人是说work for me，于是根据经验猜测是库导入出了问题，看着一堆依赖：sys、cv2、numpy、mediapipe、PyQt5、pyautogui、comtypes、pycaw。先排除可能性最小的官方库和涉及com口调用的sys、comtypes、pycaw，就只剩下cv2、numpy、PyQt5、pyautogui四种，又因为是DLL出问题结合前面msvc-runtime的开发库C++运行时，直接先锁定Qt（原先就是C++的图形界面三方库，还是社区非官方移植的），果然将原先是PyQt5先导入后再导入mediapipe的导入顺序一调换过来，识别程序就正常工作了。</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>简单python图形化程序开发（tkiner、sqlite3）</title>
       <link>https://gitblog.dowblog.top/posts/%E7%AE%80%E5%8D%95python%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91tkinersqlite3/</link>
       <pubDate>Sat, 13 Apr 2024 07:50:00 +0000</pubDate>
