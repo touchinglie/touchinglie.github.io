@@ -355,11 +355,11 @@
       <guid>https://gitblog.dowblog.top/posts/%E8%A1%A5%E5%85%B3%E4%BA%8Erss%E7%9A%84%E8%AF%B4%E6%98%8E/</guid>
       <description>&lt;p&gt;请注意RSS内本博客大量效果内容无法正常显示，这是因为RSS不支持html标签和Markdown语法。&lt;/p&gt;
 &lt;p&gt;建议仍使用浏览器访问本博客来获取内容。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://dowblog.rr.nu/index.xml&#34;&gt;RSS链接在此&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gitblog.dowblog.top/index.xml&#34;&gt;RSS链接在此&lt;/a&gt;&lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<p>请注意RSS内本博客大量效果内容无法正常显示，这是因为RSS不支持html标签和Markdown语法。</p>
 <p>建议仍使用浏览器访问本博客来获取内容。</p>
-<p><a href="https://dowblog.rr.nu/index.xml">RSS链接在此</a></p>
+<p><a href="https://gitblog.dowblog.top/index.xml">RSS链接在此</a></p>
 ]]></content:encoded>
     </item>
     
