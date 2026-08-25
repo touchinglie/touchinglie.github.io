@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>programming on Dow Blog</title>
+    <link>https://gitblog.dowblog.top/tags/programming/</link>
+    <description>Recent content in programming on Dow Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 25 Aug 2026 10:18:09 +0000</lastBuildDate><atom:link href="https://gitblog.dowblog.top/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git日常杂难指南</title>
+      <link>https://gitblog.dowblog.top/posts/git%E6%97%A5%E5%B8%B8%E6%9D%82%E9%9A%BE%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Tue, 25 Aug 2026 10:18:09 +0000</pubDate>
+      
+      <guid>https://gitblog.dowblog.top/posts/git%E6%97%A5%E5%B8%B8%E6%9D%82%E9%9A%BE%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;p&gt;这里总结一些git的日常使用问题及可能的解决方案。&lt;/p&gt;
+&lt;h3 id=&#34;系统存在多个ssh-key并都通过ssh-add添加到了ssh-agentgit操作时身份仍是第一个添加的key&#34;&gt;系统存在多个SSH Key并都通过ssh-add添加到了ssh-agent，git操作时身份仍是第一个添加的Key&lt;/h3&gt;
+&lt;p&gt;有多个SSH Key时要切换密钥身份文件，只是直接添加到ssh-agent是不起作用的，默认还是第一个添加的Key身份。&lt;/p&gt;
+&lt;p&gt;因此要通过ssh环境配置来解决这个问题，创建&amp;rsquo;~/.ssh/config&amp;rsquo;文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Host github.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    HostName github.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    User git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    IdentityFile &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;要使用的私钥文件路径，一般在&lt;span class=&#34;s2&#34;&gt;&amp;#34;~/.ssh/&amp;#34;&lt;/span&gt;底下&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    IdentitiesOnly yes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再执行git命令，操作时的身份就是指定的Key身份啦。&lt;/p&gt;
+</description>
+      <content:encoded><![CDATA[<p>这里总结一些git的日常使用问题及可能的解决方案。</p>
+<h3 id="系统存在多个ssh-key并都通过ssh-add添加到了ssh-agentgit操作时身份仍是第一个添加的key">系统存在多个SSH Key并都通过ssh-add添加到了ssh-agent，git操作时身份仍是第一个添加的Key</h3>
+<p>有多个SSH Key时要切换密钥身份文件，只是直接添加到ssh-agent是不起作用的，默认还是第一个添加的Key身份。</p>
+<p>因此要通过ssh环境配置来解决这个问题，创建&rsquo;~/.ssh/config&rsquo;文件：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Host github.com
+</span></span><span class="line"><span class="cl">    HostName github.com
+</span></span><span class="line"><span class="cl">    User git
+</span></span><span class="line"><span class="cl">    IdentityFile <span class="o">{</span>要使用的私钥文件路径，一般在<span class="s2">&#34;~/.ssh/&#34;</span>底下<span class="o">}</span>
+</span></span><span class="line"><span class="cl">    IdentitiesOnly yes
+</span></span></code></pre></div><p>再执行git命令，操作时的身份就是指定的Key身份啦。</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

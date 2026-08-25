@@ -58,6 +58,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global https.proxy http://（你的代理地址）:代理端口
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;有一说只有http.proxy的设置有用，我也只在官方文档找到了http.proxy，但都设置也好，不会有大影响。&lt;/p&gt;
+&lt;p&gt;还有很重要的一点，archlinux yay的本质是用git拉下仓库到本地来编译，因此用git拉下仓库的网络部分也受git设置代理影响，有的时候执行yay xxx报错：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;致命错误：无法访问 &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://aur.archlinux.org/xxx.git/&amp;#39;&lt;/span&gt;：Failed to connect to aur.archlinux.org:443 over proxy after &lt;span class=&#34;m&#34;&gt;3062&lt;/span&gt; ms: Could not connect to server
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;就该好好检查git代理的问题了&lt;/p&gt;
 </description>
       <content:encoded><![CDATA[<p>自从同时使用Windows和Linux双系统后，面对很多软件都需要开代理数据才可能下载成功，这里总结一下常用软件都在哪里设置会走代理。</p>
 <h3 id="linux最广泛的代理设置方式系统环境变量设置">Linux最广泛的代理设置方式（系统环境变量设置）</h3>
@@ -104,6 +107,9 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">git config --global https.proxy http://（你的代理地址）:代理端口
 </span></span></code></pre></div><p>有一说只有http.proxy的设置有用，我也只在官方文档找到了http.proxy，但都设置也好，不会有大影响。</p>
+<p>还有很重要的一点，archlinux yay的本质是用git拉下仓库到本地来编译，因此用git拉下仓库的网络部分也受git设置代理影响，有的时候执行yay xxx报错：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">致命错误：无法访问 <span class="s1">&#39;https://aur.archlinux.org/xxx.git/&#39;</span>：Failed to connect to aur.archlinux.org:443 over proxy after <span class="m">3062</span> ms: Could not connect to server
+</span></span></code></pre></div><p>就该好好检查git代理的问题了</p>
 ]]></content:encoded>
     </item>
     
